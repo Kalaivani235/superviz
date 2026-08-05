@@ -1,0 +1,12 @@
+node_modules
+.pnpm-store
+superViz/
+.next
+out
+coverage
+*.log
+.DS_Store
+.vercel
+*.tsbuildinfo
+.env*
+!.env.example
