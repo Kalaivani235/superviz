@@ -22,11 +22,27 @@ const particles = Array.from({ length: 28 }, (_, index) => ({
 }));
 
 export default function Hero({ countryCount, regionCount, yearRange, baselineYear, metrics, onExplore }: Props) {
-  const previewCards: { metric: MetricKey; value: string }[] = [
-    { metric: "live", value: formatSigned(metrics.averageLiveChange, 1, " yrs") },
-    { metric: "thrive", value: `${metrics.thriveRecoveredCount}/${metrics.thriveCountryCount} above 2019` },
-    { metric: "connect", value: formatSigned(metrics.averageConnectChange, 1, " pp") },
-    { metric: "feel", value: formatSigned(metrics.averageFeelChange, 2, " pts") },
+  const previewCards: { metric: MetricKey; value: string; caption: string }[] = [
+    {
+      metric: "live",
+      value: formatSigned(metrics.averageLiveChange, 1, " yrs"),
+      caption: "Average change in life expectancy",
+    },
+    {
+      metric: "thrive",
+      value: `${metrics.thriveRecoveredCount} of ${metrics.thriveCountryCount}`,
+      caption: "Countries with GDP per person above their 2019 level",
+    },
+    {
+      metric: "connect",
+      value: formatSigned(metrics.averageConnectChange, 1, " pp"),
+      caption: "Average change in internet access",
+    },
+    {
+      metric: "feel",
+      value: formatSigned(metrics.averageFeelChange, 2, " pts"),
+      caption: "Average change in life satisfaction",
+    },
   ];
 
   return (
@@ -60,11 +76,12 @@ export default function Hero({ countryCount, regionCount, yearRange, baselineYea
           Using {baselineYear} as the pre-pandemic baseline, explore how {countryCount} economies recovered — or
           didn&apos;t — across four independent signals: LIVE, THRIVE, CONNECT and FEEL.
         </p>
-        <div className="hero-preview" role="group" aria-label="Global averages since 2019 preview">
+        <div className="hero-preview" role="group" aria-label={`Global averages since ${baselineYear}`}>
           {previewCards.map((card) => (
             <div className="hero-preview-card" key={card.metric} style={{ "--accent": METRIC_COLORS[card.metric] } as React.CSSProperties}>
               <strong>{METRIC_LABELS[card.metric]}</strong>
               <span>{card.value}</span>
+              <em>{card.caption}</em>
             </div>
           ))}
         </div>
