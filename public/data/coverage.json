@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-08-06T09:20:10.162Z",
+  "totalCountries": 217,
+  "byIndicator": {
+    "live": {
+      "countriesWithBaseline": 217,
+      "countriesWithLatest": 217,
+      "countriesWithBoth": 217,
+      "earliestYear": 2010,
+      "latestYear": 2024
+    },
+    "thrive": {
+      "countriesWithBaseline": 208,
+      "countriesWithLatest": 213,
+      "countriesWithBoth": 208,
+      "earliestYear": 2010,
+      "latestYear": 2025
+    },
+    "connect": {
+      "countriesWithBaseline": 189,
+      "countriesWithLatest": 209,
+      "countriesWithBoth": 189,
+      "earliestYear": 2010,
+      "latestYear": 2025
+    },
+    "feel": {
+      "countriesWithBaseline": 157,
+      "countriesWithLatest": 145,
+      "countriesWithBoth": 144,
+      "earliestYear": 2011,
+      "latestYear": 2025
+    }
+  },
+  "fullyCoveredCountries": 143,
+  "regions": [
+    "East Asia & Pacific",
+    "Europe & Central Asia",
+    "Latin America & Caribbean",
+    "Middle East, North Africa, Afghanistan & Pakistan",
+    "North America",
+    "South Asia",
+    "Sub-Saharan Africa"
+  ],
+  "regionCounts": {
+    "East Asia & Pacific": 37,
+    "Europe & Central Asia": 58,
+    "Latin America & Caribbean": 42,
+    "Middle East, North Africa, Afghanistan & Pakistan": 23,
+    "North America": 3,
+    "South Asia": 6,
+    "Sub-Saharan Africa": 48
+  }
+}

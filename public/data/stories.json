@@ -1,0 +1,112 @@
+{
+  "generatedAt": "2026-08-06T09:21:42.986Z",
+  "stories": [
+    {
+      "id": "prosperity-without-wellbeing",
+      "headline": "Prosperity recovered faster than wellbeing",
+      "insight": "4 of 143 countries with complete data grew real GDP per person while reported life satisfaction fell below its 2019 level. Tajikistan grew +38.7% in real GDP per person while life satisfaction moved -0.06 points.",
+      "countries": [
+        "TJK",
+        "IRL",
+        "BGD",
+        "TUR"
+      ],
+      "years": [
+        2019,
+        2025
+      ],
+      "metrics": [
+        "thrive",
+        "feel"
+      ],
+      "lens": "thrive-feel",
+      "highlightIso3": "TJK"
+    },
+    {
+      "id": "digital-without-wellbeing",
+      "headline": "Digital access expanded while life satisfaction weakened",
+      "insight": "4 countries gained more than 10 percentage points of internet participation since 2019 while life satisfaction still sits below its pre-pandemic level. Ghana added +50.1 points of internet participation, the widest gap between digital growth and wellbeing decline in the sample.",
+      "countries": [
+        "GHA",
+        "PAK",
+        "TJK",
+        "JOR"
+      ],
+      "years": [
+        2019,
+        2024
+      ],
+      "metrics": [
+        "connect",
+        "feel"
+      ],
+      "lens": "connect-feel",
+      "highlightIso3": "GHA"
+    },
+    {
+      "id": "resilient-health",
+      "headline": "Health outcomes held steady despite economic pressure",
+      "insight": "4 countries recorded real GDP per person below its 2019 level while life expectancy still rose or held flat. Sudan's real GDP per person is -48.3% against 2019, yet life expectancy moved +0.7 years.",
+      "countries": [
+        "SDN",
+        "AFG",
+        "GNQ",
+        "MMR"
+      ],
+      "years": [
+        2019,
+        2024
+      ],
+      "metrics": [
+        "thrive",
+        "live"
+      ],
+      "lens": "live-thrive",
+      "highlightIso3": "SDN"
+    },
+    {
+      "id": "broad-recovery",
+      "headline": "A small group of countries recovered on all four signals",
+      "insight": "Only 6 of 217 countries with any data show non-negative movement in LIVE, THRIVE, CONNECT and FEEL simultaneously — broad recovery was the exception, not the rule. India leads the group.",
+      "countries": [
+        "IND",
+        "CHN",
+        "KGZ",
+        "GEO",
+        "ALB",
+        "VNM"
+      ],
+      "years": [
+        2019,
+        "latest"
+      ],
+      "metrics": [
+        "live",
+        "thrive",
+        "connect",
+        "feel"
+      ],
+      "lens": "thrive-feel",
+      "highlightIso3": "IND"
+    },
+    {
+      "id": "uneven-region",
+      "headline": "Latin America & Caribbean shows the widest recovery spread of any region",
+      "insight": "Within Latin America & Caribbean, real GDP per person ranges from -20.3% at Haiti to +524.2% at Guyana against the same 2019 baseline — one region, very different recoveries.",
+      "countries": [
+        "GUY",
+        "HTI"
+      ],
+      "years": [
+        2019,
+        "latest"
+      ],
+      "metrics": [
+        "thrive"
+      ],
+      "lens": "thrive-feel",
+      "highlightIso3": "GUY",
+      "region": "Latin America & Caribbean"
+    }
+  ]
+}

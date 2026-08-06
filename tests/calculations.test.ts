@@ -2,21 +2,40 @@ import { describe, expect, it } from "vitest";
 import {
   absoluteChange,
   aggregateHeadlineMetrics,
+  changeAsOfYear,
   classifyRecoveryPath,
   deriveCountryRecovery,
   percentageChange,
+  pointAsOfYear,
 } from "@/lib/calculations";
-import type { PilotCountry } from "@/lib/types";
+import type { CountryDataset, IndicatorSeries } from "@/lib/types";
 
-const country = (overrides: Partial<PilotCountry> = {}): PilotCountry => ({
+const series = (overrides: Partial<IndicatorSeries> = {}): IndicatorSeries => ({
+  unit: "units",
+  sourceId: "test-source",
+  values: [
+    { year: 2019, value: 100 },
+    { year: 2021, value: 105 },
+    { year: 2023, value: 110 },
+  ],
+  baselineYear: 2019,
+  baselineValue: 100,
+  latestYear: 2023,
+  latestValue: 110,
+  ...overrides,
+});
+
+const country = (overrides: Partial<CountryDataset> = {}): CountryDataset => ({
   iso3: "TST",
   country: "Testland",
   region: "Test Region",
+  incomeGroup: "High income",
   population: 1_000_000,
-  live: { baselineYear: 2019, baselineValue: 70, latestYear: 2023, latestValue: 71, unit: "years", sourceId: "life" },
-  thrive: { baselineYear: 2019, baselineValue: 100, latestYear: 2024, latestValue: 110, unit: "USD", sourceId: "gdp" },
-  connect: { baselineYear: 2019, baselineValue: 50, latestYear: 2023, latestValue: 65, unit: "%", sourceId: "internet" },
-  feel: { baselineYear: 2019, baselineValue: 6, latestYear: 2024, latestValue: 5.8, unit: "points", sourceId: "happiness" },
+  populationYear: 2023,
+  live: series({ values: [{ year: 2019, value: 70 }, { year: 2023, value: 71 }], baselineValue: 70, latestYear: 2023, latestValue: 71 }),
+  thrive: series(),
+  connect: series({ values: [{ year: 2019, value: 50 }, { year: 2023, value: 65 }], baselineValue: 50, latestYear: 2023, latestValue: 65 }),
+  feel: series({ values: [{ year: 2019, value: 6 }, { year: 2023, value: 5.8 }], baselineValue: 6, latestYear: 2023, latestValue: 5.8 }),
   ...overrides,
 });
 
@@ -52,13 +71,44 @@ describe("headline aggregation", () => {
   it("aggregates available values and ignores missing indicators", () => {
     const missingFeel = country({
       iso3: "MIS",
-      thrive: { baselineYear: 2019, baselineValue: 100, latestYear: 2024, latestValue: 90, unit: "USD", sourceId: "gdp" },
-      feel: { baselineYear: 2019, baselineValue: 6, latestYear: 2024, latestValue: null, unit: "points", sourceId: "happiness" },
+      thrive: series({ latestValue: 90 }),
+      feel: series({ values: [{ year: 2019, value: 6 }], baselineValue: 6, latestYear: null, latestValue: null }),
     });
     const result = aggregateHeadlineMetrics([deriveCountryRecovery(country()), deriveCountryRecovery(missingFeel)]);
     expect(result.thriveRecoveredCount).toBe(1);
     expect(result.thriveCountryCount).toBe(2);
     expect(result.averageLiveChange).toBe(1);
     expect(result.averageFeelChange).toBeCloseTo(-0.2);
+  });
+});
+
+describe("pointAsOfYear", () => {
+  const s = series({ values: [{ year: 2019, value: 10 }, { year: 2021, value: 12 }, { year: 2023, value: 15 }] });
+  it("returns the exact observation when available", () => {
+    expect(pointAsOfYear(s, 2021)).toEqual({ year: 2021, value: 12, isExact: true });
+  });
+  it("carries forward the most recent prior observation", () => {
+    expect(pointAsOfYear(s, 2022)).toEqual({ year: 2021, value: 12, isExact: false });
+  });
+  it("returns null when there is no observation on or before the year", () => {
+    expect(pointAsOfYear(s, 2018)).toBeNull();
+  });
+});
+
+describe("changeAsOfYear", () => {
+  it("computes percentage change for thrive", () => {
+    const c = country();
+    const result = changeAsOfYear(c, "thrive", 2021);
+    expect(result?.value).toBeCloseTo(5);
+    expect(result?.isExact).toBe(true);
+  });
+  it("computes absolute change for live", () => {
+    const c = country();
+    const result = changeAsOfYear(c, "live", 2023);
+    expect(result?.value).toBeCloseTo(1);
+  });
+  it("returns null when the metric has no baseline observation", () => {
+    const c = country({ live: series({ values: [{ year: 2021, value: 71 }], baselineValue: null }) });
+    expect(changeAsOfYear(c, "live", 2023)).toBeNull();
   });
 });

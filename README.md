@@ -1,59 +1,46 @@
-# The World Reopened. Did Life Recover?
+# Recovery Atlas
 
-A premium, single-page editorial data story for an Amazon Viz Con 2026 post-COVID recovery prototype. The experience asks whether economic recovery and human recovery moved together by looking at four signals: **LIVE**, **THRIVE**, **CONNECT**, and **FEEL**.
+An interactive global atlas exploring how economies recovered — economically, physically, digitally and emotionally — after COVID-19. Built on public World Bank and World Happiness Report data across 217 economies.
 
-> Data status: **demonstration**. The committed values exercise the interface, data contract, calculations, quadrants, missing-data handling, and narrative templates. They must be replaced with validated public-source observations before the prototype is presented as evidence.
+> **The world reopened. Did life truly recover?** Economic activity returned quickly in many places. Health, connection and wellbeing followed very different paths.
 
-## Narrative concept
+## What it is
 
-The page moves through a deliberate story rather than a dashboard:
+Four independent signals, each compared against its 2019 pre-pandemic baseline:
 
-1. **Opening:** “THE WORLD REOPENED. DID LIFE RECOVER?”
-2. **Rupture:** a 2019 baseline separates into four recovery tracks.
-3. **Vital signs:** calculated pilot summaries for physical, economic, digital, and emotional recovery.
-4. **Discovery:** the Recovery Constellation reveals where GDP per person and life satisfaction moved together or diverged.
-5. **Country detail:** the linked Country Recovery Fingerprint keeps the four signals distinct.
-6. **Trust:** formulas, missing-data rules, source families, data status, and GenAI use are explicit.
-7. **Close:** “Recovery is not a date. It is the distance between what returned and what did not.”
+- **LIVE** — life expectancy at birth
+- **THRIVE** — real GDP per person (constant 2015 US$)
+- **CONNECT** — internet participation
+- **FEEL** — self-reported life satisfaction (World Happiness Report / Cantril ladder)
 
-## Included components
+The product deliberately avoids a single composite "recovery score." Each dimension stays visible on its own terms, so a country can be shown recovering economically while still below its 2019 wellbeing level, or the reverse.
 
-- Full-viewport editorial hero with reduced-motion support
-- CSS recovery timeline
-- Four calculated global vital-sign cards
-- Apache ECharts Recovery Constellation with:
-  - GDP percentage change on the x-axis
-  - life-satisfaction change on the y-axis
-  - population-scaled bubbles
-  - region colors and recovery-path shapes
-  - zero lines and labeled quadrants
-  - region filtering, hover, click, and keyboard country controls
-- Clickable/searchable Country Recovery Fingerprint
-- Deterministic narrative generation with optional JSON overrides
-- Methodology, public sources, prototype warning, limitations, and GenAI disclosure
-- Responsive layouts for presentation screens, tablets, and phones
+## Experience
 
-## Data model
+- **Overview** — hero with live coverage stats (country/region/year counts) and a four-signal preview
+- **Explore** — the Recovery Orbit: every country's path from its 2019 baseline to the selected year, switchable between three analytical lenses (prosperity vs. wellbeing, health vs. prosperity, digital access vs. wellbeing), with region filtering, hover/keyboard exploration, and a linked Country Panel with a deterministic (non-LLM) narrative
+- **Timeline** — year slider with play/pause, wired to the Orbit and Country Panel simultaneously
+- **Compare** — two countries, all four dimensions, aligned baseline/latest/difference
+- **Stories** — 3–5 findings generated directly from the transformed dataset, each with a "View in visualization" action that sets the Orbit's lens, region and selection
+- **Methodology** — formulas, per-indicator coverage, and full source provenance
 
-All replaceable observations live in [`data/pilot-countries.json`](data/pilot-countries.json). The file contains a dataset envelope and an array of countries. Each country follows the `PilotCountry` contract in [`lib/types.ts`](lib/types.ts), with baseline/latest year, value, unit, and source ID for each signal.
+## Data pipeline
 
-`mode` must be either:
+All data is fetched and transformed at development/build time — the app never calls a data API at runtime, only static files under `public/data/`.
 
-```json
-{ "mode": "demo" }
+```bash
+npm run data:fetch      # pulls raw World Bank + World Happiness Report (via Our World in Data) sources into data/raw/
+npm run data:transform  # builds public/data/countries.json, metadata.json, coverage.json + data/processed/, data/metadata/
+npm run data:validate   # structural validation -> data/metadata/validation-report.json
+npm run data:stories    # derives public/data/stories.json from the final dataset
+npm run data:build      # runs all four in sequence
 ```
 
-or:
-
-```json
-{ "mode": "validated", "dataAsOf": "YYYY-MM-DD" }
-```
-
-Source definitions live in [`data/sources.json`](data/sources.json). No browser-time API calls, secrets, database, or backend are required.
+See [`docs/data-methodology.md`](docs/data-methodology.md) for the full source list, baseline/latest-year convention, and missing-data policy. Missing observations are never estimated or interpolated — they are shown as unavailable and excluded from any calculation that needs them.
 
 ## Local setup
 
-Requirements: Node.js 20.9 or newer (Node 22 recommended) and npm.
+Requirements: Node.js 20.9+ (LTS recommended) and npm.
 
 ```bash
 npm install
@@ -62,79 +49,46 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-Available checks:
-
 ```bash
-npm test
+npm test    # vitest — calculation and validation logic
 npm run lint
 npm run build
 npm start
 ```
 
-The repository includes a pnpm lockfile because the local build environment uses pnpm; npm commands remain supported by the package scripts.
-
-## Replacing the demonstration data
-
-1. Download or extract the four indicators from the source families in `data/sources.json`.
-2. Preserve 2019 as the baseline for LIVE, THRIVE, and CONNECT.
-3. For FEEL, calculate a 2017–2019 pre-COVID country average and a 2022–latest post-COVID average before writing the two values into the JSON contract.
-4. Use real GDP per capita in constant prices, not current-price GDP.
-5. Preserve `null` for missing observations; do not impute values for the prototype.
-6. Confirm units, years, country codes, population, regions, and source IDs.
-7. Change the envelope to `"mode": "validated"`, add `dataAsOf`, and update `refreshDate` only after every observation has been reviewed.
-8. Run all tests, lint, and the production build.
-
-The page derives all visible headline metrics from this one file. Countries missing either THRIVE or FEEL are not plotted, but available signals still appear in their fingerprint.
+The repository includes a pnpm lockfile because the reference build environment uses pnpm; the npm scripts above are fully supported as an alternative.
 
 ## Calculation methodology
 
-- **THRIVE:** `((latest real GDP per capita − 2019) / 2019) × 100`
-- **LIVE:** `latest life expectancy − 2019 life expectancy`
-- **CONNECT:** `latest internet-use share − 2019 share`, in percentage points
-- **FEEL:** `post-COVID life-satisfaction average − pre-COVID average`
+- **THRIVE**: `((latest − 2019) / 2019) × 100`
+- **LIVE**: `latest − 2019`, in years
+- **CONNECT**: `latest − 2019`, in percentage points
+- **FEEL**: `(average of 2022–latest) − (average of 2017–2019)`, in Cantril ladder points
 
-The quadrant classification uses only THRIVE and FEEL:
+"Latest" is per-indicator and per-country — coverage differs by source, and the UI always labels the actual year a value comes from. The Recovery Orbit's quadrant classification (Recovered Together / Prosperity Without Healing / Resilient Lives / Still Recovering) uses THRIVE and FEEL only; the Country Panel says so explicitly next to the badge, since its narrative paragraph considers all four signals.
 
-| GDP change | FEEL change | Recovery path |
-| --- | --- | --- |
-| ≥ 0 | ≥ 0 | Recovered Together |
-| ≥ 0 | < 0 | Prosperity Without Healing |
-| < 0 | ≥ 0 | Resilient Lives |
-| < 0 | < 0 | Still Recovering |
-
-There is no weighting, imputation, or hidden composite index. Calculation and validation logic is pure and covered by Vitest.
+Full detail: [`docs/data-methodology.md`](docs/data-methodology.md).
 
 ## Accessibility
 
-- WCAG AA-oriented palette and readable typography
-- Semantic landmarks and heading order
-- Skip link and visible keyboard focus states
-- 44px minimum interactive controls
-- Reduced animation under `prefers-reduced-motion`
-- ECharts ARIA description plus an equivalent keyboard-operable country strip
-- Recovery paths use labels and point shapes, not color alone
-- Persistent selected-country readout means tooltips are not the only source of detail
-- Missing values are explicitly labeled
-- External links announce that they open in a new tab
+- Semantic landmarks, heading order, and native `<button>`/`<input>`/`<select>` controls throughout (no clickable `<div>`s)
+- Skip link and visible `:focus-visible` rings
+- 44px minimum interactive targets
+- `prefers-reduced-motion` respected (chart transitions, hero particles, spinners)
+- Recovery paths and lens quadrants use shape/label, not color alone
+- Every chart has a parallel keyboard-operable country list, since canvas charts are not natively keyboard-navigable
+- Missing values are always labeled "Not available," never blank or zero
 
 ## GenAI usage
 
-GenAI was used to support code generation, data-cleaning and validation logic, interface development, test generation, and narrative drafting. It is not used at runtime. The narrative is deterministic, and optional human-reviewed country copy can be supplied through the JSON `narrative` field.
-
-All calculations and factual statements must be independently validated against the cited public data before submission.
+GenAI was used to support code generation, the data pipeline, interface development, and narrative template design. It is not called at runtime — the Country Panel's narrative is produced by deterministic rules in `lib/narrative.ts` evaluated against the values already computed, not by a model invented at request time.
 
 ## Deploying to Vercel
 
-### Git integration
-
 1. Push this repository to GitHub, GitLab, or Bitbucket.
-2. In Vercel, choose **Add New → Project** and import the repository.
-3. Keep the detected framework as **Next.js**.
-4. Leave the root directory at the repository root and use the default build command (`next build`).
-5. No environment variables are needed.
-6. Deploy, then add the production URL to the project metadata if desired.
-
-### Vercel CLI
+2. In Vercel, **Add New → Project**, import the repository, keep the framework as Next.js.
+3. Default build command (`next build`), default root directory. No environment variables are required.
+4. Deploy.
 
 ```bash
 npm install -g vercel
@@ -142,13 +96,17 @@ vercel
 vercel --prod
 ```
 
-The app uses static local data and standard Next.js metadata, so it is ready for Vercel’s default Node runtime.
+## Repository layout
 
-## Known prototype limitations
-
-- The committed country values are demonstration data and cannot be presented as findings.
-- The pilot includes 20 countries, one of which intentionally has a missing FEEL value to verify graceful handling.
-- Latest years differ by indicator and will require a frozen, cited extraction manifest.
-- Regional summaries and two-country comparison are described but intentionally outside the prototype scope.
-- The chart’s editorial conclusions must be rewritten after validated data replaces the demo file.
-# superViz
+```
+app/            Next.js App Router: layout, single page route, global styles
+components/     AtlasApp (orchestrator) + Header, Hero, RecoveryOrbit, TimelineControl,
+                CountryPanel, RecoveryProfile, ComparePanel, StoriesSection, Methodology
+lib/            types, calculations, validation, narrative, formatting, constants,
+                the client-side data-loading hook
+data/           raw/ (committed source payloads), processed/, metadata/ — pipeline artifacts
+scripts/        fetch-data, transform-data, validate-data, generate-stories
+public/data/    frontend-ready static JSON (countries, metadata, coverage, stories)
+tests/          Vitest coverage for calculations and validation
+docs/           revamp-audit, data-methodology, interaction-model, final-qa-report
+```

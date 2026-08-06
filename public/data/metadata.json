@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-08-06T09:20:10.160Z",
+  "baselineYear": 2019,
+  "baselineNote": "LIVE, THRIVE and CONNECT use the calendar year 2019 as the pre-pandemic baseline. FEEL uses a 2017–2019 survey average because life-satisfaction sampling is sparser and noisier year to year.",
+  "latestNote": "LIVE, THRIVE and CONNECT use each country's most recent available observation, which differs by indicator and by country. FEEL uses the average of all available survey years from 2022 onward.",
+  "missingDataNote": "A null value means the source has no observation for that country/year/indicator. Missing values are never estimated, interpolated or replaced — they are shown as unavailable and excluded from averages and comparisons that require them.",
+  "sources": [
+    {
+      "id": "world-bank-gdp",
+      "name": "World Bank — GDP per capita (constant 2015 US$)",
+      "publisher": "World Bank, World Development Indicators",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD",
+      "indicatorCode": "NY.GDP.PCAP.KD",
+      "definition": "Gross domestic product divided by midyear population, in constant 2015 U.S. dollars, so growth reflects real economic output rather than inflation or exchange-rate movement.",
+      "unit": "constant 2015 US$ per person",
+      "license": "CC BY-4.0"
+    },
+    {
+      "id": "world-bank-life",
+      "name": "World Bank — Life expectancy at birth",
+      "publisher": "World Bank, World Development Indicators (UN Population Division)",
+      "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN",
+      "indicatorCode": "SP.DYN.LE00.IN",
+      "definition": "Number of years a newborn would live if prevailing patterns of mortality at the time of birth stayed the same throughout its life.",
+      "unit": "years",
+      "license": "CC BY-4.0"
+    },
+    {
+      "id": "world-bank-internet",
+      "name": "World Bank — Individuals using the Internet",
+      "publisher": "World Bank, World Development Indicators (ITU)",
+      "url": "https://data.worldbank.org/indicator/IT.NET.USER.ZS",
+      "indicatorCode": "IT.NET.USER.ZS",
+      "definition": "Share of the population that used the internet from any location in the last three months.",
+      "unit": "% of population",
+      "license": "CC BY-4.0"
+    },
+    {
+      "id": "world-bank-population",
+      "name": "World Bank — Population, total",
+      "publisher": "World Bank, World Development Indicators",
+      "url": "https://data.worldbank.org/indicator/SP.POP.TOTL",
+      "indicatorCode": "SP.POP.TOTL",
+      "definition": "Total resident population, used only to scale visualization bubbles.",
+      "unit": "people",
+      "license": "CC BY-4.0"
+    },
+    {
+      "id": "world-happiness",
+      "name": "World Happiness Report — Life evaluation (Cantril ladder)",
+      "publisher": "Wellbeing Research Centre / World Happiness Report, via Our World in Data",
+      "url": "https://ourworldindata.org/grapher/happiness-cantril-ladder",
+      "indicatorCode": "cantril-ladder-score",
+      "definition": "Average survey response to the Cantril ladder question, where 0 is the worst possible life a respondent can imagine for themselves and 10 is the best possible life.",
+      "unit": "Cantril ladder points (0–10)",
+      "license": "CC BY-4.0"
+    }
+  ]
+}

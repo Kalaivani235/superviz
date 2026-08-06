@@ -1,8 +1,10 @@
 import type {
+  CountryDataset,
   CountryRecovery,
   HeadlineMetrics,
-  IndicatorValue,
-  PilotCountry,
+  IndicatorPoint,
+  IndicatorSeries,
+  MetricKey,
   RecoveryPath,
 } from "./types";
 
@@ -30,33 +32,21 @@ export function absoluteChange(
 }
 
 export function classifyRecoveryPath(
-  gdpChange: number | null,
+  thriveChange: number | null,
   feelChange: number | null,
 ): RecoveryPath {
-  if (gdpChange === null || feelChange === null) return "insufficient-data";
-  if (gdpChange >= 0 && feelChange >= 0) return "recovered-together";
-  if (gdpChange >= 0 && feelChange < 0) return "prosperity-without-healing";
-  if (gdpChange < 0 && feelChange >= 0) return "resilient-lives";
+  if (thriveChange === null || feelChange === null) return "insufficient-data";
+  if (thriveChange >= 0 && feelChange >= 0) return "recovered-together";
+  if (thriveChange >= 0 && feelChange < 0) return "prosperity-without-healing";
+  if (thriveChange < 0 && feelChange >= 0) return "resilient-lives";
   return "still-recovering";
 }
 
-export function deriveCountryRecovery(country: PilotCountry): CountryRecovery {
-  const thrivePctChange = percentageChange(
-    country.thrive.baselineValue,
-    country.thrive.latestValue,
-  );
-  const liveAbsoluteChange = absoluteChange(
-    country.live.baselineValue,
-    country.live.latestValue,
-  );
-  const connectPointChange = absoluteChange(
-    country.connect.baselineValue,
-    country.connect.latestValue,
-  );
-  const feelAbsoluteChange = absoluteChange(
-    country.feel.baselineValue,
-    country.feel.latestValue,
-  );
+export function deriveCountryRecovery(country: CountryDataset): CountryRecovery {
+  const thrivePctChange = percentageChange(country.thrive.baselineValue, country.thrive.latestValue);
+  const liveAbsoluteChange = absoluteChange(country.live.baselineValue, country.live.latestValue);
+  const connectPointChange = absoluteChange(country.connect.baselineValue, country.connect.latestValue);
+  const feelAbsoluteChange = absoluteChange(country.feel.baselineValue, country.feel.latestValue);
 
   return {
     ...country,
@@ -75,9 +65,7 @@ function mean(values: Array<number | null>): number | null {
     : null;
 }
 
-export function aggregateHeadlineMetrics(
-  recoveries: CountryRecovery[],
-): HeadlineMetrics {
+export function aggregateHeadlineMetrics(recoveries: CountryRecovery[]): HeadlineMetrics {
   const gdpValues = recoveries
     .map((country) => country.thrivePctChange)
     .filter((value): value is number => value !== null);
@@ -86,9 +74,7 @@ export function aggregateHeadlineMetrics(
     averageLiveChange: mean(recoveries.map((country) => country.liveAbsoluteChange)),
     thriveRecoveredCount: gdpValues.filter((value) => value >= 0).length,
     thriveCountryCount: gdpValues.length,
-    averageConnectChange: mean(
-      recoveries.map((country) => country.connectPointChange),
-    ),
+    averageConnectChange: mean(recoveries.map((country) => country.connectPointChange)),
     averageFeelChange: mean(recoveries.map((country) => country.feelAbsoluteChange)),
   };
 }
@@ -97,6 +83,69 @@ export function hasPlottableRecovery(country: CountryRecovery): boolean {
   return country.thrivePctChange !== null && country.feelAbsoluteChange !== null;
 }
 
-export function hasIndicatorValues(indicator: IndicatorValue): boolean {
-  return absoluteChange(indicator.baselineValue, indicator.latestValue) !== null;
+export function hasIndicatorValues(indicator: IndicatorSeries): boolean {
+  return indicator.baselineValue !== null || indicator.latestValue !== null;
+}
+
+/**
+ * Most recent actual observation at or before `year`. Never interpolates —
+ * returns null if the series has no observation on or before that year.
+ * `isExact` tells the caller whether the value is genuinely from `year`
+ * or carried forward from an earlier observation (must be labeled as such).
+ */
+export function pointAsOfYear(
+  series: IndicatorSeries,
+  year: number,
+): (IndicatorPoint & { isExact: boolean }) | null {
+  let result: IndicatorPoint | null = null;
+  for (const point of series.values) {
+    if (point.year > year) break;
+    result = point;
+  }
+  if (!result) return null;
+  return { ...result, isExact: result.year === year };
+}
+
+export function seriesYearRange(series: IndicatorSeries): [number, number] | null {
+  if (!series.values.length) return null;
+  return [series.values[0].year, series.values[series.values.length - 1].year];
+}
+
+export type YearChange = { value: number; year: number; isExact: boolean; baselineYear: number };
+
+/**
+ * Change from the series' baseline reading to its reading as-of `year`
+ * (most recent actual observation at or before `year`). THRIVE is expressed
+ * as percentage change; LIVE, CONNECT and FEEL as absolute change. Returns
+ * null if either endpoint has no observation — never fabricated.
+ */
+export function changeAsOfYear(
+  country: CountryDataset,
+  metric: MetricKey,
+  year: number,
+): YearChange | null {
+  const series = country[metric];
+  const baseline = pointAsOfYear(series, series.baselineYear);
+  const current = pointAsOfYear(series, year);
+  if (!baseline || !current) return null;
+  const value = metric === "thrive"
+    ? percentageChange(baseline.value, current.value)
+    : absoluteChange(baseline.value, current.value);
+  if (value === null) return null;
+  return { value, year: current.year, isExact: current.isExact, baselineYear: baseline.year };
+}
+
+export function datasetYearRange(countries: CountryDataset[], metrics: MetricKey[]): [number, number] {
+  let min = Infinity;
+  let max = -Infinity;
+  for (const country of countries) {
+    for (const metric of metrics) {
+      const range = seriesYearRange(country[metric]);
+      if (!range) continue;
+      min = Math.min(min, range[0]);
+      max = Math.max(max, range[1]);
+    }
+  }
+  if (!Number.isFinite(min) || !Number.isFinite(max)) return [2019, 2019];
+  return [min, max];
 }

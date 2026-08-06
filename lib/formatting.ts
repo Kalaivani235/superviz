@@ -31,3 +31,21 @@ export function directionWord(value: number | null): "above" | "below" | "at" | 
   if (value < 0) return "below";
   return "at";
 }
+
+export function formatValue(value: number | null, digits = 1): string {
+  if (value === null || !Number.isFinite(value)) return "Not available";
+  return value.toFixed(digits);
+}
+
+export function formatYear(year: number | string | null): string {
+  if (year === null) return "—";
+  return String(year);
+}
+
+const REGION_LABELS: Record<string, string> = {
+  "Middle East, North Africa, Afghanistan & Pakistan": "Middle East & North Africa",
+};
+
+export function shortRegionLabel(region: string): string {
+  return REGION_LABELS[region] ?? region;
+}

@@ -9,29 +9,29 @@ const metadataBase = new URL(
 
 export const metadata: Metadata = {
   metadataBase,
-  title: "The World Reopened. Did Life Recover?",
+  title: "Recovery Atlas — How the world recovered after COVID",
   description:
-    "An interactive data story exploring how economic prosperity, life expectancy, digital connection, and life satisfaction changed after COVID.",
-  applicationName: "Post-COVID Recovery",
+    "An interactive global atlas exploring how 200+ economies recovered economically, physically, digitally and emotionally after COVID-19, built on public World Bank and World Happiness Report data.",
+  applicationName: "Recovery Atlas",
   openGraph: {
-    title: "The World Reopened. Did Life Recover?",
+    title: "Recovery Atlas — How the world recovered after COVID",
     description:
-      "A visual story of how the world lived, thrived, and reconnected after COVID.",
+      "Economic activity returned quickly in many places. Health, connection and wellbeing followed very different paths.",
     type: "website",
     images: [
       {
         url: "/og.png",
         width: 1728,
         height: 909,
-        alt: "The World Reopened. Did Life Recover? — Live, Thrive, Connect, Feel",
+        alt: "Recovery Atlas — LIVE, THRIVE, CONNECT, FEEL",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The World Reopened. Did Life Recover?",
+    title: "Recovery Atlas — How the world recovered after COVID",
     description:
-      "A visual story of how the world lived, thrived, and reconnected after COVID.",
+      "Economic activity returned quickly in many places. Health, connection and wellbeing followed very different paths.",
     images: ["/og.png"],
   },
 };
