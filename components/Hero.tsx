@@ -70,11 +70,12 @@ export default function Hero({ countryCount, regionCount, yearRange, baselineYea
           <em>ATLAS</em>
         </h1>
         <p className="hero-subtitle">
-          Economic activity returned quickly in many places. Health, connection and wellbeing followed very different paths.
+          A data-driven look at how life changed before and after COVID-19 — economically, physically, digitally
+          and emotionally.
         </p>
         <p className="hero-context">
-          Using {baselineYear} as the pre-pandemic baseline, explore how {countryCount} economies recovered — or
-          didn&apos;t — across four independent signals: LIVE, THRIVE, CONNECT and FEEL.
+          Using {baselineYear} as the pre-pandemic baseline, compare {countryCount} economies then and now across
+          four independent signals: LIVE, THRIVE, CONNECT and FEEL.
         </p>
         <div className="hero-preview" role="group" aria-label={`Global averages since ${baselineYear}`}>
           {previewCards.map((card) => (

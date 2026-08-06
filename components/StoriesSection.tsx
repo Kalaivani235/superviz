@@ -1,15 +1,16 @@
 import { METRIC_LABELS } from "@/lib/constants";
-import type { CountryDataset, Story } from "@/lib/types";
+import type { CountryRecovery, Story } from "@/lib/types";
 import SectionHeading from "./SectionHeading";
+import StoryChart from "./StoryChart";
 
 type Props = {
   stories: Story[];
-  countries: CountryDataset[];
+  recoveries: CountryRecovery[];
   onViewStory: (story: Story) => void;
 };
 
-export default function StoriesSection({ stories, countries, onViewStory }: Props) {
-  const countryName = (iso3: string) => countries.find((c) => c.iso3 === iso3)?.country ?? iso3;
+export default function StoriesSection({ stories, recoveries, onViewStory }: Props) {
+  const countryName = (iso3: string) => recoveries.find((c) => c.iso3 === iso3)?.country ?? iso3;
 
   return (
     <section id="stories" className="stories section-shell" aria-labelledby="stories-title">
@@ -29,6 +30,7 @@ export default function StoriesSection({ stories, countries, onViewStory }: Prop
                 <span>{story.countries.slice(0, 4).map(countryName).join(", ")}{story.countries.length > 4 ? "…" : ""}</span>
                 <span>{story.years.join("–")}</span>
               </div>
+              <StoryChart story={story} recoveries={recoveries} />
               <button type="button" onClick={() => onViewStory(story)}>
                 View in visualization →
               </button>

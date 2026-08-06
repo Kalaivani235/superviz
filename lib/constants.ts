@@ -40,6 +40,23 @@ export const METRIC_UNITS_SHORT: Record<MetricKey, string> = {
   feel: " pts",
 };
 
+// Rough "typical extreme" per metric, used only to position a change value
+// along a -1..1 visual track (recovery-profile bars, compare rows, story
+// mini-charts) — not a statistical scale, just a shared visual convention.
+export const METRIC_MAGNITUDE: Record<MetricKey, number> = {
+  thrive: 30,
+  live: 3,
+  connect: 30,
+  feel: 1.5,
+};
+
+export const METRIC_CHANGE_KEY = {
+  live: "liveAbsoluteChange",
+  thrive: "thrivePctChange",
+  connect: "connectPointChange",
+  feel: "feelAbsoluteChange",
+} as const satisfies Record<MetricKey, string>;
+
 export const LENSES: LensDefinition[] = [
   {
     key: "thrive-feel",
