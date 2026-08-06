@@ -4,8 +4,10 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { aggregateHeadlineMetrics, datasetYearRange, deriveCountryRecovery } from "@/lib/calculations";
 import { LENSES, NAV_SECTIONS, REGION_ORDER } from "@/lib/constants";
 import { shortRegionLabel } from "@/lib/formatting";
+import type { CompanionCommand, CompanionContext } from "@/lib/companion/types";
 import type { LensKey } from "@/lib/types";
 import { useAtlasData } from "@/lib/useAtlasData";
+import DataCompanion from "./companion/DataCompanion";
 import ComparePanel from "./ComparePanel";
 import CountryPanel from "./CountryPanel";
 import Header from "./Header";
@@ -30,6 +32,18 @@ export default function AtlasApp() {
   const [region, setRegion] = useState("All regions");
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeSection, setActiveSection] = useState("overview");
+  const [storySpotlight, setStorySpotlight] = useState<string[] | null>(null);
+  const [predictionReveal, setPredictionReveal] = useState<{ iso3s: string[]; correct: boolean } | null>(null);
+
+  // Manual country selection (search, clicking a bubble, the keyboard list)
+  // always clears any active companion spotlight — picking a country
+  // yourself means you've left "look at this" mode. Companion-driven
+  // selection goes through handleCompanionCommand instead, which does not
+  // clear the spotlight it may be setting in the same command.
+  const selectCountry = useCallback((iso3: string) => {
+    setSelectedIso3(iso3);
+    setStorySpotlight(null);
+  }, []);
 
   const recoveries = useMemo(() => (dataset ? dataset.countries.map(deriveCountryRecovery) : []), [dataset]);
   const yearRange = useMemo(
@@ -47,6 +61,38 @@ export default function AtlasApp() {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     document.getElementById(id)?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
   }, []);
+
+  // The companion never touches visualization state directly — it only
+  // ever issues one of these commands, which is why this is the single
+  // place SET_VIEW etc. are translated into AtlasApp's own setters.
+  const handleCompanionCommand = useCallback(
+    (command: CompanionCommand) => {
+      switch (command.type) {
+        case "SET_VIEW":
+          if (command.lens) setLens(command.lens);
+          if (command.region) setRegion(command.region);
+          if (command.year !== undefined) setYear(command.year);
+          if (command.selectedIso3) setSelectedIso3(command.selectedIso3);
+          if (command.spotlightIso3s) setStorySpotlight(command.spotlightIso3s);
+          if (command.section) scrollToSection(command.section);
+          break;
+        case "START_TIMELINE":
+          setYear(command.fromYear);
+          setIsPlaying(true);
+          break;
+        case "STOP_TIMELINE":
+          setIsPlaying(false);
+          break;
+        case "CLEAR_SPOTLIGHT":
+          setStorySpotlight(null);
+          break;
+        case "SCROLL_TO_SECTION":
+          scrollToSection(command.section);
+          break;
+      }
+    },
+    [scrollToSection],
+  );
 
   useEffect(() => {
     if (!dataset) return;
@@ -84,12 +130,23 @@ export default function AtlasApp() {
     ...REGION_ORDER.filter((r) => dataset.countries.some((c) => c.region === r)),
   ];
 
+  const companionContext: CompanionContext = {
+    activeSection,
+    lens,
+    region,
+    year: effectiveYear,
+    selectedIso3: effectiveSelectedIso3,
+    selectedCountryName: selectedRecovery?.country,
+    isPlaying,
+    storySpotlight,
+  };
+
   return (
     <main>
       <a className="skip-link" href="#overview">
         Skip to main content
       </a>
-      <Header activeSection={activeSection} onNavigate={scrollToSection} countries={dataset.countries} onSelectCountry={setSelectedIso3} />
+      <Header activeSection={activeSection} onNavigate={scrollToSection} countries={dataset.countries} onSelectCountry={selectCountry} />
 
       <Hero
         countryCount={coverage.totalCountries}
@@ -133,6 +190,8 @@ export default function AtlasApp() {
               setYear(yearRange[1]);
               setHoveredIso3(null);
               setIsPlaying(false);
+              setStorySpotlight(null);
+              setPredictionReveal(null);
             }}
           >
             Reset view
@@ -147,7 +206,9 @@ export default function AtlasApp() {
           selectedIso3={effectiveSelectedIso3}
           hoveredIso3={hoveredIso3}
           compareIso3={countryB?.iso3 ?? null}
-          onSelect={setSelectedIso3}
+          spotlightIso3s={storySpotlight}
+          revealHighlight={predictionReveal}
+          onSelect={selectCountry}
           onHover={setHoveredIso3}
         />
 
@@ -230,6 +291,14 @@ export default function AtlasApp() {
           <span>Built with Next.js</span>
         </div>
       </footer>
+
+      <DataCompanion
+        context={companionContext}
+        recoveries={recoveries}
+        yearRange={yearRange}
+        onCommand={handleCompanionCommand}
+        onReveal={setPredictionReveal}
+      />
     </main>
   );
 }

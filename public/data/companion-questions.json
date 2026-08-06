@@ -1,0 +1,631 @@
+{
+  "generatedAt": "2026-08-06T17:49:49.462Z",
+  "questions": [
+    {
+      "id": "country-1",
+      "type": "country-choice",
+      "question": "Which country recovered economically but remained below its wellbeing baseline?",
+      "options": [
+        {
+          "id": "USA",
+          "label": "United States"
+        },
+        {
+          "id": "IND",
+          "label": "India"
+        },
+        {
+          "id": "CHN",
+          "label": "China"
+        }
+      ],
+      "correctOptionId": "USA",
+      "rationale": "United States's real GDP per person moved +11.3% against its 2019 baseline, while reported life satisfaction moved −0.12 points over the same period.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "thrive-feel",
+        "region": "All regions",
+        "selectedIso3": "USA",
+        "spotlightIso3s": [
+          "USA"
+        ]
+      },
+      "highlightIso3s": [
+        "USA"
+      ],
+      "sourceMetrics": [
+        "thrive",
+        "feel"
+      ],
+      "years": [
+        2019,
+        2025
+      ]
+    },
+    {
+      "id": "country-2",
+      "type": "country-choice",
+      "question": "Which country recovered economically but remained below its wellbeing baseline?",
+      "options": [
+        {
+          "id": "IDN",
+          "label": "Indonesia"
+        },
+        {
+          "id": "NGA",
+          "label": "Nigeria"
+        },
+        {
+          "id": "PAK",
+          "label": "Pakistan"
+        }
+      ],
+      "correctOptionId": "PAK",
+      "rationale": "Pakistan's real GDP per person moved +6.1% against its 2019 baseline, while reported life satisfaction moved −0.89 points over the same period.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "thrive-feel",
+        "region": "All regions",
+        "selectedIso3": "PAK",
+        "spotlightIso3s": [
+          "PAK"
+        ]
+      },
+      "highlightIso3s": [
+        "PAK"
+      ],
+      "sourceMetrics": [
+        "thrive",
+        "feel"
+      ],
+      "years": [
+        2019,
+        2025
+      ]
+    },
+    {
+      "id": "country-3",
+      "type": "country-choice",
+      "question": "Which country recovered economically but remained below its wellbeing baseline?",
+      "options": [
+        {
+          "id": "RUS",
+          "label": "Russian Federation"
+        },
+        {
+          "id": "BGD",
+          "label": "Bangladesh"
+        },
+        {
+          "id": "BRA",
+          "label": "Brazil"
+        }
+      ],
+      "correctOptionId": "BGD",
+      "rationale": "Bangladesh's real GDP per person moved +26.9% against its 2019 baseline, while reported life satisfaction moved −0.51 points over the same period.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "thrive-feel",
+        "region": "All regions",
+        "selectedIso3": "BGD",
+        "spotlightIso3s": [
+          "BGD"
+        ]
+      },
+      "highlightIso3s": [
+        "BGD"
+      ],
+      "sourceMetrics": [
+        "thrive",
+        "feel"
+      ],
+      "years": [
+        2019,
+        2025
+      ]
+    },
+    {
+      "id": "country-4",
+      "type": "country-choice",
+      "question": "Which country recovered economically but remained below its wellbeing baseline?",
+      "options": [
+        {
+          "id": "ETH",
+          "label": "Ethiopia"
+        },
+        {
+          "id": "JPN",
+          "label": "Japan"
+        },
+        {
+          "id": "PHL",
+          "label": "Philippines"
+        }
+      ],
+      "correctOptionId": "ETH",
+      "rationale": "Ethiopia's real GDP per person moved +26.9% against its 2019 baseline, while reported life satisfaction moved −0.31 points over the same period.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "thrive-feel",
+        "region": "All regions",
+        "selectedIso3": "ETH",
+        "spotlightIso3s": [
+          "ETH"
+        ]
+      },
+      "highlightIso3s": [
+        "ETH"
+      ],
+      "sourceMetrics": [
+        "thrive",
+        "feel"
+      ],
+      "years": [
+        2019,
+        2025
+      ]
+    },
+    {
+      "id": "region-5",
+      "type": "region-choice",
+      "question": "Which region contains more countries in the “Prosperity Without Healing” quadrant?",
+      "options": [
+        {
+          "id": "Europe & Central Asia",
+          "label": "Europe & Central Asia"
+        },
+        {
+          "id": "Sub-Saharan Africa",
+          "label": "Sub-Saharan Africa"
+        },
+        {
+          "id": "Latin America & Caribbean",
+          "label": "Latin America & Caribbean"
+        }
+      ],
+      "correctOptionId": "Europe & Central Asia",
+      "rationale": "Europe & Central Asia has 13 countries with complete data in the “Prosperity Without Healing” quadrant, more than any other region compared here.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "thrive-feel",
+        "region": "Europe & Central Asia"
+      },
+      "highlightIso3s": [
+        "AZE",
+        "BEL",
+        "CZE",
+        "DNK",
+        "IRL",
+        "NLD",
+        "NOR",
+        "SWE",
+        "CHE",
+        "TJK",
+        "TUR",
+        "GBR",
+        "UZB"
+      ],
+      "sourceMetrics": [
+        "thrive",
+        "feel"
+      ],
+      "years": []
+    },
+    {
+      "id": "region-6",
+      "type": "region-choice",
+      "question": "Which region contains more countries in the “Recovered Together” quadrant?",
+      "options": [
+        {
+          "id": "Latin America & Caribbean",
+          "label": "Latin America & Caribbean"
+        },
+        {
+          "id": "East Asia & Pacific",
+          "label": "East Asia & Pacific"
+        },
+        {
+          "id": "Europe & Central Asia",
+          "label": "Europe & Central Asia"
+        }
+      ],
+      "correctOptionId": "Europe & Central Asia",
+      "rationale": "Europe & Central Asia has 23 countries with complete data in the “Recovered Together” quadrant, more than any other region compared here.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "thrive-feel",
+        "region": "Europe & Central Asia"
+      },
+      "highlightIso3s": [
+        "ALB",
+        "ARM",
+        "BIH",
+        "BGR",
+        "HRV",
+        "FRA",
+        "GEO",
+        "GRC",
+        "HUN",
+        "ITA",
+        "KAZ",
+        "KGZ",
+        "LVA",
+        "LTU",
+        "MDA",
+        "POL",
+        "PRT",
+        "ROU",
+        "RUS",
+        "SRB",
+        "SVK",
+        "SVN",
+        "ESP"
+      ],
+      "sourceMetrics": [
+        "thrive",
+        "feel"
+      ],
+      "years": []
+    },
+    {
+      "id": "region-7",
+      "type": "region-choice",
+      "question": "Which region contains more countries in the “Resilient Lives” quadrant?",
+      "options": [
+        {
+          "id": "Europe & Central Asia",
+          "label": "Europe & Central Asia"
+        },
+        {
+          "id": "Sub-Saharan Africa",
+          "label": "Sub-Saharan Africa"
+        },
+        {
+          "id": "Middle East, North Africa, Afghanistan & Pakistan",
+          "label": "Middle East & North Africa"
+        }
+      ],
+      "correctOptionId": "Sub-Saharan Africa",
+      "rationale": "Sub-Saharan Africa has 8 countries with complete data in the “Resilient Lives” quadrant, more than any other region compared here.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "thrive-feel",
+        "region": "Sub-Saharan Africa"
+      },
+      "highlightIso3s": [
+        "TCD",
+        "COG",
+        "GAB",
+        "LSO",
+        "MDG",
+        "MOZ",
+        "NAM",
+        "ZAF"
+      ],
+      "sourceMetrics": [
+        "thrive",
+        "feel"
+      ],
+      "years": []
+    },
+    {
+      "id": "region-8",
+      "type": "region-choice",
+      "question": "Which region contains more countries in the “Still Recovering” quadrant?",
+      "options": [
+        {
+          "id": "Sub-Saharan Africa",
+          "label": "Sub-Saharan Africa"
+        },
+        {
+          "id": "Middle East, North Africa, Afghanistan & Pakistan",
+          "label": "Middle East & North Africa"
+        },
+        {
+          "id": "Europe & Central Asia",
+          "label": "Europe & Central Asia"
+        }
+      ],
+      "correctOptionId": "Sub-Saharan Africa",
+      "rationale": "Sub-Saharan Africa has 4 countries with complete data in the “Still Recovering” quadrant, more than any other region compared here.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "thrive-feel",
+        "region": "Sub-Saharan Africa"
+      },
+      "highlightIso3s": [
+        "BWA",
+        "MWI",
+        "NGA",
+        "SOM"
+      ],
+      "sourceMetrics": [
+        "thrive",
+        "feel"
+      ],
+      "years": []
+    },
+    {
+      "id": "signal-9",
+      "type": "signal-choice",
+      "question": "For India, which signal recovered most strongly since 2019?",
+      "options": [
+        {
+          "id": "live",
+          "label": "LIVE"
+        },
+        {
+          "id": "thrive",
+          "label": "THRIVE"
+        },
+        {
+          "id": "connect",
+          "label": "CONNECT"
+        },
+        {
+          "id": "feel",
+          "label": "FEEL"
+        }
+      ],
+      "correctOptionId": "connect",
+      "rationale": "India's CONNECT signal moved +40.5 pp — the largest relative change among its available signals.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "connect-feel",
+        "region": "All regions",
+        "selectedIso3": "IND",
+        "spotlightIso3s": [
+          "IND"
+        ]
+      },
+      "highlightIso3s": [
+        "IND"
+      ],
+      "sourceMetrics": [
+        "live",
+        "thrive",
+        "connect",
+        "feel"
+      ],
+      "years": [
+        2019,
+        2025
+      ]
+    },
+    {
+      "id": "signal-10",
+      "type": "signal-choice",
+      "question": "For China, which signal recovered most strongly since 2019?",
+      "options": [
+        {
+          "id": "thrive",
+          "label": "THRIVE"
+        },
+        {
+          "id": "connect",
+          "label": "CONNECT"
+        },
+        {
+          "id": "feel",
+          "label": "FEEL"
+        },
+        {
+          "id": "live",
+          "label": "LIVE"
+        }
+      ],
+      "correctOptionId": "thrive",
+      "rationale": "China's THRIVE signal moved +33.2% — the largest relative change among its available signals.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "thrive-feel",
+        "region": "All regions",
+        "selectedIso3": "CHN",
+        "spotlightIso3s": [
+          "CHN"
+        ]
+      },
+      "highlightIso3s": [
+        "CHN"
+      ],
+      "sourceMetrics": [
+        "live",
+        "thrive",
+        "connect",
+        "feel"
+      ],
+      "years": [
+        2019,
+        2025
+      ]
+    },
+    {
+      "id": "signal-11",
+      "type": "signal-choice",
+      "question": "For United States, which signal recovered most strongly since 2019?",
+      "options": [
+        {
+          "id": "connect",
+          "label": "CONNECT"
+        },
+        {
+          "id": "feel",
+          "label": "FEEL"
+        },
+        {
+          "id": "live",
+          "label": "LIVE"
+        },
+        {
+          "id": "thrive",
+          "label": "THRIVE"
+        }
+      ],
+      "correctOptionId": "thrive",
+      "rationale": "United States's THRIVE signal moved +11.3% — the largest relative change among its available signals.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "thrive-feel",
+        "region": "All regions",
+        "selectedIso3": "USA",
+        "spotlightIso3s": [
+          "USA"
+        ]
+      },
+      "highlightIso3s": [
+        "USA"
+      ],
+      "sourceMetrics": [
+        "live",
+        "thrive",
+        "connect",
+        "feel"
+      ],
+      "years": [
+        2019,
+        2025
+      ]
+    },
+    {
+      "id": "signal-12",
+      "type": "signal-choice",
+      "question": "For Indonesia, which signal recovered most strongly since 2019?",
+      "options": [
+        {
+          "id": "feel",
+          "label": "FEEL"
+        },
+        {
+          "id": "live",
+          "label": "LIVE"
+        },
+        {
+          "id": "thrive",
+          "label": "THRIVE"
+        },
+        {
+          "id": "connect",
+          "label": "CONNECT"
+        }
+      ],
+      "correctOptionId": "connect",
+      "rationale": "Indonesia's CONNECT signal moved +25.1 pp — the largest relative change among its available signals.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "connect-feel",
+        "region": "All regions",
+        "selectedIso3": "IDN",
+        "spotlightIso3s": [
+          "IDN"
+        ]
+      },
+      "highlightIso3s": [
+        "IDN"
+      ],
+      "sourceMetrics": [
+        "live",
+        "thrive",
+        "connect",
+        "feel"
+      ],
+      "years": [
+        2019,
+        2025
+      ]
+    },
+    {
+      "id": "signal-13",
+      "type": "signal-choice",
+      "question": "For Pakistan, which signal recovered most strongly since 2019?",
+      "options": [
+        {
+          "id": "live",
+          "label": "LIVE"
+        },
+        {
+          "id": "thrive",
+          "label": "THRIVE"
+        },
+        {
+          "id": "connect",
+          "label": "CONNECT"
+        },
+        {
+          "id": "feel",
+          "label": "FEEL"
+        }
+      ],
+      "correctOptionId": "connect",
+      "rationale": "Pakistan's CONNECT signal moved +40.2 pp — the largest relative change among its available signals.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "connect-feel",
+        "region": "All regions",
+        "selectedIso3": "PAK",
+        "spotlightIso3s": [
+          "PAK"
+        ]
+      },
+      "highlightIso3s": [
+        "PAK"
+      ],
+      "sourceMetrics": [
+        "live",
+        "thrive",
+        "connect",
+        "feel"
+      ],
+      "years": [
+        2019,
+        2025
+      ]
+    },
+    {
+      "id": "signal-14",
+      "type": "signal-choice",
+      "question": "For Nigeria, which signal recovered most strongly since 2019?",
+      "options": [
+        {
+          "id": "thrive",
+          "label": "THRIVE"
+        },
+        {
+          "id": "connect",
+          "label": "CONNECT"
+        },
+        {
+          "id": "feel",
+          "label": "FEEL"
+        },
+        {
+          "id": "live",
+          "label": "LIVE"
+        }
+      ],
+      "correctOptionId": "live",
+      "rationale": "Nigeria's LIVE signal moved +1.6 yrs — the largest relative change among its available signals.",
+      "command": {
+        "type": "SET_VIEW",
+        "lens": "live-thrive",
+        "region": "All regions",
+        "selectedIso3": "NGA",
+        "spotlightIso3s": [
+          "NGA"
+        ]
+      },
+      "highlightIso3s": [
+        "NGA"
+      ],
+      "sourceMetrics": [
+        "live",
+        "thrive",
+        "connect",
+        "feel"
+      ],
+      "years": [
+        2019,
+        2025
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import * as echarts from "echarts/core";
 import { LinesChart, ScatterChart } from "echarts/charts";
 import { AriaComponent, GraphicComponent, GridComponent, TooltipComponent } from "echarts/components";
@@ -54,6 +54,15 @@ type Props = {
   selectedIso3: string | null;
   hoveredIso3: string | null;
   compareIso3?: string | null;
+  /** Driven by the companion (guided story scenes) and reusing the same
+   * mechanism the story cards used to — when set, every country listed is
+   * emphasized together and everything else dims. */
+  spotlightIso3s?: string[] | null;
+  spotlightLabel?: string;
+  /** A short-lived, narrower highlight specifically for a prediction
+   * reveal: tints the answer country and pulses once. Independent of
+   * spotlightIso3s so the two don't have to model the same shape. */
+  revealHighlight?: { iso3s: string[]; correct: boolean } | null;
   onSelect: (iso3: string) => void;
   onHover: (iso3: string | null) => void;
 };
@@ -66,10 +75,26 @@ export default function RecoveryOrbit({
   selectedIso3,
   hoveredIso3,
   compareIso3,
+  spotlightIso3s,
+  spotlightLabel,
+  revealHighlight,
   onSelect,
   onHover,
 }: Props) {
   const chartRef = useRef<HTMLDivElement>(null);
+  const [pulsing, setPulsing] = useState(false);
+
+  useEffect(() => {
+    if (!revealHighlight) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const startTimer = setTimeout(() => setPulsing(true), 0);
+    const stopTimer = setTimeout(() => setPulsing(false), 1400);
+    return () => {
+      clearTimeout(startTimer);
+      clearTimeout(stopTimer);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [revealHighlight?.iso3s.join(","), revealHighlight?.correct]);
 
   const plotted: PlottedCountry[] = useMemo(() => {
     const results: PlottedCountry[] = [];
@@ -110,12 +135,20 @@ export default function RecoveryOrbit({
       return 14 + ratio * 40;
     };
 
+    const highlightSet = new Set(spotlightIso3s ?? []);
+    const revealSet = new Set(revealHighlight?.iso3s ?? []);
+    const isHighlightActive = highlightSet.size > 0 || revealSet.size > 0;
+    const isEmphasized = (iso3: string) =>
+      isHighlightActive ? highlightSet.has(iso3) || revealSet.has(iso3) : iso3 === activeIso3 || iso3 === compareIso3;
     const isDimmed = (iso3: string) => {
+      if (isHighlightActive) return !highlightSet.has(iso3) && !revealSet.has(iso3);
       if (!activeIso3 && !compareIso3) return false;
       return iso3 !== activeIso3 && iso3 !== compareIso3;
     };
 
-    const focusPoints = plotted.filter((p) => [activeIso3, compareIso3].includes(p.country.iso3));
+    const focusPoints = plotted.filter(
+      (p) => highlightSet.has(p.country.iso3) || revealSet.has(p.country.iso3) || [activeIso3, compareIso3].includes(p.country.iso3),
+    );
     const xBounds = percentileBounds(
       plotted.map((p) => p.x),
       focusPoints.map((p) => p.x),
@@ -139,8 +172,8 @@ export default function RecoveryOrbit({
         iso3: p.country.iso3,
         lineStyle: {
           color: REGION_COLORS[p.country.region] ?? "#aab6c5",
-          opacity: isDimmed(p.country.iso3) ? 0.06 : p.country.iso3 === activeIso3 ? 0.75 : 0.22,
-          width: p.country.iso3 === activeIso3 ? 2.4 : 1.2,
+          opacity: isDimmed(p.country.iso3) ? 0.06 : isEmphasized(p.country.iso3) ? 0.75 : 0.22,
+          width: isEmphasized(p.country.iso3) ? 2.4 : 1.2,
           curveness: 0.08,
         },
       }));
@@ -162,31 +195,36 @@ export default function RecoveryOrbit({
       const isSelected = p.country.iso3 === selectedIso3;
       const isHovered = p.country.iso3 === hoveredIso3;
       const isCompare = p.country.iso3 === compareIso3;
+      const isHighlighted = highlightSet.has(p.country.iso3);
+      const isRevealed = revealSet.has(p.country.iso3);
+      const isPrimary = isSelected || isCompare;
+      const showLabel = isPrimary || isHovered || isHighlighted || isRevealed;
+      const revealColor = isRevealed ? (revealHighlight?.correct ? "#63d8e5" : "#ff8f7f") : null;
+      const isPulsingThis = pulsing && isRevealed;
       return {
         value: [p.x, p.y, p.country.population ?? 0],
         iso3: p.country.iso3,
         country: p.country,
-        symbolSize: bubbleSize(p.country.population),
+        symbolSize: bubbleSize(p.country.population) * (isPulsingThis ? 1.25 : 1),
         itemStyle: {
           color: REGION_COLORS[p.country.region] ?? "#aab6c5",
-          borderColor: isSelected || isCompare ? "#ffffff" : "#1b212b",
-          borderWidth: isSelected || isCompare ? 3.5 : 1.5,
+          borderColor: revealColor ?? (isPrimary ? "#ffffff" : isHighlighted ? "rgba(255,255,255,.65)" : "#1b212b"),
+          borderWidth: isPrimary ? 3.5 : isHighlighted || isRevealed ? 2.6 : 1.5,
           opacity: isDimmed(p.country.iso3) ? 0.18 : 0.9,
-          shadowBlur: isSelected || isHovered ? 20 : 0,
-          shadowColor: REGION_COLORS[p.country.region],
+          shadowBlur: isPrimary || isHovered || isHighlighted || isRevealed ? (isPulsingThis ? 26 : 18) : 0,
+          shadowColor: revealColor ?? REGION_COLORS[p.country.region],
         },
-        label:
-          isSelected || isHovered || isCompare
-            ? {
-                show: true,
-                formatter: p.country.country,
-                position: "top" as const,
-                distance: 10,
-                color: "#f5f0e8",
-                fontWeight: 700,
-                fontSize: 12,
-              }
-            : { show: false },
+        label: showLabel
+          ? {
+              show: true,
+              formatter: p.country.country,
+              position: "top" as const,
+              distance: 10,
+              color: "#f5f0e8",
+              fontWeight: isPrimary ? 700 : 600,
+              fontSize: isPrimary ? 12 : 11,
+            }
+          : { show: false },
       };
     });
 
@@ -289,7 +327,7 @@ export default function RecoveryOrbit({
       chart.dispose();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [plotted, lens, selectedIso3, hoveredIso3, compareIso3, activeIso3]);
+  }, [plotted, lens, selectedIso3, hoveredIso3, compareIso3, activeIso3, spotlightIso3s, revealHighlight, pulsing]);
 
   const legendRegions = Array.from(new Set(countries.map((c) => c.region))).sort();
 
@@ -335,7 +373,13 @@ export default function RecoveryOrbit({
                 <button
                   key={p.country.iso3}
                   type="button"
-                  className={p.country.iso3 === selectedIso3 ? "is-selected" : ""}
+                  className={
+                    p.country.iso3 === selectedIso3
+                      ? "is-selected"
+                      : spotlightIso3s?.includes(p.country.iso3)
+                        ? "is-spotlighted"
+                        : ""
+                  }
                   onFocus={() => onHover(p.country.iso3)}
                   onBlur={() => onHover(null)}
                   onMouseEnter={() => onHover(p.country.iso3)}
@@ -357,7 +401,11 @@ export default function RecoveryOrbit({
       )}
       <p className="chart-caption">
         <span>Bubble area represents population. Faint ring marks each country&apos;s {countries[0]?.thrive.baselineYear ?? 2019} baseline; the line traces its path to {year}.</span>
-        <span>Axes are scaled to the typical range so extreme outliers don&apos;t compress every other country — select or search a country to bring it into view.</span>
+        {spotlightIso3s && spotlightIso3s.length > 0 ? (
+          <span>{spotlightLabel ?? `Highlighting ${spotlightIso3s.length} countries`} — select any other country to clear it.</span>
+        ) : (
+          <span>Axes are scaled to the typical range so extreme outliers don&apos;t compress every other country — select or search a country to bring it into view.</span>
+        )}
       </p>
     </div>
   );

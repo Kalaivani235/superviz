@@ -16,7 +16,8 @@
     "data:transform": "node scripts/transform-data.mjs",
     "data:validate": "node scripts/validate-data.mjs",
     "data:stories": "node scripts/generate-stories.mjs",
-    "data:build": "npm run data:fetch && npm run data:transform && npm run data:validate && npm run data:stories"
+    "data:companion-questions": "node scripts/generate-companion-questions.mjs",
+    "data:build": "npm run data:fetch && npm run data:transform && npm run data:validate && npm run data:stories && npm run data:companion-questions"
   },
   "dependencies": {
     "echarts": "^6.1.0",
