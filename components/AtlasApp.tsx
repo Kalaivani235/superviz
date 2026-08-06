@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { aggregateHeadlineMetrics, datasetYearRange, deriveCountryRecovery } from "@/lib/calculations";
 import { LENSES, NAV_SECTIONS, REGION_ORDER } from "@/lib/constants";
 import { shortRegionLabel } from "@/lib/formatting";
-import type { LensKey, Story } from "@/lib/types";
+import type { LensKey } from "@/lib/types";
 import { useAtlasData } from "@/lib/useAtlasData";
 import ComparePanel from "./ComparePanel";
 import CountryPanel from "./CountryPanel";
@@ -30,15 +30,6 @@ export default function AtlasApp() {
   const [region, setRegion] = useState("All regions");
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeSection, setActiveSection] = useState("overview");
-  const [storySpotlight, setStorySpotlight] = useState<string[] | null>(null);
-
-  // Manual country selection (search, clicking a bubble, the keyboard list)
-  // always clears any active story spotlight — picking a country yourself
-  // means you've left "look at this story" mode.
-  const selectCountry = useCallback((iso3: string) => {
-    setSelectedIso3(iso3);
-    setStorySpotlight(null);
-  }, []);
 
   const recoveries = useMemo(() => (dataset ? dataset.countries.map(deriveCountryRecovery) : []), [dataset]);
   const yearRange = useMemo(
@@ -93,20 +84,12 @@ export default function AtlasApp() {
     ...REGION_ORDER.filter((r) => dataset.countries.some((c) => c.region === r)),
   ];
 
-  const handleViewStory = (story: Story) => {
-    setLens(story.lens);
-    setSelectedIso3(story.highlightIso3);
-    setStorySpotlight(story.countries);
-    setRegion(story.region ?? "All regions");
-    scrollToSection("explore");
-  };
-
   return (
     <main>
       <a className="skip-link" href="#overview">
         Skip to main content
       </a>
-      <Header activeSection={activeSection} onNavigate={scrollToSection} countries={dataset.countries} onSelectCountry={selectCountry} />
+      <Header activeSection={activeSection} onNavigate={scrollToSection} countries={dataset.countries} onSelectCountry={setSelectedIso3} />
 
       <Hero
         countryCount={coverage.totalCountries}
@@ -150,7 +133,6 @@ export default function AtlasApp() {
               setYear(yearRange[1]);
               setHoveredIso3(null);
               setIsPlaying(false);
-              setStorySpotlight(null);
             }}
           >
             Reset view
@@ -165,8 +147,7 @@ export default function AtlasApp() {
           selectedIso3={effectiveSelectedIso3}
           hoveredIso3={hoveredIso3}
           compareIso3={countryB?.iso3 ?? null}
-          spotlightIso3s={storySpotlight}
-          onSelect={selectCountry}
+          onSelect={setSelectedIso3}
           onHover={setHoveredIso3}
         />
 
@@ -210,7 +191,7 @@ export default function AtlasApp() {
         />
       </section>
 
-      <StoriesSection stories={stories.stories} recoveries={recoveries} onViewStory={handleViewStory} />
+      <StoriesSection stories={stories.stories} recoveries={recoveries} />
 
       <Methodology metadata={metadata} coverage={coverage} />
 

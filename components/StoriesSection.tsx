@@ -6,10 +6,9 @@ import StoryChart from "./StoryChart";
 type Props = {
   stories: Story[];
   recoveries: CountryRecovery[];
-  onViewStory: (story: Story) => void;
 };
 
-export default function StoriesSection({ stories, recoveries, onViewStory }: Props) {
+export default function StoriesSection({ stories, recoveries }: Props) {
   const countryName = (iso3: string) => recoveries.find((c) => c.iso3 === iso3)?.country ?? iso3;
 
   return (
@@ -31,9 +30,6 @@ export default function StoriesSection({ stories, recoveries, onViewStory }: Pro
                 <span>{story.years.join("–")}</span>
               </div>
               <StoryChart story={story} recoveries={recoveries} />
-              <button type="button" onClick={() => onViewStory(story)}>
-                View in visualization →
-              </button>
             </article>
           ))}
         </div>
