@@ -67,6 +67,7 @@ export type DatasetMetadata = {
   baselineNote: string;
   latestNote: string;
   missingDataNote: string;
+  coverageScopeNote: string;
   sources: SourceDefinition[];
 };
 
@@ -81,6 +82,7 @@ export type CoverageIndicatorStat = {
 export type CoverageReport = {
   generatedAt: string;
   totalCountries: number;
+  excludedByPopulationCap: number;
   byIndicator: Record<MetricKey, CoverageIndicatorStat>;
   fullyCoveredCountries: number;
   regions: string[];

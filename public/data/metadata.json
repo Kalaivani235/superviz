@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-08-06T09:20:10.160Z",
+  "generatedAt": "2026-08-06T11:55:06.591Z",
   "baselineYear": 2019,
   "baselineNote": "LIVE, THRIVE and CONNECT use the calendar year 2019 as the pre-pandemic baseline. FEEL uses a 2017–2019 survey average because life-satisfaction sampling is sparser and noisier year to year.",
   "latestNote": "LIVE, THRIVE and CONNECT use each country's most recent available observation, which differs by indicator and by country. FEEL uses the average of all available survey years from 2022 onward.",
   "missingDataNote": "A null value means the source has no observation for that country/year/indicator. Missing values are never estimated, interpolated or replaced — they are shown as unavailable and excluded from averages and comparisons that require them.",
+  "coverageScopeNote": "This atlas covers the 150 most populous economies with usable data, so the experience stays focused on widely-recognized countries rather than every micro-territory a source tracks. Ranking is by total population (most recent available), the only objective proxy for global prominence present in the source data. 67 smaller economies were excluded on this basis.",
   "sources": [
     {
       "id": "world-bank-gdp",

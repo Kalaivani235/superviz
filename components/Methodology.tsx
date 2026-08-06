@@ -24,6 +24,10 @@ export default function Methodology({ metadata, coverage }: Props) {
             <p>{metadata.baselineNote}</p>
           </details>
           <details>
+            <summary>Which countries are included?</summary>
+            <p>{metadata.coverageScopeNote}</p>
+          </details>
+          <details>
             <summary>How are years aligned across indicators?</summary>
             <p>{metadata.latestNote}</p>
           </details>

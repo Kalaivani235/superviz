@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-08-06T09:20:10.162Z",
-  "totalCountries": 217,
+  "generatedAt": "2026-08-06T11:55:06.592Z",
+  "totalCountries": 150,
+  "excludedByPopulationCap": 67,
   "byIndicator": {
     "live": {
-      "countriesWithBaseline": 217,
-      "countriesWithLatest": 217,
-      "countriesWithBoth": 217,
-      "earliestYear": 2010,
+      "countriesWithBaseline": 150,
+      "countriesWithLatest": 150,
+      "countriesWithBoth": 150,
+      "earliestYear": 2015,
       "latestYear": 2024
     },
     "thrive": {
-      "countriesWithBaseline": 208,
-      "countriesWithLatest": 213,
-      "countriesWithBoth": 208,
-      "earliestYear": 2010,
+      "countriesWithBaseline": 146,
+      "countriesWithLatest": 148,
+      "countriesWithBoth": 146,
+      "earliestYear": 2015,
       "latestYear": 2025
     },
     "connect": {
-      "countriesWithBaseline": 189,
-      "countriesWithLatest": 209,
-      "countriesWithBoth": 189,
-      "earliestYear": 2010,
+      "countriesWithBaseline": 146,
+      "countriesWithLatest": 149,
+      "countriesWithBoth": 146,
+      "earliestYear": 2015,
       "latestYear": 2025
     },
     "feel": {
-      "countriesWithBaseline": 157,
-      "countriesWithLatest": 145,
-      "countriesWithBoth": 144,
-      "earliestYear": 2011,
+      "countriesWithBaseline": 142,
+      "countriesWithLatest": 132,
+      "countriesWithBoth": 131,
+      "earliestYear": 2015,
       "latestYear": 2025
     }
   },
-  "fullyCoveredCountries": 143,
+  "fullyCoveredCountries": 130,
   "regions": [
     "East Asia & Pacific",
     "Europe & Central Asia",
@@ -42,12 +43,12 @@
     "Sub-Saharan Africa"
   ],
   "regionCounts": {
-    "East Asia & Pacific": 37,
-    "Europe & Central Asia": 58,
-    "Latin America & Caribbean": 42,
-    "Middle East, North Africa, Afghanistan & Pakistan": 23,
-    "North America": 3,
-    "South Asia": 6,
-    "Sub-Saharan Africa": 48
+    "East Asia & Pacific": 18,
+    "Europe & Central Asia": 42,
+    "Latin America & Caribbean": 22,
+    "Middle East, North Africa, Afghanistan & Pakistan": 20,
+    "North America": 2,
+    "South Asia": 4,
+    "Sub-Saharan Africa": 42
   }
 }

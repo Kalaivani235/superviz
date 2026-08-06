@@ -14,7 +14,7 @@ const WB_INDICATORS = {
   population: "SP.POP.TOTL",
 };
 
-const YEAR_RANGE = "2010:2025";
+const YEAR_RANGE = "2015:2025";
 
 async function fetchJson(url, attempt = 1) {
   const res = await fetch(url, { headers: { "user-agent": "recovery-atlas-data-pipeline" } });

@@ -52,6 +52,14 @@ function fmtPts(value, digits = 2) {
   return `${value >= 0 ? "+" : ""}${value.toFixed(digits)}`;
 }
 
+const REGION_SHORT_LABELS = {
+  "Middle East, North Africa, Afghanistan & Pakistan": "Middle East & North Africa",
+};
+
+function shortRegion(region) {
+  return REGION_SHORT_LABELS[region] ?? region;
+}
+
 async function main() {
   const dataset = JSON.parse(await readFile(DATASET_PATH, "utf-8"));
   const recoveries = dataset.countries.map(deriveRecovery);
@@ -149,8 +157,8 @@ async function main() {
     const lowest = sorted[sorted.length - 1];
     stories.push({
       id: "uneven-region",
-      headline: `${top.region} shows the widest recovery spread of any region`,
-      insight: `Within ${top.region}, real GDP per person ranges from ${fmtPct(lowest.thrivePct)} at ${lowest.country} to ${fmtPct(highest.thrivePct)} at ${highest.country} against the same 2019 baseline — one region, very different recoveries.`,
+      headline: `${shortRegion(top.region)} shows the widest recovery spread of any region`,
+      insight: `Within ${shortRegion(top.region)}, real GDP per person ranges from ${fmtPct(lowest.thrivePct)} at ${lowest.country} to ${fmtPct(highest.thrivePct)} at ${highest.country} against the same 2019 baseline — one region, very different recoveries.`,
       countries: [highest.iso3, lowest.iso3],
       years: [dataset.baselineYear, "latest"],
       metrics: ["thrive"],

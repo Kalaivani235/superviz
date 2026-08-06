@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase,
   title: "Recovery Atlas — How the world recovered after COVID",
   description:
-    "An interactive global atlas exploring how 200+ economies recovered economically, physically, digitally and emotionally after COVID-19, built on public World Bank and World Happiness Report data.",
+    "An interactive global atlas exploring how the world's 150 most populous economies recovered economically, physically, digitally and emotionally after COVID-19, built on public World Bank and World Happiness Report data.",
   applicationName: "Recovery Atlas",
   openGraph: {
     title: "Recovery Atlas — How the world recovered after COVID",

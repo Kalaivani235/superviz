@@ -1,6 +1,6 @@
 # Recovery Atlas
 
-An interactive global atlas exploring how economies recovered — economically, physically, digitally and emotionally — after COVID-19. Built on public World Bank and World Happiness Report data across 217 economies.
+An interactive global atlas exploring how economies recovered — economically, physically, digitally and emotionally — after COVID-19. Built on public World Bank and World Happiness Report data across the 150 most populous economies, 2015–2025.
 
 > **The world reopened. Did life truly recover?** Economic activity returned quickly in many places. Health, connection and wellbeing followed very different paths.
 

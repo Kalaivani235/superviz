@@ -30,8 +30,8 @@ npm run data:build                                   runs all four in sequence
 
 Nothing in the Next.js app calls a data API at request time. All four scripts run at development/build time; the frontend only ever reads the static files under `public/data/`.
 
-1. **fetch-data** calls the public World Bank API (`api.worldbank.org/v2/...`, no key required) for country metadata and each indicator across 2010–2025, and downloads the Our World in Data happiness CSV. Raw responses are committed under `data/raw/` unmodified, so the exact source payload is always reproducible and auditable.
-2. **transform-data** filters World Bank's country list down to actual economies (`region.id !== "NA"`, which excludes aggregates like "World" or "OECD members"), builds a year-indexed series per country per indicator, and computes the baseline/latest figures described below. Output is rounded to 3 decimal places to keep the static bundle small; raw, unrounded source values remain in `data/raw/`.
+1. **fetch-data** calls the public World Bank API (`api.worldbank.org/v2/...`, no key required) for country metadata and each indicator across 2015–2025, and downloads the Our World in Data happiness CSV. Raw responses are committed under `data/raw/` unmodified, so the exact source payload is always reproducible and auditable.
+2. **transform-data** filters World Bank's country list down to actual economies (`region.id !== "NA"`, which excludes aggregates like "World" or "OECD members"), drops any happiness observation before 2015, builds a year-indexed series per country per indicator, computes the baseline/latest figures described below, then keeps only the **150 most populous** of those economies (see §6) and rounds output to 3 decimal places to keep the static bundle small. Raw, unrounded, unfiltered source values remain in `data/raw/`.
 3. **validate-data** checks structural integrity (ascending years, valid ISO3 codes, numeric-or-null values, no duplicate countries) and writes a pass/fail report.
 4. **generate-stories** re-derives the curated Stories mode directly from the transformed dataset (see `docs/interaction-model.md`) — no story content is written before this step runs against real numbers.
 
@@ -57,11 +57,15 @@ Defined once in `lib/calculations.ts` and reused everywhere in the UI — there 
 
 There is no weighted composite "recovery score." Each dimension is shown independently; the only cross-dimension read is the THRIVE-vs-FEEL quadrant classification (`lib/calculations.ts: classifyRecoveryPath`) used for the Recovery Orbit's four labeled quadrants, and that classification is descriptive (which direction each axis moved), not a weighting or ranking.
 
-## 6. Coverage (as of the last pipeline run)
+## 6. Country scope: top 150 by population
 
-See `public/data/coverage.json` for the live numbers, regenerated on every `npm run data:transform`. As of this dataset build: 217 economies included, 143 with complete baseline-and-latest data on all four dimensions. Per-indicator coverage and observed year ranges are in the same file, and summarized in the in-app Methodology section.
+The pipeline builds the full set of economies with any usable data first, then keeps only the **150 most populous** (`TOP_N_COUNTRIES` in `scripts/transform-data.mjs`), ranked by each country's most recent World Bank population figure. This is a deliberate scope decision, not a data-quality exclusion: the goal is an atlas of widely-recognized countries rather than every micro-territory a source happens to track. Population is used as the ranking criterion because it is the only objective, source-backed proxy for "prominence" available — there is no editorial curation of which countries feel more or less significant. A country with no population figure at all would rank last and likely be excluded; in practice every country that clears any population threshold worth discussing has one. The exact exclusion count for the current build is recorded in `coverage.json` (`excludedByPopulationCap`) and surfaced in the app's Methodology section.
 
-## 7. Re-running the pipeline
+## 7. Coverage (as of the last pipeline run)
+
+See `public/data/coverage.json` for the live numbers, regenerated on every `npm run data:transform`. As of this dataset build: 150 economies included (67 smaller economies excluded by the population cap above), 130 with complete baseline-and-latest data on all four dimensions. Per-indicator coverage and observed year ranges are in the same file, and summarized in the in-app Methodology section.
+
+## 8. Re-running the pipeline
 
 ```bash
 npm run data:build

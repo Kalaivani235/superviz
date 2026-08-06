@@ -14,6 +14,8 @@ const PUBLIC_DATA_DIR = path.join(ROOT, "public/data");
 const BASELINE_YEAR = 2019;
 const FEEL_BASELINE_WINDOW = [2017, 2019];
 const FEEL_LATEST_WINDOW_START = 2022;
+const TOP_N_COUNTRIES = 150;
+const MIN_YEAR = 2015;
 
 const SOURCES = {
   "world-bank-gdp": {
@@ -175,6 +177,7 @@ async function main() {
     const numericValue = Number(value);
     const numericYear = Number(year);
     if (!Number.isFinite(numericValue) || !Number.isInteger(numericYear)) continue;
+    if (numericYear < MIN_YEAR) continue;
     if (!happinessMap.has(code)) happinessMap.set(code, new Map());
     happinessMap.get(code).set(numericYear, numericValue);
   }
@@ -205,7 +208,16 @@ async function main() {
     });
   }
 
-  countries.sort((a, b) => a.country.localeCompare(b.country));
+  // Keep only the top N countries by population — the most defensible
+  // objective proxy for global prominence available in the source data —
+  // so the atlas stays focused on widely-recognized economies rather than
+  // every micro-territory the World Bank tracks. Countries with no
+  // population figure rank last and are excluded if the cut lands above them.
+  const rankedByPopulation = [...countries].sort((a, b) => (b.population ?? -1) - (a.population ?? -1));
+  const excludedByPopulationCap = Math.max(0, rankedByPopulation.length - TOP_N_COUNTRIES);
+  const keptIso3 = new Set(rankedByPopulation.slice(0, TOP_N_COUNTRIES).map((c) => c.iso3));
+  const topCountries = countries.filter((c) => keptIso3.has(c.iso3));
+  topCountries.sort((a, b) => a.country.localeCompare(b.country));
 
   const now = new Date().toISOString().slice(0, 10);
   const dataset = {
@@ -213,7 +225,7 @@ async function main() {
     dataAsOf: now,
     refreshDate: now,
     baselineYear: BASELINE_YEAR,
-    countries,
+    countries: topCountries,
   };
 
   await writeFile(path.join(PROCESSED_DIR, "dataset.json"), JSON.stringify(dataset, null, 2));
@@ -226,6 +238,7 @@ async function main() {
     baselineNote: "LIVE, THRIVE and CONNECT use the calendar year 2019 as the pre-pandemic baseline. FEEL uses a 2017–2019 survey average because life-satisfaction sampling is sparser and noisier year to year.",
     latestNote: "LIVE, THRIVE and CONNECT use each country's most recent available observation, which differs by indicator and by country. FEEL uses the average of all available survey years from 2022 onward.",
     missingDataNote: "A null value means the source has no observation for that country/year/indicator. Missing values are never estimated, interpolated or replaced — they are shown as unavailable and excluded from averages and comparisons that require them.",
+    coverageScopeNote: `This atlas covers the ${TOP_N_COUNTRIES} most populous economies with usable data, so the experience stays focused on widely-recognized countries rather than every micro-territory a source tracks. Ranking is by total population (most recent available), the only objective proxy for global prominence present in the source data. ${excludedByPopulationCap} smaller economies were excluded on this basis.`,
     sources: Object.values(SOURCES),
   };
   await writeFile(path.join(PUBLIC_DATA_DIR, "metadata.json"), JSON.stringify(metadata, null, 2));
@@ -233,13 +246,14 @@ async function main() {
   const indicatorKeys = ["live", "thrive", "connect", "feel"];
   const coverage = {
     generatedAt: new Date().toISOString(),
-    totalCountries: countries.length,
+    totalCountries: topCountries.length,
+    excludedByPopulationCap,
     byIndicator: Object.fromEntries(
       indicatorKeys.map((key) => {
-        const withBaseline = countries.filter((c) => c[key].baselineValue !== null).length;
-        const withLatest = countries.filter((c) => c[key].latestValue !== null).length;
-        const withBoth = countries.filter((c) => c[key].baselineValue !== null && c[key].latestValue !== null).length;
-        const years = countries.flatMap((c) => c[key].values.map((v) => v.year));
+        const withBaseline = topCountries.filter((c) => c[key].baselineValue !== null).length;
+        const withLatest = topCountries.filter((c) => c[key].latestValue !== null).length;
+        const withBoth = topCountries.filter((c) => c[key].baselineValue !== null && c[key].latestValue !== null).length;
+        const years = topCountries.flatMap((c) => c[key].values.map((v) => v.year));
         return [
           key,
           {
@@ -252,19 +266,19 @@ async function main() {
         ];
       }),
     ),
-    fullyCoveredCountries: countries.filter((c) =>
+    fullyCoveredCountries: topCountries.filter((c) =>
       indicatorKeys.every((key) => c[key].baselineValue !== null && c[key].latestValue !== null),
     ).length,
-    regions: Array.from(new Set(countries.map((c) => c.region))).sort(),
+    regions: Array.from(new Set(topCountries.map((c) => c.region))).sort(),
     regionCounts: Object.fromEntries(
-      Array.from(new Set(countries.map((c) => c.region)))
+      Array.from(new Set(topCountries.map((c) => c.region)))
         .sort()
-        .map((region) => [region, countries.filter((c) => c.region === region).length]),
+        .map((region) => [region, topCountries.filter((c) => c.region === region).length]),
     ),
   };
   await writeFile(path.join(PUBLIC_DATA_DIR, "coverage.json"), JSON.stringify(coverage, null, 2));
 
-  console.log(`Transformed ${countries.length} countries.`);
+  console.log(`Transformed ${topCountries.length} countries (top ${TOP_N_COUNTRIES} by population; ${excludedByPopulationCap} smaller economies excluded).`);
   console.log(`Fully covered (all 4 dimensions, baseline+latest): ${coverage.fullyCoveredCountries}`);
   console.log("Per-indicator coverage:", coverage.byIndicator);
 }
