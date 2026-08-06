@@ -169,7 +169,7 @@ export default function RecoveryOrbit({
         symbolSize: bubbleSize(p.country.population),
         itemStyle: {
           color: REGION_COLORS[p.country.region] ?? "#aab6c5",
-          borderColor: isSelected || isCompare ? "#ffffff" : "#07111f",
+          borderColor: isSelected || isCompare ? "#ffffff" : "#1b212b",
           borderWidth: isSelected || isCompare ? 3.5 : 1.5,
           opacity: isDimmed(p.country.iso3) ? 0.18 : 0.9,
           shadowBlur: isSelected || isHovered ? 20 : 0,
@@ -200,8 +200,8 @@ export default function RecoveryOrbit({
       grid: { left: 64, right: 34, top: 54, bottom: 62, containLabel: false },
       tooltip: {
         trigger: "item",
-        backgroundColor: "#102236",
-        borderColor: "#31455c",
+        backgroundColor: "#242c39",
+        borderColor: "#3d4757",
         textStyle: { color: "#f5f0e8", fontFamily: "sans-serif" },
         extraCssText: "border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.35);padding:14px 16px;max-width:300px",
         formatter: (params: unknown) => {
