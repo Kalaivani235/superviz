@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T17:49:49.462Z",
+  "generatedAt": "2026-08-07T10:59:04.891Z",
   "questions": [
     {
       "id": "country-1",
@@ -171,39 +171,40 @@
       "question": "Which region contains more countries in the “Prosperity Without Healing” quadrant?",
       "options": [
         {
-          "id": "Europe & Central Asia",
-          "label": "Europe & Central Asia"
-        },
-        {
           "id": "Sub-Saharan Africa",
           "label": "Sub-Saharan Africa"
         },
         {
-          "id": "Latin America & Caribbean",
-          "label": "Latin America & Caribbean"
+          "id": "Europe & Central Asia",
+          "label": "Europe & Central Asia"
+        },
+        {
+          "id": "Middle East, North Africa, Afghanistan & Pakistan",
+          "label": "Middle East & North Africa"
         }
       ],
-      "correctOptionId": "Europe & Central Asia",
-      "rationale": "Europe & Central Asia has 13 countries with complete data in the “Prosperity Without Healing” quadrant, more than any other region compared here.",
+      "correctOptionId": "Sub-Saharan Africa",
+      "rationale": "Sub-Saharan Africa has 14 countries with complete data in the “Prosperity Without Healing” quadrant, more than any other region compared here.",
       "command": {
         "type": "SET_VIEW",
         "lens": "thrive-feel",
-        "region": "Europe & Central Asia"
+        "region": "Sub-Saharan Africa"
       },
       "highlightIso3s": [
-        "AZE",
-        "BEL",
-        "CZE",
-        "DNK",
-        "IRL",
-        "NLD",
-        "NOR",
-        "SWE",
-        "CHE",
-        "TJK",
-        "TUR",
-        "GBR",
-        "UZB"
+        "BEN",
+        "BFA",
+        "CMR",
+        "COM",
+        "COD",
+        "SWZ",
+        "ETH",
+        "GMB",
+        "GHA",
+        "MLI",
+        "MUS",
+        "SLE",
+        "ZMB",
+        "ZWE"
       ],
       "sourceMetrics": [
         "thrive",
@@ -230,7 +231,7 @@
         }
       ],
       "correctOptionId": "Europe & Central Asia",
-      "rationale": "Europe & Central Asia has 23 countries with complete data in the “Recovered Together” quadrant, more than any other region compared here.",
+      "rationale": "Europe & Central Asia has 27 countries with complete data in the “Recovered Together” quadrant, more than any other region compared here.",
       "command": {
         "type": "SET_VIEW",
         "lens": "thrive-feel",
@@ -242,16 +243,20 @@
         "BIH",
         "BGR",
         "HRV",
+        "CYP",
         "FRA",
         "GEO",
         "GRC",
         "HUN",
+        "ISL",
         "ITA",
         "KAZ",
         "KGZ",
         "LVA",
         "LTU",
         "MDA",
+        "MNE",
+        "MKD",
         "POL",
         "PRT",
         "ROU",

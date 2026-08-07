@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-08-06T11:55:06.592Z",
-  "totalCountries": 150,
-  "excludedByPopulationCap": 67,
+  "generatedAt": "2026-08-07T10:57:53.153Z",
+  "totalCountries": 143,
+  "excludedByPopulationCap": 0,
   "byIndicator": {
     "live": {
-      "countriesWithBaseline": 150,
-      "countriesWithLatest": 150,
-      "countriesWithBoth": 150,
+      "countriesWithBaseline": 143,
+      "countriesWithLatest": 143,
+      "countriesWithBoth": 143,
       "earliestYear": 2015,
       "latestYear": 2024
     },
     "thrive": {
-      "countriesWithBaseline": 146,
-      "countriesWithLatest": 148,
-      "countriesWithBoth": 146,
+      "countriesWithBaseline": 143,
+      "countriesWithLatest": 143,
+      "countriesWithBoth": 143,
       "earliestYear": 2015,
       "latestYear": 2025
     },
     "connect": {
-      "countriesWithBaseline": 146,
-      "countriesWithLatest": 149,
-      "countriesWithBoth": 146,
+      "countriesWithBaseline": 143,
+      "countriesWithLatest": 143,
+      "countriesWithBoth": 143,
       "earliestYear": 2015,
       "latestYear": 2025
     },
     "feel": {
-      "countriesWithBaseline": 142,
-      "countriesWithLatest": 132,
-      "countriesWithBoth": 131,
+      "countriesWithBaseline": 143,
+      "countriesWithLatest": 143,
+      "countriesWithBoth": 143,
       "earliestYear": 2015,
       "latestYear": 2025
     }
   },
-  "fullyCoveredCountries": 130,
+  "fullyCoveredCountries": 143,
   "regions": [
     "East Asia & Pacific",
     "Europe & Central Asia",
@@ -43,12 +43,12 @@
     "Sub-Saharan Africa"
   ],
   "regionCounts": {
-    "East Asia & Pacific": 18,
-    "Europe & Central Asia": 42,
-    "Latin America & Caribbean": 22,
-    "Middle East, North Africa, Afghanistan & Pakistan": 20,
+    "East Asia & Pacific": 16,
+    "Europe & Central Asia": 46,
+    "Latin America & Caribbean": 21,
+    "Middle East, North Africa, Afghanistan & Pakistan": 18,
     "North America": 2,
     "South Asia": 4,
-    "Sub-Saharan Africa": 42
+    "Sub-Saharan Africa": 36
   }
 }

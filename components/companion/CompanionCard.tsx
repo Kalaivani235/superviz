@@ -5,10 +5,9 @@ type Props = {
   prompt: CompanionPrompt;
   onAction: (id: CompanionActionId) => void;
   onMinimize: () => void;
-  onDismiss: () => void;
 };
 
-export default function CompanionCard({ prompt, onAction, onMinimize, onDismiss }: Props) {
+export default function CompanionCard({ prompt, onAction, onMinimize }: Props) {
   return (
     <div className="companion-card" role="status" aria-live="polite">
       <div className="companion-card-head">
@@ -16,9 +15,6 @@ export default function CompanionCard({ prompt, onAction, onMinimize, onDismiss 
         <div className="companion-card-controls">
           <button type="button" onClick={onMinimize} aria-label="Minimize guide">
             −
-          </button>
-          <button type="button" onClick={onDismiss} aria-label="Close guide">
-            ×
           </button>
         </div>
       </div>

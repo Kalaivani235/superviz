@@ -1,7 +1,7 @@
 {
   "mode": "validated",
-  "dataAsOf": "2026-08-06",
-  "refreshDate": "2026-08-06",
+  "dataAsOf": "2026-08-07",
+  "refreshDate": "2026-08-07",
   "baselineYear": 2019,
   "countries": [
     {
@@ -679,194 +679,6 @@
           2024,
           2025
         ]
-      }
-    },
-    {
-      "iso3": "AGO",
-      "country": "Angola",
-      "region": "Sub-Saharan Africa",
-      "incomeGroup": "Lower middle income",
-      "population": 39040039,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 61.042
-          },
-          {
-            "year": 2016,
-            "value": 61.619
-          },
-          {
-            "year": 2017,
-            "value": 62.122
-          },
-          {
-            "year": 2018,
-            "value": 62.622
-          },
-          {
-            "year": 2019,
-            "value": 63.051
-          },
-          {
-            "year": 2020,
-            "value": 63.116
-          },
-          {
-            "year": 2021,
-            "value": 62.958
-          },
-          {
-            "year": 2022,
-            "value": 64.246
-          },
-          {
-            "year": 2023,
-            "value": 64.617
-          },
-          {
-            "year": 2024,
-            "value": 64.805
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 63.051,
-        "latestYear": 2024,
-        "latestValue": 64.805
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 3641.729
-          },
-          {
-            "year": 2016,
-            "value": 3505.596
-          },
-          {
-            "year": 2017,
-            "value": 3378.076
-          },
-          {
-            "year": 2018,
-            "value": 3246.879
-          },
-          {
-            "year": 2019,
-            "value": 3105.6
-          },
-          {
-            "year": 2020,
-            "value": 2847.242
-          },
-          {
-            "year": 2021,
-            "value": 2788.167
-          },
-          {
-            "year": 2022,
-            "value": 2798.017
-          },
-          {
-            "year": 2023,
-            "value": 2748.952
-          },
-          {
-            "year": 2024,
-            "value": 2798.594
-          },
-          {
-            "year": 2025,
-            "value": 2800.958
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 3105.6,
-        "latestYear": 2025,
-        "latestValue": 2800.958
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 22
-          },
-          {
-            "year": 2016,
-            "value": 23.2
-          },
-          {
-            "year": 2017,
-            "value": 26
-          },
-          {
-            "year": 2018,
-            "value": 29
-          },
-          {
-            "year": 2019,
-            "value": 32.129
-          },
-          {
-            "year": 2020,
-            "value": 33.321
-          },
-          {
-            "year": 2021,
-            "value": 34.556
-          },
-          {
-            "year": 2022,
-            "value": 35.838
-          },
-          {
-            "year": 2023,
-            "value": 37.886
-          },
-          {
-            "year": 2024,
-            "value": 40.705
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 32.129,
-        "latestYear": 2024,
-        "latestValue": 40.705
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 3.866
-          },
-          {
-            "year": 2016,
-            "value": 3.795
-          },
-          {
-            "year": 2017,
-            "value": 3.795
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 3.795,
-        "baselineYears": [
-          2017
-        ],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
       }
     },
     {
@@ -2008,6 +1820,233 @@
       }
     },
     {
+      "iso3": "BHR",
+      "country": "Bahrain",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "incomeGroup": "High income",
+      "population": 1600366,
+      "populationYear": 2025,
+      "live": {
+        "unit": "years",
+        "sourceId": "world-bank-life",
+        "values": [
+          {
+            "year": 2015,
+            "value": 80.338
+          },
+          {
+            "year": 2016,
+            "value": 80.407
+          },
+          {
+            "year": 2017,
+            "value": 80.407
+          },
+          {
+            "year": 2018,
+            "value": 80.412
+          },
+          {
+            "year": 2019,
+            "value": 80.471
+          },
+          {
+            "year": 2020,
+            "value": 78.683
+          },
+          {
+            "year": 2021,
+            "value": 78.083
+          },
+          {
+            "year": 2022,
+            "value": 80.992
+          },
+          {
+            "year": 2023,
+            "value": 81.284
+          },
+          {
+            "year": 2024,
+            "value": 81.423
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 80.471,
+        "latestYear": 2024,
+        "latestValue": 81.423
+      },
+      "thrive": {
+        "unit": "constant 2015 US$ per person",
+        "sourceId": "world-bank-gdp",
+        "values": [
+          {
+            "year": 2015,
+            "value": 23734.055
+          },
+          {
+            "year": 2016,
+            "value": 23715.279
+          },
+          {
+            "year": 2017,
+            "value": 23606.887
+          },
+          {
+            "year": 2018,
+            "value": 24059.784
+          },
+          {
+            "year": 2019,
+            "value": 24873.664
+          },
+          {
+            "year": 2020,
+            "value": 23586.931
+          },
+          {
+            "year": 2021,
+            "value": 24086.785
+          },
+          {
+            "year": 2022,
+            "value": 25234.403
+          },
+          {
+            "year": 2023,
+            "value": 25342.623
+          },
+          {
+            "year": 2024,
+            "value": 25886.239
+          },
+          {
+            "year": 2025,
+            "value": 26591.665
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 24873.664,
+        "latestYear": 2025,
+        "latestValue": 26591.665
+      },
+      "connect": {
+        "unit": "% of population",
+        "sourceId": "world-bank-internet",
+        "values": [
+          {
+            "year": 2015,
+            "value": 93.478
+          },
+          {
+            "year": 2016,
+            "value": 98
+          },
+          {
+            "year": 2017,
+            "value": 95.878
+          },
+          {
+            "year": 2018,
+            "value": 98.645
+          },
+          {
+            "year": 2019,
+            "value": 99.702
+          },
+          {
+            "year": 2020,
+            "value": 99.671
+          },
+          {
+            "year": 2021,
+            "value": 100
+          },
+          {
+            "year": 2022,
+            "value": 100
+          },
+          {
+            "year": 2023,
+            "value": 100
+          },
+          {
+            "year": 2024,
+            "value": 100
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 99.702,
+        "latestYear": 2024,
+        "latestValue": 100
+      },
+      "feel": {
+        "unit": "Cantril ladder points (0–10)",
+        "sourceId": "world-happiness",
+        "values": [
+          {
+            "year": 2015,
+            "value": 6.218
+          },
+          {
+            "year": 2016,
+            "value": 6.087
+          },
+          {
+            "year": 2017,
+            "value": 6.105
+          },
+          {
+            "year": 2018,
+            "value": 6.199
+          },
+          {
+            "year": 2019,
+            "value": 6.227
+          },
+          {
+            "year": 2020,
+            "value": 6.647
+          },
+          {
+            "year": 2021,
+            "value": 6.647
+          },
+          {
+            "year": 2022,
+            "value": 6.173
+          },
+          {
+            "year": 2023,
+            "value": 5.959
+          },
+          {
+            "year": 2024,
+            "value": 6.03
+          },
+          {
+            "year": 2025,
+            "value": 6.254
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 6.177,
+        "baselineYears": [
+          2017,
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 6.104,
+        "latestYears": [
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      }
+    },
+    {
       "iso3": "BGD",
       "country": "Bangladesh",
       "region": "South Asia",
@@ -2235,212 +2274,6 @@
       }
     },
     {
-      "iso3": "BLR",
-      "country": "Belarus",
-      "region": "Europe & Central Asia",
-      "incomeGroup": "Upper middle income",
-      "population": 9085991,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 73.624
-          },
-          {
-            "year": 2016,
-            "value": 73.827
-          },
-          {
-            "year": 2017,
-            "value": 74.129
-          },
-          {
-            "year": 2018,
-            "value": 74.176
-          },
-          {
-            "year": 2019,
-            "value": 74.227
-          },
-          {
-            "year": 2020,
-            "value": 72.139
-          },
-          {
-            "year": 2021,
-            "value": 72.071
-          },
-          {
-            "year": 2022,
-            "value": 74.103
-          },
-          {
-            "year": 2023,
-            "value": 74.184
-          },
-          {
-            "year": 2024,
-            "value": 74.365
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 74.227,
-        "latestYear": 2024,
-        "latestValue": 74.365
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 5967.056
-          },
-          {
-            "year": 2016,
-            "value": 5811.202
-          },
-          {
-            "year": 2017,
-            "value": 5964.897
-          },
-          {
-            "year": 2018,
-            "value": 6165.913
-          },
-          {
-            "year": 2019,
-            "value": 6267.735
-          },
-          {
-            "year": 2020,
-            "value": 6251.989
-          },
-          {
-            "year": 2021,
-            "value": 6457.731
-          },
-          {
-            "year": 2022,
-            "value": 6206.619
-          },
-          {
-            "year": 2023,
-            "value": 6497.785
-          },
-          {
-            "year": 2024,
-            "value": 6814.344
-          },
-          {
-            "year": 2025,
-            "value": 6938.363
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 6267.735,
-        "latestYear": 2025,
-        "latestValue": 6938.363
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 62.23
-          },
-          {
-            "year": 2016,
-            "value": 71.113
-          },
-          {
-            "year": 2017,
-            "value": 74.436
-          },
-          {
-            "year": 2018,
-            "value": 79.13
-          },
-          {
-            "year": 2019,
-            "value": 82.789
-          },
-          {
-            "year": 2020,
-            "value": 85.088
-          },
-          {
-            "year": 2021,
-            "value": 86.888
-          },
-          {
-            "year": 2022,
-            "value": 89.507
-          },
-          {
-            "year": 2023,
-            "value": 91.512
-          },
-          {
-            "year": 2024,
-            "value": 94.262
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 82.789,
-        "latestYear": 2024,
-        "latestValue": 94.262
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 5.802
-          },
-          {
-            "year": 2016,
-            "value": 5.569
-          },
-          {
-            "year": 2017,
-            "value": 5.483
-          },
-          {
-            "year": 2018,
-            "value": 5.323
-          },
-          {
-            "year": 2019,
-            "value": 5.54
-          },
-          {
-            "year": 2020,
-            "value": 5.534
-          },
-          {
-            "year": 2021,
-            "value": 5.821
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 5.449,
-        "baselineYears": [
-          2017,
-          2018,
-          2019
-        ],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
-      }
-    },
-    {
       "iso3": "BEL",
       "country": "Belgium",
       "region": "Europe & Central Asia",
@@ -2662,6 +2495,205 @@
         "latestYears": [
           2022,
           2023,
+          2024,
+          2025
+        ]
+      }
+    },
+    {
+      "iso3": "BLZ",
+      "country": "Belize",
+      "region": "Latin America & Caribbean",
+      "incomeGroup": "Upper middle income",
+      "population": 422924,
+      "populationYear": 2025,
+      "live": {
+        "unit": "years",
+        "sourceId": "world-bank-life",
+        "values": [
+          {
+            "year": 2015,
+            "value": 71.647
+          },
+          {
+            "year": 2016,
+            "value": 71.843
+          },
+          {
+            "year": 2017,
+            "value": 72.062
+          },
+          {
+            "year": 2018,
+            "value": 72.322
+          },
+          {
+            "year": 2019,
+            "value": 72.577
+          },
+          {
+            "year": 2020,
+            "value": 71.58
+          },
+          {
+            "year": 2021,
+            "value": 70.917
+          },
+          {
+            "year": 2022,
+            "value": 72.19
+          },
+          {
+            "year": 2023,
+            "value": 73.566
+          },
+          {
+            "year": 2024,
+            "value": 73.739
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 72.577,
+        "latestYear": 2024,
+        "latestValue": 73.739
+      },
+      "thrive": {
+        "unit": "constant 2015 US$ per person",
+        "sourceId": "world-bank-gdp",
+        "values": [
+          {
+            "year": 2015,
+            "value": 6154.623
+          },
+          {
+            "year": 2016,
+            "value": 6012.213
+          },
+          {
+            "year": 2017,
+            "value": 5767.619
+          },
+          {
+            "year": 2018,
+            "value": 5707.611
+          },
+          {
+            "year": 2019,
+            "value": 5864.146
+          },
+          {
+            "year": 2020,
+            "value": 5006.485
+          },
+          {
+            "year": 2021,
+            "value": 5839.402
+          },
+          {
+            "year": 2022,
+            "value": 6262.561
+          },
+          {
+            "year": 2023,
+            "value": 6165.694
+          },
+          {
+            "year": 2024,
+            "value": 6290.493
+          },
+          {
+            "year": 2025,
+            "value": 6373.942
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 5864.146,
+        "latestYear": 2025,
+        "latestValue": 6373.942
+      },
+      "connect": {
+        "unit": "% of population",
+        "sourceId": "world-bank-internet",
+        "values": [
+          {
+            "year": 2015,
+            "value": 41.59
+          },
+          {
+            "year": 2016,
+            "value": 44.576
+          },
+          {
+            "year": 2017,
+            "value": 48.877
+          },
+          {
+            "year": 2018,
+            "value": 53.594
+          },
+          {
+            "year": 2019,
+            "value": 58.765
+          },
+          {
+            "year": 2020,
+            "value": 64.436
+          },
+          {
+            "year": 2021,
+            "value": 70.654
+          },
+          {
+            "year": 2022,
+            "value": 69.983
+          },
+          {
+            "year": 2023,
+            "value": 70.187
+          },
+          {
+            "year": 2024,
+            "value": 80.006
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 58.765,
+        "latestYear": 2024,
+        "latestValue": 80.006
+      },
+      "feel": {
+        "unit": "Cantril ladder points (0–10)",
+        "sourceId": "world-happiness",
+        "values": [
+          {
+            "year": 2015,
+            "value": 5.956
+          },
+          {
+            "year": 2016,
+            "value": 5.956
+          },
+          {
+            "year": 2017,
+            "value": 5.956
+          },
+          {
+            "year": 2024,
+            "value": 6.711
+          },
+          {
+            "year": 2025,
+            "value": 6.711
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 5.956,
+        "baselineYears": [
+          2017
+        ],
+        "latestYear": 2025,
+        "latestValue": 6.711,
+        "latestYears": [
           2024,
           2025
         ]
@@ -4253,208 +4285,6 @@
       }
     },
     {
-      "iso3": "BDI",
-      "country": "Burundi",
-      "region": "Sub-Saharan Africa",
-      "incomeGroup": "Low income",
-      "population": 14390003,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 60.107
-          },
-          {
-            "year": 2016,
-            "value": 60.789
-          },
-          {
-            "year": 2017,
-            "value": 61.345
-          },
-          {
-            "year": 2018,
-            "value": 61.806
-          },
-          {
-            "year": 2019,
-            "value": 62.18
-          },
-          {
-            "year": 2020,
-            "value": 62.569
-          },
-          {
-            "year": 2021,
-            "value": 62.101
-          },
-          {
-            "year": 2022,
-            "value": 62.882
-          },
-          {
-            "year": 2023,
-            "value": 63.651
-          },
-          {
-            "year": 2024,
-            "value": 63.818
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 62.18,
-        "latestYear": 2024,
-        "latestValue": 63.818
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 254.403
-          },
-          {
-            "year": 2016,
-            "value": 258.062
-          },
-          {
-            "year": 2017,
-            "value": 261.726
-          },
-          {
-            "year": 2018,
-            "value": 267.509
-          },
-          {
-            "year": 2019,
-            "value": 270.411
-          },
-          {
-            "year": 2020,
-            "value": 263.464
-          },
-          {
-            "year": 2021,
-            "value": 264.683
-          },
-          {
-            "year": 2022,
-            "value": 263.588
-          },
-          {
-            "year": 2023,
-            "value": 264.843
-          },
-          {
-            "year": 2024,
-            "value": 268.701
-          },
-          {
-            "year": 2025,
-            "value": 273.433
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 270.411,
-        "latestYear": 2025,
-        "latestValue": 273.433
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 2
-          },
-          {
-            "year": 2016,
-            "value": 2.2
-          },
-          {
-            "year": 2017,
-            "value": 2.661
-          },
-          {
-            "year": 2018,
-            "value": 4.019
-          },
-          {
-            "year": 2019,
-            "value": 6.072
-          },
-          {
-            "year": 2020,
-            "value": 6.43
-          },
-          {
-            "year": 2021,
-            "value": 6.778
-          },
-          {
-            "year": 2022,
-            "value": 7.145
-          },
-          {
-            "year": 2023,
-            "value": 7.172
-          },
-          {
-            "year": 2024,
-            "value": 8.596
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 6.072,
-        "latestYear": 2024,
-        "latestValue": 8.596
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 2.905
-          },
-          {
-            "year": 2016,
-            "value": 2.905
-          },
-          {
-            "year": 2017,
-            "value": 2.905
-          },
-          {
-            "year": 2018,
-            "value": 3.775
-          },
-          {
-            "year": 2019,
-            "value": 3.775
-          },
-          {
-            "year": 2020,
-            "value": 3.775
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 3.485,
-        "baselineYears": [
-          2017,
-          2018,
-          2019
-        ],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
-      }
-    },
-    {
       "iso3": "KHM",
       "country": "Cambodia",
       "region": "East Asia & Pacific",
@@ -5133,192 +4963,6 @@
           2024,
           2025
         ]
-      }
-    },
-    {
-      "iso3": "CAF",
-      "country": "Central African Republic",
-      "region": "Sub-Saharan Africa",
-      "incomeGroup": "Low income",
-      "population": 5513282,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 51.934
-          },
-          {
-            "year": 2016,
-            "value": 50.999
-          },
-          {
-            "year": 2017,
-            "value": 45.231
-          },
-          {
-            "year": 2018,
-            "value": 52.297
-          },
-          {
-            "year": 2019,
-            "value": 31.53
-          },
-          {
-            "year": 2020,
-            "value": 50.596
-          },
-          {
-            "year": 2021,
-            "value": 40.279
-          },
-          {
-            "year": 2022,
-            "value": 18.818
-          },
-          {
-            "year": 2023,
-            "value": 57.408
-          },
-          {
-            "year": 2024,
-            "value": 57.671
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 31.53,
-        "latestYear": 2024,
-        "latestValue": 57.671
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 366.323
-          },
-          {
-            "year": 2016,
-            "value": 376.858
-          },
-          {
-            "year": 2017,
-            "value": 387.358
-          },
-          {
-            "year": 2018,
-            "value": 395.02
-          },
-          {
-            "year": 2019,
-            "value": 401.826
-          },
-          {
-            "year": 2020,
-            "value": 398.834
-          },
-          {
-            "year": 2021,
-            "value": 396.021
-          },
-          {
-            "year": 2022,
-            "value": 398.915
-          },
-          {
-            "year": 2023,
-            "value": 397.468
-          },
-          {
-            "year": 2024,
-            "value": 389.938
-          },
-          {
-            "year": 2025,
-            "value": 393.988
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 401.826,
-        "latestYear": 2025,
-        "latestValue": 393.988
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 2.9
-          },
-          {
-            "year": 2016,
-            "value": 3.1
-          },
-          {
-            "year": 2017,
-            "value": 4
-          },
-          {
-            "year": 2018,
-            "value": 5.1
-          },
-          {
-            "year": 2019,
-            "value": 7.509
-          },
-          {
-            "year": 2022,
-            "value": 13.754
-          },
-          {
-            "year": 2023,
-            "value": 13.842
-          },
-          {
-            "year": 2024,
-            "value": 13.783
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 7.509,
-        "latestYear": 2024,
-        "latestValue": 13.783
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2016,
-            "value": 2.693
-          },
-          {
-            "year": 2017,
-            "value": 3.083
-          },
-          {
-            "year": 2018,
-            "value": 3.083
-          },
-          {
-            "year": 2019,
-            "value": 3.476
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 3.214,
-        "baselineYears": [
-          2017,
-          2018,
-          2019
-        ],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
       }
     },
     {
@@ -6225,6 +5869,220 @@
         ],
         "latestYear": 2025,
         "latestValue": 5.842,
+        "latestYears": [
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      }
+    },
+    {
+      "iso3": "COM",
+      "country": "Comoros",
+      "region": "Sub-Saharan Africa",
+      "incomeGroup": "Lower middle income",
+      "population": 882847,
+      "populationYear": 2025,
+      "live": {
+        "unit": "years",
+        "sourceId": "world-bank-life",
+        "values": [
+          {
+            "year": 2015,
+            "value": 64.473
+          },
+          {
+            "year": 2016,
+            "value": 64.792
+          },
+          {
+            "year": 2017,
+            "value": 65.127
+          },
+          {
+            "year": 2018,
+            "value": 65.401
+          },
+          {
+            "year": 2019,
+            "value": 65.662
+          },
+          {
+            "year": 2020,
+            "value": 65.756
+          },
+          {
+            "year": 2021,
+            "value": 65.201
+          },
+          {
+            "year": 2022,
+            "value": 66.481
+          },
+          {
+            "year": 2023,
+            "value": 66.777
+          },
+          {
+            "year": 2024,
+            "value": 67.023
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 65.662,
+        "latestYear": 2024,
+        "latestValue": 67.023
+      },
+      "thrive": {
+        "unit": "constant 2015 US$ per person",
+        "sourceId": "world-bank-gdp",
+        "values": [
+          {
+            "year": 2015,
+            "value": 1329.37
+          },
+          {
+            "year": 2016,
+            "value": 1345.626
+          },
+          {
+            "year": 2017,
+            "value": 1369.412
+          },
+          {
+            "year": 2018,
+            "value": 1391.846
+          },
+          {
+            "year": 2019,
+            "value": 1389.365
+          },
+          {
+            "year": 2020,
+            "value": 1359.707
+          },
+          {
+            "year": 2021,
+            "value": 1360.327
+          },
+          {
+            "year": 2022,
+            "value": 1366.951
+          },
+          {
+            "year": 2023,
+            "value": 1383.642
+          },
+          {
+            "year": 2024,
+            "value": 1402.526
+          },
+          {
+            "year": 2025,
+            "value": 1428.45
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 1389.365,
+        "latestYear": 2025,
+        "latestValue": 1428.45
+      },
+      "connect": {
+        "unit": "% of population",
+        "sourceId": "world-bank-internet",
+        "values": [
+          {
+            "year": 2015,
+            "value": 7.459
+          },
+          {
+            "year": 2016,
+            "value": 7.938
+          },
+          {
+            "year": 2017,
+            "value": 8.478
+          },
+          {
+            "year": 2019,
+            "value": 16.384
+          },
+          {
+            "year": 2020,
+            "value": 22.42
+          },
+          {
+            "year": 2021,
+            "value": 30.681
+          },
+          {
+            "year": 2022,
+            "value": 31.374
+          },
+          {
+            "year": 2023,
+            "value": 31.927
+          },
+          {
+            "year": 2024,
+            "value": 32.518
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 16.384,
+        "latestYear": 2024,
+        "latestValue": 32.518
+      },
+      "feel": {
+        "unit": "Cantril ladder points (0–10)",
+        "sourceId": "world-happiness",
+        "values": [
+          {
+            "year": 2015,
+            "value": 3.956
+          },
+          {
+            "year": 2018,
+            "value": 3.973
+          },
+          {
+            "year": 2019,
+            "value": 4.289
+          },
+          {
+            "year": 2020,
+            "value": 4.289
+          },
+          {
+            "year": 2021,
+            "value": 4.609
+          },
+          {
+            "year": 2022,
+            "value": 3.545
+          },
+          {
+            "year": 2023,
+            "value": 3.566
+          },
+          {
+            "year": 2024,
+            "value": 3.754
+          },
+          {
+            "year": 2025,
+            "value": 3.925
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 4.131,
+        "baselineYears": [
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 3.698,
         "latestYears": [
           2022,
           2023,
@@ -7357,11 +7215,11 @@
       }
     },
     {
-      "iso3": "CUB",
-      "country": "Cuba",
-      "region": "Latin America & Caribbean",
-      "incomeGroup": "Upper middle income",
-      "population": 10937203,
+      "iso3": "CYP",
+      "country": "Cyprus",
+      "region": "Europe & Central Asia",
+      "incomeGroup": "High income",
+      "population": 1370754,
       "populationYear": 2025,
       "live": {
         "unit": "years",
@@ -7369,49 +7227,49 @@
         "values": [
           {
             "year": 2015,
-            "value": 77.745
+            "value": 81.464
           },
           {
             "year": 2016,
-            "value": 77.571
+            "value": 81.534
           },
           {
             "year": 2017,
-            "value": 77.3
+            "value": 81.543
           },
           {
             "year": 2018,
-            "value": 77.426
+            "value": 81.556
           },
           {
             "year": 2019,
-            "value": 77.413
+            "value": 81.454
           },
           {
             "year": 2020,
-            "value": 77.407
+            "value": 81.23
           },
           {
             "year": 2021,
-            "value": 73.201
+            "value": 80.573
           },
           {
             "year": 2022,
-            "value": 77.629
+            "value": 80.434
           },
           {
             "year": 2023,
-            "value": 78.085
+            "value": 81.648
           },
           {
             "year": 2024,
-            "value": 78.264
+            "value": 81.821
           }
         ],
         "baselineYear": 2019,
-        "baselineValue": 77.413,
+        "baselineValue": 81.454,
         "latestYear": 2024,
-        "latestValue": 78.264
+        "latestValue": 81.821
       },
       "thrive": {
         "unit": "constant 2015 US$ per person",
@@ -7419,49 +7277,53 @@
         "values": [
           {
             "year": 2015,
-            "value": 7727.92
+            "value": 23088.43
           },
           {
             "year": 2016,
-            "value": 7774.07
+            "value": 24477.975
           },
           {
             "year": 2017,
-            "value": 7927.278
+            "value": 25665.99
           },
           {
             "year": 2018,
-            "value": 8120.431
+            "value": 26962.393
           },
           {
             "year": 2019,
-            "value": 8124.753
+            "value": 28167.146
           },
           {
             "year": 2020,
-            "value": 7252.288
+            "value": 26895.672
           },
           {
             "year": 2021,
-            "value": 7379.043
+            "value": 29517.059
           },
           {
             "year": 2022,
-            "value": 7552.332
+            "value": 31505.211
           },
           {
             "year": 2023,
-            "value": 7433.429
+            "value": 32022.02
           },
           {
             "year": 2024,
-            "value": 7381.398
+            "value": 32757.541
+          },
+          {
+            "year": 2025,
+            "value": 33526.828
           }
         ],
         "baselineYear": 2019,
-        "baselineValue": 8124.753,
-        "latestYear": 2024,
-        "latestValue": 7381.398
+        "baselineValue": 28167.146,
+        "latestYear": 2025,
+        "latestValue": 33526.828
       },
       "connect": {
         "unit": "% of population",
@@ -7469,60 +7331,114 @@
         "values": [
           {
             "year": 2015,
-            "value": 37.305
+            "value": 71.716
           },
           {
             "year": 2016,
-            "value": 42.979
+            "value": 75.9
           },
           {
             "year": 2017,
-            "value": 57.148
+            "value": 80.743
           },
           {
             "year": 2018,
-            "value": 62.679
+            "value": 84.434
           },
           {
             "year": 2019,
-            "value": 67.971
+            "value": 86.064
           },
           {
             "year": 2020,
-            "value": 71.119
+            "value": 90.802
           },
           {
             "year": 2021,
-            "value": 67.644
+            "value": 90.76
           },
           {
             "year": 2022,
-            "value": 67.884
+            "value": 89.601
           },
           {
             "year": 2023,
-            "value": 69.556
+            "value": 91.221
           },
           {
             "year": 2024,
-            "value": 70.477
+            "value": 89.601
           }
         ],
         "baselineYear": 2019,
-        "baselineValue": 67.971,
+        "baselineValue": 86.064,
         "latestYear": 2024,
-        "latestValue": 70.477
+        "latestValue": 89.601
       },
       "feel": {
         "unit": "Cantril ladder points (0–10)",
         "sourceId": "world-happiness",
-        "values": [],
+        "values": [
+          {
+            "year": 2015,
+            "value": 5.546
+          },
+          {
+            "year": 2016,
+            "value": 5.621
+          },
+          {
+            "year": 2017,
+            "value": 5.762
+          },
+          {
+            "year": 2018,
+            "value": 6.046
+          },
+          {
+            "year": 2019,
+            "value": 6.159
+          },
+          {
+            "year": 2020,
+            "value": 6.223
+          },
+          {
+            "year": 2021,
+            "value": 6.221
+          },
+          {
+            "year": 2022,
+            "value": 6.13
+          },
+          {
+            "year": 2023,
+            "value": 6.068
+          },
+          {
+            "year": 2024,
+            "value": 5.942
+          },
+          {
+            "year": 2025,
+            "value": 6.126
+          }
+        ],
         "baselineYear": 2019,
-        "baselineValue": null,
-        "baselineYears": [],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
+        "baselineValue": 5.989,
+        "baselineYears": [
+          2017,
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 6.067,
+        "latestYears": [
+          2022,
+          2023,
+          2024,
+          2025
+        ]
       }
     },
     {
@@ -8888,11 +8804,11 @@
       }
     },
     {
-      "iso3": "GNQ",
-      "country": "Equatorial Guinea",
-      "region": "Sub-Saharan Africa",
-      "incomeGroup": "Upper middle income",
-      "population": 1938431,
+      "iso3": "EST",
+      "country": "Estonia",
+      "region": "Europe & Central Asia",
+      "incomeGroup": "High income",
+      "population": 1366475,
       "populationYear": 2025,
       "live": {
         "unit": "years",
@@ -8900,49 +8816,49 @@
         "values": [
           {
             "year": 2015,
-            "value": 60.635
+            "value": 77.59
           },
           {
             "year": 2016,
-            "value": 61.081
+            "value": 77.641
           },
           {
             "year": 2017,
-            "value": 61.481
+            "value": 78.093
           },
           {
             "year": 2018,
-            "value": 61.915
+            "value": 78.244
           },
           {
             "year": 2019,
-            "value": 62.297
+            "value": 78.646
           },
           {
             "year": 2020,
-            "value": 62.141
+            "value": 78.595
           },
           {
             "year": 2021,
-            "value": 62.447
+            "value": 76.944
           },
           {
             "year": 2022,
-            "value": 63.355
+            "value": 77.844
           },
           {
             "year": 2023,
-            "value": 63.707
+            "value": 78.793
           },
           {
             "year": 2024,
-            "value": 63.906
+            "value": 79.295
           }
         ],
         "baselineYear": 2019,
-        "baselineValue": 62.297,
+        "baselineValue": 78.646,
         "latestYear": 2024,
-        "latestValue": 63.906
+        "latestValue": 79.295
       },
       "thrive": {
         "unit": "constant 2015 US$ per person",
@@ -8950,53 +8866,53 @@
         "values": [
           {
             "year": 2015,
-            "value": 9068.91
+            "value": 17722.156
           },
           {
             "year": 2016,
-            "value": 7971.834
+            "value": 18264.987
           },
           {
             "year": 2017,
-            "value": 7259.109
+            "value": 19270.814
           },
           {
             "year": 2018,
-            "value": 6578.9
+            "value": 19914.345
           },
           {
             "year": 2019,
-            "value": 6018.121
+            "value": 20579.876
           },
           {
             "year": 2020,
-            "value": 5575.262
+            "value": 19946.946
           },
           {
             "year": 2021,
-            "value": 5487.925
+            "value": 21570.666
           },
           {
             "year": 2022,
-            "value": 5524.243
+            "value": 21023.299
           },
           {
             "year": 2023,
-            "value": 4992.261
+            "value": 20126.373
           },
           {
             "year": 2024,
-            "value": 4892.953
+            "value": 20078.14
           },
           {
             "year": 2025,
-            "value": 4497.751
+            "value": 20282.153
           }
         ],
         "baselineYear": 2019,
-        "baselineValue": 6018.121,
+        "baselineValue": 20579.876,
         "latestYear": 2025,
-        "latestValue": 4497.751
+        "latestValue": 20282.153
       },
       "connect": {
         "unit": "% of population",
@@ -9004,68 +8920,122 @@
         "values": [
           {
             "year": 2015,
-            "value": 21.32
+            "value": 88.41
           },
           {
             "year": 2016,
-            "value": 23.78
+            "value": 87.24
           },
           {
             "year": 2017,
-            "value": 26.24
+            "value": 88.102
           },
           {
             "year": 2018,
-            "value": 29.4
+            "value": 89.357
           },
           {
             "year": 2019,
-            "value": 49.134
+            "value": 90.229
           },
           {
             "year": 2020,
-            "value": 55.001
+            "value": 89.058
           },
           {
             "year": 2021,
-            "value": 58.717
+            "value": 90.98
           },
           {
             "year": 2022,
-            "value": 63.66
+            "value": 91.52
           },
           {
             "year": 2023,
-            "value": 63.52
+            "value": 93.183
           },
           {
             "year": 2024,
-            "value": 63.299
+            "value": 92.238
           }
         ],
         "baselineYear": 2019,
-        "baselineValue": 49.134,
+        "baselineValue": 90.229,
         "latestYear": 2024,
-        "latestValue": 63.299
+        "latestValue": 92.238
       },
       "feel": {
         "unit": "Cantril ladder points (0–10)",
         "sourceId": "world-happiness",
-        "values": [],
+        "values": [
+          {
+            "year": 2015,
+            "value": 5.517
+          },
+          {
+            "year": 2016,
+            "value": 5.611
+          },
+          {
+            "year": 2017,
+            "value": 5.739
+          },
+          {
+            "year": 2018,
+            "value": 5.893
+          },
+          {
+            "year": 2019,
+            "value": 6.022
+          },
+          {
+            "year": 2020,
+            "value": 6.189
+          },
+          {
+            "year": 2021,
+            "value": 6.341
+          },
+          {
+            "year": 2022,
+            "value": 6.455
+          },
+          {
+            "year": 2023,
+            "value": 6.448
+          },
+          {
+            "year": 2024,
+            "value": 6.417
+          },
+          {
+            "year": 2025,
+            "value": 6.41
+          }
+        ],
         "baselineYear": 2019,
-        "baselineValue": null,
-        "baselineYears": [],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
+        "baselineValue": 5.885,
+        "baselineYears": [
+          2017,
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 6.433,
+        "latestYears": [
+          2022,
+          2023,
+          2024,
+          2025
+        ]
       }
     },
     {
-      "iso3": "ERI",
-      "country": "Eritrea",
+      "iso3": "SWZ",
+      "country": "Eswatini",
       "region": "Sub-Saharan Africa",
-      "incomeGroup": "Low income",
-      "population": 3607003,
+      "incomeGroup": "Lower middle income",
+      "population": 1256174,
       "populationYear": 2025,
       "live": {
         "unit": "years",
@@ -9073,58 +9043,103 @@
         "values": [
           {
             "year": 2015,
-            "value": 65.909
+            "value": 54.941
           },
           {
             "year": 2016,
-            "value": 66.242
+            "value": 56.228
           },
           {
             "year": 2017,
-            "value": 66.612
+            "value": 57.574
           },
           {
             "year": 2018,
-            "value": 66.979
+            "value": 58.707
           },
           {
             "year": 2019,
-            "value": 67.306
+            "value": 59.85
           },
           {
             "year": 2020,
-            "value": 66.98
+            "value": 59.862
           },
           {
             "year": 2021,
-            "value": 66.94
+            "value": 58.228
           },
           {
             "year": 2022,
-            "value": 67.789
+            "value": 63.028
           },
           {
             "year": 2023,
-            "value": 68.624
+            "value": 64.123
           },
           {
             "year": 2024,
-            "value": 68.893
+            "value": 64.264
           }
         ],
         "baselineYear": 2019,
-        "baselineValue": 67.306,
+        "baselineValue": 59.85,
         "latestYear": 2024,
-        "latestValue": 68.893
+        "latestValue": 64.264
       },
       "thrive": {
         "unit": "constant 2015 US$ per person",
         "sourceId": "world-bank-gdp",
-        "values": [],
+        "values": [
+          {
+            "year": 2015,
+            "value": 3419.823
+          },
+          {
+            "year": 2016,
+            "value": 3500.177
+          },
+          {
+            "year": 2017,
+            "value": 3596.236
+          },
+          {
+            "year": 2018,
+            "value": 3565.543
+          },
+          {
+            "year": 2019,
+            "value": 3759.671
+          },
+          {
+            "year": 2020,
+            "value": 3609.367
+          },
+          {
+            "year": 2021,
+            "value": 3719.038
+          },
+          {
+            "year": 2022,
+            "value": 3695.65
+          },
+          {
+            "year": 2023,
+            "value": 3790.166
+          },
+          {
+            "year": 2024,
+            "value": 3866.371
+          },
+          {
+            "year": 2025,
+            "value": 3985.704
+          }
+        ],
         "baselineYear": 2019,
-        "baselineValue": null,
-        "latestYear": null,
-        "latestValue": null
+        "baselineValue": 3759.671,
+        "latestYear": 2025,
+        "latestValue": 3985.704
       },
       "connect": {
         "unit": "% of population",
@@ -9132,44 +9147,96 @@
         "values": [
           {
             "year": 2015,
-            "value": 1.084
+            "value": 25.643
           },
           {
             "year": 2016,
-            "value": 1.177
+            "value": 28.57
           },
           {
             "year": 2017,
-            "value": 2.496
+            "value": 35.332
           },
           {
             "year": 2018,
-            "value": 5.293
+            "value": 39.381
           },
           {
             "year": 2019,
-            "value": 11.224
+            "value": 43.934
           },
           {
             "year": 2020,
-            "value": 14.349
+            "value": 49.013
+          },
+          {
+            "year": 2021,
+            "value": 53.995
+          },
+          {
+            "year": 2022,
+            "value": 57.344
+          },
+          {
+            "year": 2023,
+            "value": 61.333
+          },
+          {
+            "year": 2024,
+            "value": 63.403
           }
         ],
         "baselineYear": 2019,
-        "baselineValue": 11.224,
-        "latestYear": 2020,
-        "latestValue": 14.349
+        "baselineValue": 43.934,
+        "latestYear": 2024,
+        "latestValue": 63.403
       },
       "feel": {
         "unit": "Cantril ladder points (0–10)",
         "sourceId": "world-happiness",
-        "values": [],
+        "values": [
+          {
+            "year": 2018,
+            "value": 4.212
+          },
+          {
+            "year": 2019,
+            "value": 4.308
+          },
+          {
+            "year": 2020,
+            "value": 4.308
+          },
+          {
+            "year": 2021,
+            "value": 4.396
+          },
+          {
+            "year": 2023,
+            "value": 3.502
+          },
+          {
+            "year": 2024,
+            "value": 3.774
+          },
+          {
+            "year": 2025,
+            "value": 3.909
+          }
+        ],
         "baselineYear": 2019,
-        "baselineValue": null,
-        "baselineYears": [],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
+        "baselineValue": 4.26,
+        "baselineYears": [
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 3.728,
+        "latestYears": [
+          2023,
+          2024,
+          2025
+        ]
       }
     },
     {
@@ -11657,381 +11724,6 @@
       }
     },
     {
-      "iso3": "GNB",
-      "country": "Guinea-Bissau",
-      "region": "Sub-Saharan Africa",
-      "incomeGroup": "Low income",
-      "population": 2249515,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 60.071
-          },
-          {
-            "year": 2016,
-            "value": 60.619
-          },
-          {
-            "year": 2017,
-            "value": 61.148
-          },
-          {
-            "year": 2018,
-            "value": 61.652
-          },
-          {
-            "year": 2019,
-            "value": 62.161
-          },
-          {
-            "year": 2020,
-            "value": 61.343
-          },
-          {
-            "year": 2021,
-            "value": 61.653
-          },
-          {
-            "year": 2022,
-            "value": 63.605
-          },
-          {
-            "year": 2023,
-            "value": 64.085
-          },
-          {
-            "year": 2024,
-            "value": 64.254
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 62.161,
-        "latestYear": 2024,
-        "latestValue": 64.254
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 645.067
-          },
-          {
-            "year": 2016,
-            "value": 663.243
-          },
-          {
-            "year": 2017,
-            "value": 677.466
-          },
-          {
-            "year": 2018,
-            "value": 686.457
-          },
-          {
-            "year": 2019,
-            "value": 706.299
-          },
-          {
-            "year": 2020,
-            "value": 710.276
-          },
-          {
-            "year": 2021,
-            "value": 729.397
-          },
-          {
-            "year": 2022,
-            "value": 752.149
-          },
-          {
-            "year": 2023,
-            "value": 769.505
-          },
-          {
-            "year": 2024,
-            "value": 785.91
-          },
-          {
-            "year": 2025,
-            "value": 813.83
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 706.299,
-        "latestYear": 2025,
-        "latestValue": 813.83
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 6.1
-          },
-          {
-            "year": 2016,
-            "value": 13.8
-          },
-          {
-            "year": 2017,
-            "value": 14.8
-          },
-          {
-            "year": 2018,
-            "value": 15.7
-          },
-          {
-            "year": 2019,
-            "value": 17.921
-          },
-          {
-            "year": 2020,
-            "value": 20.457
-          },
-          {
-            "year": 2021,
-            "value": 23.352
-          },
-          {
-            "year": 2022,
-            "value": 27.674
-          },
-          {
-            "year": 2023,
-            "value": 28.712
-          },
-          {
-            "year": 2024,
-            "value": 29.777
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 17.921,
-        "latestYear": 2024,
-        "latestValue": 29.777
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "baselineYears": [],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
-      }
-    },
-    {
-      "iso3": "HTI",
-      "country": "Haiti",
-      "region": "Latin America & Caribbean",
-      "incomeGroup": "Lower middle income",
-      "population": 11906095,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 63.224
-          },
-          {
-            "year": 2016,
-            "value": 63.325
-          },
-          {
-            "year": 2017,
-            "value": 63.832
-          },
-          {
-            "year": 2018,
-            "value": 64.077
-          },
-          {
-            "year": 2019,
-            "value": 64.328
-          },
-          {
-            "year": 2020,
-            "value": 63.773
-          },
-          {
-            "year": 2021,
-            "value": 62.613
-          },
-          {
-            "year": 2022,
-            "value": 63.948
-          },
-          {
-            "year": 2023,
-            "value": 64.936
-          },
-          {
-            "year": 2024,
-            "value": 65.119
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 64.328,
-        "latestYear": 2024,
-        "latestValue": 65.119
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 1411.127
-          },
-          {
-            "year": 2016,
-            "value": 1416.749
-          },
-          {
-            "year": 2017,
-            "value": 1432.672
-          },
-          {
-            "year": 2018,
-            "value": 1437.353
-          },
-          {
-            "year": 2019,
-            "value": 1394.421
-          },
-          {
-            "year": 2020,
-            "value": 1331.698
-          },
-          {
-            "year": 2021,
-            "value": 1292.72
-          },
-          {
-            "year": 2022,
-            "value": 1256.721
-          },
-          {
-            "year": 2023,
-            "value": 1219.119
-          },
-          {
-            "year": 2024,
-            "value": 1154.688
-          },
-          {
-            "year": 2025,
-            "value": 1110.763
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 1394.421,
-        "latestYear": 2025,
-        "latestValue": 1110.763
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 14.2
-          },
-          {
-            "year": 2016,
-            "value": 22.8
-          },
-          {
-            "year": 2017,
-            "value": 27.2
-          },
-          {
-            "year": 2018,
-            "value": 32.474
-          },
-          {
-            "year": 2019,
-            "value": 35.764
-          },
-          {
-            "year": 2020,
-            "value": 39.388
-          },
-          {
-            "year": 2021,
-            "value": 43.379
-          },
-          {
-            "year": 2022,
-            "value": 47.775
-          },
-          {
-            "year": 2023,
-            "value": 47.993
-          },
-          {
-            "year": 2024,
-            "value": 47.861
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 35.764,
-        "latestYear": 2024,
-        "latestValue": 47.861
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 4.028
-          },
-          {
-            "year": 2016,
-            "value": 3.603
-          },
-          {
-            "year": 2017,
-            "value": 3.582
-          },
-          {
-            "year": 2018,
-            "value": 3.597
-          },
-          {
-            "year": 2019,
-            "value": 3.721
-          },
-          {
-            "year": 2020,
-            "value": 3.615
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 3.633,
-        "baselineYears": [
-          2017,
-          2018,
-          2019
-        ],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
-      }
-    },
-    {
       "iso3": "HND",
       "country": "Honduras",
       "region": "Latin America & Caribbean",
@@ -12704,6 +12396,233 @@
         ],
         "latestYear": 2025,
         "latestValue": 5.978,
+        "latestYears": [
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      }
+    },
+    {
+      "iso3": "ISL",
+      "country": "Iceland",
+      "region": "Europe & Central Asia",
+      "incomeGroup": "High income",
+      "population": 392404,
+      "populationYear": 2025,
+      "live": {
+        "unit": "years",
+        "sourceId": "world-bank-life",
+        "values": [
+          {
+            "year": 2015,
+            "value": 82.468
+          },
+          {
+            "year": 2016,
+            "value": 82.205
+          },
+          {
+            "year": 2017,
+            "value": 82.661
+          },
+          {
+            "year": 2018,
+            "value": 82.861
+          },
+          {
+            "year": 2019,
+            "value": 83.163
+          },
+          {
+            "year": 2020,
+            "value": 83.063
+          },
+          {
+            "year": 2021,
+            "value": 83.166
+          },
+          {
+            "year": 2022,
+            "value": 82.12
+          },
+          {
+            "year": 2023,
+            "value": 82.456
+          },
+          {
+            "year": 2024,
+            "value": 82.81
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 83.163,
+        "latestYear": 2024,
+        "latestValue": 82.81
+      },
+      "thrive": {
+        "unit": "constant 2015 US$ per person",
+        "sourceId": "world-bank-gdp",
+        "values": [
+          {
+            "year": 2015,
+            "value": 53505.696
+          },
+          {
+            "year": 2016,
+            "value": 56049.293
+          },
+          {
+            "year": 2017,
+            "value": 56657.98
+          },
+          {
+            "year": 2018,
+            "value": 57731.652
+          },
+          {
+            "year": 2019,
+            "value": 57118.845
+          },
+          {
+            "year": 2020,
+            "value": 52464.307
+          },
+          {
+            "year": 2021,
+            "value": 54285.021
+          },
+          {
+            "year": 2022,
+            "value": 57626.253
+          },
+          {
+            "year": 2023,
+            "value": 59951.754
+          },
+          {
+            "year": 2024,
+            "value": 59053.565
+          },
+          {
+            "year": 2025,
+            "value": 58910.176
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 57118.845,
+        "latestYear": 2025,
+        "latestValue": 58910.176
+      },
+      "connect": {
+        "unit": "% of population",
+        "sourceId": "world-bank-internet",
+        "values": [
+          {
+            "year": 2015,
+            "value": 98.2
+          },
+          {
+            "year": 2016,
+            "value": 98.24
+          },
+          {
+            "year": 2017,
+            "value": 98.255
+          },
+          {
+            "year": 2018,
+            "value": 99.011
+          },
+          {
+            "year": 2019,
+            "value": 99.505
+          },
+          {
+            "year": 2020,
+            "value": 99.533
+          },
+          {
+            "year": 2021,
+            "value": 99.687
+          },
+          {
+            "year": 2022,
+            "value": 97.583
+          },
+          {
+            "year": 2023,
+            "value": 97.949
+          },
+          {
+            "year": 2024,
+            "value": 98.209
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 99.505,
+        "latestYear": 2024,
+        "latestValue": 98.209
+      },
+      "feel": {
+        "unit": "Cantril ladder points (0–10)",
+        "sourceId": "world-happiness",
+        "values": [
+          {
+            "year": 2015,
+            "value": 7.501
+          },
+          {
+            "year": 2016,
+            "value": 7.504
+          },
+          {
+            "year": 2017,
+            "value": 7.495
+          },
+          {
+            "year": 2018,
+            "value": 7.494
+          },
+          {
+            "year": 2019,
+            "value": 7.505
+          },
+          {
+            "year": 2020,
+            "value": 7.554
+          },
+          {
+            "year": 2021,
+            "value": 7.557
+          },
+          {
+            "year": 2022,
+            "value": 7.53
+          },
+          {
+            "year": 2023,
+            "value": 7.525
+          },
+          {
+            "year": 2024,
+            "value": 7.515
+          },
+          {
+            "year": 2025,
+            "value": 7.54
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 7.498,
+        "baselineYears": [
+          2017,
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 7.528,
         "latestYears": [
           2022,
           2023,
@@ -15441,93 +15360,6 @@
       }
     },
     {
-      "iso3": "PRK",
-      "country": "Korea, Dem. People's Rep.",
-      "region": "East Asia & Pacific",
-      "incomeGroup": "Low income",
-      "population": 26571036,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 72.825
-          },
-          {
-            "year": 2016,
-            "value": 72.971
-          },
-          {
-            "year": 2017,
-            "value": 73.034
-          },
-          {
-            "year": 2018,
-            "value": 73.02
-          },
-          {
-            "year": 2019,
-            "value": 72.928
-          },
-          {
-            "year": 2020,
-            "value": 72.783
-          },
-          {
-            "year": 2021,
-            "value": 73.437
-          },
-          {
-            "year": 2022,
-            "value": 73.641
-          },
-          {
-            "year": 2023,
-            "value": 73.642
-          },
-          {
-            "year": 2024,
-            "value": 73.743
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 72.928,
-        "latestYear": 2024,
-        "latestValue": 73.743
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "latestYear": null,
-        "latestValue": null
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "latestYear": null,
-        "latestValue": null
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "baselineYears": [],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
-      }
-    },
-    {
       "iso3": "KOR",
       "country": "Korea, Rep.",
       "region": "East Asia & Pacific",
@@ -17775,6 +17607,237 @@
       }
     },
     {
+      "iso3": "LUX",
+      "country": "Luxembourg",
+      "region": "Europe & Central Asia",
+      "incomeGroup": "High income",
+      "population": 686970,
+      "populationYear": 2025,
+      "live": {
+        "unit": "years",
+        "sourceId": "world-bank-life",
+        "values": [
+          {
+            "year": 2015,
+            "value": 82.293
+          },
+          {
+            "year": 2016,
+            "value": 82.685
+          },
+          {
+            "year": 2017,
+            "value": 82.095
+          },
+          {
+            "year": 2018,
+            "value": 82.295
+          },
+          {
+            "year": 2019,
+            "value": 82.639
+          },
+          {
+            "year": 2020,
+            "value": 82.144
+          },
+          {
+            "year": 2021,
+            "value": 82.598
+          },
+          {
+            "year": 2022,
+            "value": 82.946
+          },
+          {
+            "year": 2023,
+            "value": 83.31
+          },
+          {
+            "year": 2024,
+            "value": 83.195
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 82.639,
+        "latestYear": 2024,
+        "latestValue": 83.195
+      },
+      "thrive": {
+        "unit": "constant 2015 US$ per person",
+        "sourceId": "world-bank-gdp",
+        "values": [
+          {
+            "year": 2015,
+            "value": 105462.013
+          },
+          {
+            "year": 2016,
+            "value": 108351.452
+          },
+          {
+            "year": 2017,
+            "value": 107142.055
+          },
+          {
+            "year": 2018,
+            "value": 106788.661
+          },
+          {
+            "year": 2019,
+            "value": 107591.9
+          },
+          {
+            "year": 2020,
+            "value": 105274.182
+          },
+          {
+            "year": 2021,
+            "value": 110873.115
+          },
+          {
+            "year": 2022,
+            "value": 107467.124
+          },
+          {
+            "year": 2023,
+            "value": 105422.765
+          },
+          {
+            "year": 2024,
+            "value": 104147.111
+          },
+          {
+            "year": 2025,
+            "value": 103292.145
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 107591.9,
+        "latestYear": 2025,
+        "latestValue": 103292.145
+      },
+      "connect": {
+        "unit": "% of population",
+        "sourceId": "world-bank-internet",
+        "values": [
+          {
+            "year": 2015,
+            "value": 96.377
+          },
+          {
+            "year": 2016,
+            "value": 98.137
+          },
+          {
+            "year": 2017,
+            "value": 97.363
+          },
+          {
+            "year": 2018,
+            "value": 97.061
+          },
+          {
+            "year": 2019,
+            "value": 97.121
+          },
+          {
+            "year": 2020,
+            "value": 98.46
+          },
+          {
+            "year": 2021,
+            "value": 98.661
+          },
+          {
+            "year": 2022,
+            "value": 98.242
+          },
+          {
+            "year": 2023,
+            "value": 99.348
+          },
+          {
+            "year": 2024,
+            "value": 98.761
+          },
+          {
+            "year": 2025,
+            "value": 99.129
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 97.121,
+        "latestYear": 2025,
+        "latestValue": 99.129
+      },
+      "feel": {
+        "unit": "Cantril ladder points (0–10)",
+        "sourceId": "world-happiness",
+        "values": [
+          {
+            "year": 2015,
+            "value": 6.871
+          },
+          {
+            "year": 2016,
+            "value": 6.863
+          },
+          {
+            "year": 2017,
+            "value": 6.91
+          },
+          {
+            "year": 2018,
+            "value": 7.09
+          },
+          {
+            "year": 2019,
+            "value": 7.238
+          },
+          {
+            "year": 2020,
+            "value": 7.324
+          },
+          {
+            "year": 2021,
+            "value": 7.404
+          },
+          {
+            "year": 2022,
+            "value": 7.228
+          },
+          {
+            "year": 2023,
+            "value": 7.122
+          },
+          {
+            "year": 2024,
+            "value": 7.122
+          },
+          {
+            "year": 2025,
+            "value": 7.063
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 7.079,
+        "baselineYears": [
+          2017,
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 7.134,
+        "latestYears": [
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      }
+    },
+    {
       "iso3": "MDG",
       "country": "Madagascar",
       "region": "Sub-Saharan Africa",
@@ -18683,6 +18746,233 @@
       }
     },
     {
+      "iso3": "MLT",
+      "country": "Malta",
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "incomeGroup": "High income",
+      "population": 579704,
+      "populationYear": 2025,
+      "live": {
+        "unit": "years",
+        "sourceId": "world-bank-life",
+        "values": [
+          {
+            "year": 2015,
+            "value": 81.798
+          },
+          {
+            "year": 2016,
+            "value": 82.354
+          },
+          {
+            "year": 2017,
+            "value": 82.195
+          },
+          {
+            "year": 2018,
+            "value": 82.249
+          },
+          {
+            "year": 2019,
+            "value": 82.659
+          },
+          {
+            "year": 2020,
+            "value": 82.098
+          },
+          {
+            "year": 2021,
+            "value": 82.259
+          },
+          {
+            "year": 2022,
+            "value": 82.298
+          },
+          {
+            "year": 2023,
+            "value": 83.356
+          },
+          {
+            "year": 2024,
+            "value": 82.956
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 82.659,
+        "latestYear": 2024,
+        "latestValue": 82.956
+      },
+      "thrive": {
+        "unit": "constant 2015 US$ per person",
+        "sourceId": "world-bank-gdp",
+        "values": [
+          {
+            "year": 2015,
+            "value": 25529.669
+          },
+          {
+            "year": 2016,
+            "value": 25969.5
+          },
+          {
+            "year": 2017,
+            "value": 28546.646
+          },
+          {
+            "year": 2018,
+            "value": 29536.791
+          },
+          {
+            "year": 2019,
+            "value": 29522.648
+          },
+          {
+            "year": 2020,
+            "value": 27861.807
+          },
+          {
+            "year": 2021,
+            "value": 31419.503
+          },
+          {
+            "year": 2022,
+            "value": 31447.392
+          },
+          {
+            "year": 2023,
+            "value": 33429.817
+          },
+          {
+            "year": 2024,
+            "value": 34501.789
+          },
+          {
+            "year": 2025,
+            "value": 35196.833
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 29522.648,
+        "latestYear": 2025,
+        "latestValue": 35196.833
+      },
+      "connect": {
+        "unit": "% of population",
+        "sourceId": "world-bank-internet",
+        "values": [
+          {
+            "year": 2015,
+            "value": 75.96
+          },
+          {
+            "year": 2016,
+            "value": 78.075
+          },
+          {
+            "year": 2017,
+            "value": 81.012
+          },
+          {
+            "year": 2018,
+            "value": 81.658
+          },
+          {
+            "year": 2019,
+            "value": 85.779
+          },
+          {
+            "year": 2020,
+            "value": 86.859
+          },
+          {
+            "year": 2021,
+            "value": 87.47
+          },
+          {
+            "year": 2022,
+            "value": 91.541
+          },
+          {
+            "year": 2023,
+            "value": 92.073
+          },
+          {
+            "year": 2024,
+            "value": 93.86
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 85.779,
+        "latestYear": 2024,
+        "latestValue": 93.86
+      },
+      "feel": {
+        "unit": "Cantril ladder points (0–10)",
+        "sourceId": "world-happiness",
+        "values": [
+          {
+            "year": 2015,
+            "value": 6.488
+          },
+          {
+            "year": 2016,
+            "value": 6.527
+          },
+          {
+            "year": 2017,
+            "value": 6.627
+          },
+          {
+            "year": 2018,
+            "value": 6.726
+          },
+          {
+            "year": 2019,
+            "value": 6.773
+          },
+          {
+            "year": 2020,
+            "value": 6.602
+          },
+          {
+            "year": 2021,
+            "value": 6.447
+          },
+          {
+            "year": 2022,
+            "value": 6.3
+          },
+          {
+            "year": 2023,
+            "value": 6.346
+          },
+          {
+            "year": 2024,
+            "value": 6.316
+          },
+          {
+            "year": 2025,
+            "value": 6.436
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 6.709,
+        "baselineYears": [
+          2017,
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 6.35,
+        "latestYears": [
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      }
+    },
+    {
       "iso3": "MRT",
       "country": "Mauritania",
       "region": "Sub-Saharan Africa",
@@ -18901,6 +19191,233 @@
         ],
         "latestYear": 2025,
         "latestValue": 4.561,
+        "latestYears": [
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      }
+    },
+    {
+      "iso3": "MUS",
+      "country": "Mauritius",
+      "region": "Sub-Saharan Africa",
+      "incomeGroup": "Upper middle income",
+      "population": 1243741,
+      "populationYear": 2025,
+      "live": {
+        "unit": "years",
+        "sourceId": "world-bank-life",
+        "values": [
+          {
+            "year": 2015,
+            "value": 74.353
+          },
+          {
+            "year": 2016,
+            "value": 74.395
+          },
+          {
+            "year": 2017,
+            "value": 74.515
+          },
+          {
+            "year": 2018,
+            "value": 74.416
+          },
+          {
+            "year": 2019,
+            "value": 74.236
+          },
+          {
+            "year": 2020,
+            "value": 74.177
+          },
+          {
+            "year": 2021,
+            "value": 73.68
+          },
+          {
+            "year": 2022,
+            "value": 73.515
+          },
+          {
+            "year": 2023,
+            "value": 73.412
+          },
+          {
+            "year": 2024,
+            "value": 73.789
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 74.236,
+        "latestYear": 2024,
+        "latestValue": 73.789
+      },
+      "thrive": {
+        "unit": "constant 2015 US$ per person",
+        "sourceId": "world-bank-gdp",
+        "values": [
+          {
+            "year": 2015,
+            "value": 9630.544
+          },
+          {
+            "year": 2016,
+            "value": 9997.892
+          },
+          {
+            "year": 2017,
+            "value": 10383.883
+          },
+          {
+            "year": 2018,
+            "value": 10805.462
+          },
+          {
+            "year": 2019,
+            "value": 11111.342
+          },
+          {
+            "year": 2020,
+            "value": 9533.598
+          },
+          {
+            "year": 2021,
+            "value": 9849.349
+          },
+          {
+            "year": 2022,
+            "value": 10703.236
+          },
+          {
+            "year": 2023,
+            "value": 11330.734
+          },
+          {
+            "year": 2024,
+            "value": 11918.805
+          },
+          {
+            "year": 2025,
+            "value": 12314.58
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 11111.342,
+        "latestYear": 2025,
+        "latestValue": 12314.58
+      },
+      "connect": {
+        "unit": "% of population",
+        "sourceId": "world-bank-internet",
+        "values": [
+          {
+            "year": 2015,
+            "value": 50.139
+          },
+          {
+            "year": 2016,
+            "value": 52.191
+          },
+          {
+            "year": 2017,
+            "value": 55.403
+          },
+          {
+            "year": 2018,
+            "value": 58.596
+          },
+          {
+            "year": 2019,
+            "value": 61.73
+          },
+          {
+            "year": 2020,
+            "value": 67.733
+          },
+          {
+            "year": 2021,
+            "value": 71.6
+          },
+          {
+            "year": 2022,
+            "value": 75.5
+          },
+          {
+            "year": 2023,
+            "value": 79.5
+          },
+          {
+            "year": 2024,
+            "value": 73.308
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 61.73,
+        "latestYear": 2024,
+        "latestValue": 73.308
+      },
+      "feel": {
+        "unit": "Cantril ladder points (0–10)",
+        "sourceId": "world-happiness",
+        "values": [
+          {
+            "year": 2015,
+            "value": 5.648
+          },
+          {
+            "year": 2016,
+            "value": 5.629
+          },
+          {
+            "year": 2017,
+            "value": 5.891
+          },
+          {
+            "year": 2018,
+            "value": 5.888
+          },
+          {
+            "year": 2019,
+            "value": 6.101
+          },
+          {
+            "year": 2020,
+            "value": 6.049
+          },
+          {
+            "year": 2021,
+            "value": 6.071
+          },
+          {
+            "year": 2022,
+            "value": 5.902
+          },
+          {
+            "year": 2023,
+            "value": 5.816
+          },
+          {
+            "year": 2024,
+            "value": 5.832
+          },
+          {
+            "year": 2025,
+            "value": 5.939
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 5.96,
+        "baselineYears": [
+          2017,
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 5.872,
         "latestYears": [
           2022,
           2023,
@@ -19582,6 +20099,233 @@
         ],
         "latestYear": 2025,
         "latestValue": 5.826,
+        "latestYears": [
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      }
+    },
+    {
+      "iso3": "MNE",
+      "country": "Montenegro",
+      "region": "Europe & Central Asia",
+      "incomeGroup": "Upper middle income",
+      "population": 623129,
+      "populationYear": 2025,
+      "live": {
+        "unit": "years",
+        "sourceId": "world-bank-life",
+        "values": [
+          {
+            "year": 2015,
+            "value": 76.602
+          },
+          {
+            "year": 2016,
+            "value": 76.541
+          },
+          {
+            "year": 2017,
+            "value": 76.685
+          },
+          {
+            "year": 2018,
+            "value": 77.885
+          },
+          {
+            "year": 2019,
+            "value": 76.683
+          },
+          {
+            "year": 2020,
+            "value": 75.932
+          },
+          {
+            "year": 2021,
+            "value": 73.824
+          },
+          {
+            "year": 2022,
+            "value": 76.188
+          },
+          {
+            "year": 2023,
+            "value": 77.588
+          },
+          {
+            "year": 2024,
+            "value": 77.89
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 76.683,
+        "latestYear": 2024,
+        "latestValue": 77.89
+      },
+      "thrive": {
+        "unit": "constant 2015 US$ per person",
+        "sourceId": "world-bank-gdp",
+        "values": [
+          {
+            "year": 2015,
+            "value": 6421
+          },
+          {
+            "year": 2016,
+            "value": 6634.382
+          },
+          {
+            "year": 2017,
+            "value": 6840.908
+          },
+          {
+            "year": 2018,
+            "value": 7159.468
+          },
+          {
+            "year": 2019,
+            "value": 7470.292
+          },
+          {
+            "year": 2020,
+            "value": 6351.952
+          },
+          {
+            "year": 2021,
+            "value": 7198.301
+          },
+          {
+            "year": 2022,
+            "value": 7773.6
+          },
+          {
+            "year": 2023,
+            "value": 8278.025
+          },
+          {
+            "year": 2024,
+            "value": 8540.004
+          },
+          {
+            "year": 2025,
+            "value": 8779.965
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 7470.292,
+        "latestYear": 2025,
+        "latestValue": 8779.965
+      },
+      "connect": {
+        "unit": "% of population",
+        "sourceId": "world-bank-internet",
+        "values": [
+          {
+            "year": 2015,
+            "value": 68.12
+          },
+          {
+            "year": 2016,
+            "value": 69.882
+          },
+          {
+            "year": 2017,
+            "value": 71.272
+          },
+          {
+            "year": 2018,
+            "value": 71.517
+          },
+          {
+            "year": 2019,
+            "value": 73.477
+          },
+          {
+            "year": 2020,
+            "value": 77.609
+          },
+          {
+            "year": 2021,
+            "value": 82.22
+          },
+          {
+            "year": 2022,
+            "value": 88.222
+          },
+          {
+            "year": 2023,
+            "value": 88.552
+          },
+          {
+            "year": 2024,
+            "value": 88.883
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 73.477,
+        "latestYear": 2024,
+        "latestValue": 88.883
+      },
+      "feel": {
+        "unit": "Cantril ladder points (0–10)",
+        "sourceId": "world-happiness",
+        "values": [
+          {
+            "year": 2015,
+            "value": 5.161
+          },
+          {
+            "year": 2016,
+            "value": 5.237
+          },
+          {
+            "year": 2017,
+            "value": 5.347
+          },
+          {
+            "year": 2018,
+            "value": 5.523
+          },
+          {
+            "year": 2019,
+            "value": 5.546
+          },
+          {
+            "year": 2020,
+            "value": 5.581
+          },
+          {
+            "year": 2021,
+            "value": 5.547
+          },
+          {
+            "year": 2022,
+            "value": 5.722
+          },
+          {
+            "year": 2023,
+            "value": 5.707
+          },
+          {
+            "year": 2024,
+            "value": 5.877
+          },
+          {
+            "year": 2025,
+            "value": 6.139
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 5.472,
+        "baselineYears": [
+          2017,
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 5.861,
         "latestYears": [
           2022,
           2023,
@@ -21841,6 +22585,237 @@
       }
     },
     {
+      "iso3": "MKD",
+      "country": "North Macedonia",
+      "region": "Europe & Central Asia",
+      "incomeGroup": "Upper middle income",
+      "population": 1820909,
+      "populationYear": 2025,
+      "live": {
+        "unit": "years",
+        "sourceId": "world-bank-life",
+        "values": [
+          {
+            "year": 2015,
+            "value": 75.402
+          },
+          {
+            "year": 2016,
+            "value": 75.4
+          },
+          {
+            "year": 2017,
+            "value": 75.954
+          },
+          {
+            "year": 2018,
+            "value": 76.649
+          },
+          {
+            "year": 2019,
+            "value": 76.602
+          },
+          {
+            "year": 2020,
+            "value": 74.395
+          },
+          {
+            "year": 2021,
+            "value": 73.246
+          },
+          {
+            "year": 2022,
+            "value": 74.425
+          },
+          {
+            "year": 2023,
+            "value": 75.316
+          },
+          {
+            "year": 2024,
+            "value": 76.617
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 76.602,
+        "latestYear": 2024,
+        "latestValue": 76.617
+      },
+      "thrive": {
+        "unit": "constant 2015 US$ per person",
+        "sourceId": "world-bank-gdp",
+        "values": [
+          {
+            "year": 2015,
+            "value": 5262.687
+          },
+          {
+            "year": 2016,
+            "value": 5429.947
+          },
+          {
+            "year": 2017,
+            "value": 5510.819
+          },
+          {
+            "year": 2018,
+            "value": 5698.393
+          },
+          {
+            "year": 2019,
+            "value": 5961.585
+          },
+          {
+            "year": 2020,
+            "value": 5743.726
+          },
+          {
+            "year": 2021,
+            "value": 6064.923
+          },
+          {
+            "year": 2022,
+            "value": 6250.627
+          },
+          {
+            "year": 2023,
+            "value": 6423.992
+          },
+          {
+            "year": 2024,
+            "value": 6628.847
+          },
+          {
+            "year": 2025,
+            "value": 6872.996
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 5961.585,
+        "latestYear": 2025,
+        "latestValue": 6872.996
+      },
+      "connect": {
+        "unit": "% of population",
+        "sourceId": "world-bank-internet",
+        "values": [
+          {
+            "year": 2015,
+            "value": 70.38
+          },
+          {
+            "year": 2016,
+            "value": 72.157
+          },
+          {
+            "year": 2017,
+            "value": 74.517
+          },
+          {
+            "year": 2018,
+            "value": 79.168
+          },
+          {
+            "year": 2019,
+            "value": 81.413
+          },
+          {
+            "year": 2020,
+            "value": 81.406
+          },
+          {
+            "year": 2021,
+            "value": 81.874
+          },
+          {
+            "year": 2022,
+            "value": 83.85
+          },
+          {
+            "year": 2023,
+            "value": 88.5
+          },
+          {
+            "year": 2024,
+            "value": 93.6
+          },
+          {
+            "year": 2025,
+            "value": 93.1
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 81.413,
+        "latestYear": 2025,
+        "latestValue": 93.1
+      },
+      "feel": {
+        "unit": "Cantril ladder points (0–10)",
+        "sourceId": "world-happiness",
+        "values": [
+          {
+            "year": 2015,
+            "value": 5.121
+          },
+          {
+            "year": 2016,
+            "value": 5.175
+          },
+          {
+            "year": 2017,
+            "value": 5.185
+          },
+          {
+            "year": 2018,
+            "value": 5.274
+          },
+          {
+            "year": 2019,
+            "value": 5.16
+          },
+          {
+            "year": 2020,
+            "value": 5.101
+          },
+          {
+            "year": 2021,
+            "value": 5.199
+          },
+          {
+            "year": 2022,
+            "value": 5.254
+          },
+          {
+            "year": 2023,
+            "value": 5.369
+          },
+          {
+            "year": 2024,
+            "value": 5.503
+          },
+          {
+            "year": 2025,
+            "value": 5.719
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 5.206,
+        "baselineYears": [
+          2017,
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 5.461,
+        "latestYears": [
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      }
+    },
+    {
       "iso3": "NOR",
       "country": "Norway",
       "region": "Europe & Central Asia",
@@ -22062,191 +23037,6 @@
         "latestYears": [
           2022,
           2023,
-          2024,
-          2025
-        ]
-      }
-    },
-    {
-      "iso3": "OMN",
-      "country": "Oman",
-      "region": "Middle East, North Africa, Afghanistan & Pakistan",
-      "incomeGroup": "High income",
-      "population": 5494691,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 79.346
-          },
-          {
-            "year": 2016,
-            "value": 79.581
-          },
-          {
-            "year": 2017,
-            "value": 79.748
-          },
-          {
-            "year": 2018,
-            "value": 79.864
-          },
-          {
-            "year": 2019,
-            "value": 79.946
-          },
-          {
-            "year": 2020,
-            "value": 77.763
-          },
-          {
-            "year": 2021,
-            "value": 75.969
-          },
-          {
-            "year": 2022,
-            "value": 77.911
-          },
-          {
-            "year": 2023,
-            "value": 80.031
-          },
-          {
-            "year": 2024,
-            "value": 80.246
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 79.946,
-        "latestYear": 2024,
-        "latestValue": 80.246
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 18808.308
-          },
-          {
-            "year": 2016,
-            "value": 18830.606
-          },
-          {
-            "year": 2017,
-            "value": 18277.946
-          },
-          {
-            "year": 2018,
-            "value": 18269.677
-          },
-          {
-            "year": 2019,
-            "value": 18089.587
-          },
-          {
-            "year": 2020,
-            "value": 17743.886
-          },
-          {
-            "year": 2021,
-            "value": 18291.339
-          },
-          {
-            "year": 2022,
-            "value": 18792.446
-          },
-          {
-            "year": 2023,
-            "value": 17853.964
-          },
-          {
-            "year": 2024,
-            "value": 17347.291
-          },
-          {
-            "year": 2025,
-            "value": 17074.175
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 18089.587,
-        "latestYear": 2025,
-        "latestValue": 17074.175
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 73.53
-          },
-          {
-            "year": 2016,
-            "value": 76.845
-          },
-          {
-            "year": 2017,
-            "value": 80.186
-          },
-          {
-            "year": 2018,
-            "value": 85.5
-          },
-          {
-            "year": 2019,
-            "value": 90.259
-          },
-          {
-            "year": 2020,
-            "value": 95.232
-          },
-          {
-            "year": 2021,
-            "value": 95.239
-          },
-          {
-            "year": 2022,
-            "value": 95.245
-          },
-          {
-            "year": 2023,
-            "value": 95.252
-          },
-          {
-            "year": 2024,
-            "value": 95.252
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 90.259,
-        "latestYear": 2024,
-        "latestValue": 95.252
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2024,
-            "value": 6.197
-          },
-          {
-            "year": 2025,
-            "value": 6.197
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "baselineYears": [],
-        "latestYear": 2025,
-        "latestValue": 6.197,
-        "latestYears": [
           2024,
           2025
         ]
@@ -22692,179 +23482,6 @@
           2024,
           2025
         ]
-      }
-    },
-    {
-      "iso3": "PNG",
-      "country": "Papua New Guinea",
-      "region": "East Asia & Pacific",
-      "incomeGroup": "Lower middle income",
-      "population": 10762817,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 64.473
-          },
-          {
-            "year": 2016,
-            "value": 64.7
-          },
-          {
-            "year": 2017,
-            "value": 64.923
-          },
-          {
-            "year": 2018,
-            "value": 65.114
-          },
-          {
-            "year": 2019,
-            "value": 65.331
-          },
-          {
-            "year": 2020,
-            "value": 65.075
-          },
-          {
-            "year": 2021,
-            "value": 64.358
-          },
-          {
-            "year": 2022,
-            "value": 65.274
-          },
-          {
-            "year": 2023,
-            "value": 66.134
-          },
-          {
-            "year": 2024,
-            "value": 66.256
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 65.331,
-        "latestYear": 2024,
-        "latestValue": 66.256
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 2484.596
-          },
-          {
-            "year": 2016,
-            "value": 2557.095
-          },
-          {
-            "year": 2017,
-            "value": 2584.888
-          },
-          {
-            "year": 2018,
-            "value": 2518.459
-          },
-          {
-            "year": 2019,
-            "value": 2572.562
-          },
-          {
-            "year": 2020,
-            "value": 2438.611
-          },
-          {
-            "year": 2021,
-            "value": 2378.389
-          },
-          {
-            "year": 2022,
-            "value": 2467.24
-          },
-          {
-            "year": 2023,
-            "value": 2515.286
-          },
-          {
-            "year": 2024,
-            "value": 2566.911
-          },
-          {
-            "year": 2025,
-            "value": 2664.69
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 2572.562,
-        "latestYear": 2025,
-        "latestValue": 2664.69
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 7.9
-          },
-          {
-            "year": 2016,
-            "value": 9.601
-          },
-          {
-            "year": 2017,
-            "value": 11.209
-          },
-          {
-            "year": 2018,
-            "value": 12.358
-          },
-          {
-            "year": 2019,
-            "value": 13.624
-          },
-          {
-            "year": 2020,
-            "value": 15.02
-          },
-          {
-            "year": 2021,
-            "value": 16.56
-          },
-          {
-            "year": 2022,
-            "value": 18.257
-          },
-          {
-            "year": 2023,
-            "value": 18.561
-          },
-          {
-            "year": 2024,
-            "value": 18.812
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 13.624,
-        "latestYear": 2024,
-        "latestValue": 18.812
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "baselineYears": [],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
       }
     },
     {
@@ -24003,365 +24620,6 @@
       }
     },
     {
-      "iso3": "PRI",
-      "country": "Puerto Rico (US)",
-      "region": "Latin America & Caribbean",
-      "incomeGroup": "High income",
-      "population": 3184835,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 80.677
-          },
-          {
-            "year": 2016,
-            "value": 80.355
-          },
-          {
-            "year": 2017,
-            "value": 79.07
-          },
-          {
-            "year": 2018,
-            "value": 81.086
-          },
-          {
-            "year": 2019,
-            "value": 81.438
-          },
-          {
-            "year": 2020,
-            "value": 80.009
-          },
-          {
-            "year": 2021,
-            "value": 79.77
-          },
-          {
-            "year": 2022,
-            "value": 79.427
-          },
-          {
-            "year": 2023,
-            "value": 81.69
-          },
-          {
-            "year": 2024,
-            "value": 81.902
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 81.438,
-        "latestYear": 2024,
-        "latestValue": 81.902
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 29242.041
-          },
-          {
-            "year": 2016,
-            "value": 29326.575
-          },
-          {
-            "year": 2017,
-            "value": 29061.556
-          },
-          {
-            "year": 2018,
-            "value": 28808.852
-          },
-          {
-            "year": 2019,
-            "value": 29185.097
-          },
-          {
-            "year": 2020,
-            "value": 28144.714
-          },
-          {
-            "year": 2021,
-            "value": 28416.449
-          },
-          {
-            "year": 2022,
-            "value": 29643.64
-          },
-          {
-            "year": 2023,
-            "value": 30012.906
-          },
-          {
-            "year": 2024,
-            "value": 30978.747
-          },
-          {
-            "year": 2025,
-            "value": 31249.735
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 29185.097,
-        "latestYear": 2025,
-        "latestValue": 31249.735
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 63.466
-          },
-          {
-            "year": 2016,
-            "value": 68.644
-          },
-          {
-            "year": 2017,
-            "value": 68.741
-          },
-          {
-            "year": 2018,
-            "value": 70.856
-          },
-          {
-            "year": 2019,
-            "value": 77.736
-          },
-          {
-            "year": 2021,
-            "value": 84.787
-          },
-          {
-            "year": 2022,
-            "value": 87.292
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 77.736,
-        "latestYear": 2022,
-        "latestValue": 87.292
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 7.039
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "baselineYears": [],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
-      }
-    },
-    {
-      "iso3": "QAT",
-      "country": "Qatar",
-      "region": "Middle East, North Africa, Afghanistan & Pakistan",
-      "incomeGroup": "High income",
-      "population": 2972215,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 81.785
-          },
-          {
-            "year": 2016,
-            "value": 82.147
-          },
-          {
-            "year": 2017,
-            "value": 82.458
-          },
-          {
-            "year": 2018,
-            "value": 82.714
-          },
-          {
-            "year": 2019,
-            "value": 82.945
-          },
-          {
-            "year": 2020,
-            "value": 80.409
-          },
-          {
-            "year": 2021,
-            "value": 81.083
-          },
-          {
-            "year": 2022,
-            "value": 81.857
-          },
-          {
-            "year": 2023,
-            "value": 82.368
-          },
-          {
-            "year": 2024,
-            "value": 82.522
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 82.945,
-        "latestYear": 2024,
-        "latestValue": 82.522
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 68985.295
-          },
-          {
-            "year": 2016,
-            "value": 67294.459
-          },
-          {
-            "year": 2017,
-            "value": 64497.699
-          },
-          {
-            "year": 2018,
-            "value": 64410.817
-          },
-          {
-            "year": 2019,
-            "value": 63430.461
-          },
-          {
-            "year": 2020,
-            "value": 57769.604
-          },
-          {
-            "year": 2021,
-            "value": 65488.512
-          },
-          {
-            "year": 2022,
-            "value": 64315.626
-          },
-          {
-            "year": 2023,
-            "value": 65111.033
-          },
-          {
-            "year": 2024,
-            "value": 62395.311
-          },
-          {
-            "year": 2025,
-            "value": 61734.693
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 63430.461,
-        "latestYear": 2025,
-        "latestValue": 61734.693
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 92.885
-          },
-          {
-            "year": 2016,
-            "value": 95.125
-          },
-          {
-            "year": 2017,
-            "value": 97.389
-          },
-          {
-            "year": 2018,
-            "value": 99.653
-          },
-          {
-            "year": 2019,
-            "value": 99.653
-          },
-          {
-            "year": 2020,
-            "value": 99.653
-          },
-          {
-            "year": 2021,
-            "value": 99.653
-          },
-          {
-            "year": 2022,
-            "value": 98.038
-          },
-          {
-            "year": 2023,
-            "value": 98.152
-          },
-          {
-            "year": 2024,
-            "value": 98.085
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 99.653,
-        "latestYear": 2024,
-        "latestValue": 98.085
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 6.375
-          },
-          {
-            "year": 2016,
-            "value": 6.375
-          },
-          {
-            "year": 2017,
-            "value": 6.374
-          },
-          {
-            "year": 2018,
-            "value": 6.374
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 6.374,
-        "baselineYears": [
-          2017,
-          2018
-        ],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
-      }
-    },
-    {
       "iso3": "ROU",
       "country": "Romania",
       "region": "Europe & Central Asia",
@@ -24813,212 +25071,6 @@
           2024,
           2025
         ]
-      }
-    },
-    {
-      "iso3": "RWA",
-      "country": "Rwanda",
-      "region": "Sub-Saharan Africa",
-      "incomeGroup": "Low income",
-      "population": 14569341,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 65.419
-          },
-          {
-            "year": 2016,
-            "value": 65.733
-          },
-          {
-            "year": 2017,
-            "value": 66.14
-          },
-          {
-            "year": 2018,
-            "value": 66.354
-          },
-          {
-            "year": 2019,
-            "value": 66.691
-          },
-          {
-            "year": 2020,
-            "value": 66.953
-          },
-          {
-            "year": 2021,
-            "value": 66.85
-          },
-          {
-            "year": 2022,
-            "value": 67.528
-          },
-          {
-            "year": 2023,
-            "value": 67.785
-          },
-          {
-            "year": 2024,
-            "value": 68.017
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 66.691,
-        "latestYear": 2024,
-        "latestValue": 68.017
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 725.691
-          },
-          {
-            "year": 2016,
-            "value": 748.798
-          },
-          {
-            "year": 2017,
-            "value": 765.845
-          },
-          {
-            "year": 2018,
-            "value": 808.705
-          },
-          {
-            "year": 2019,
-            "value": 863.872
-          },
-          {
-            "year": 2020,
-            "value": 821.257
-          },
-          {
-            "year": 2021,
-            "value": 871.042
-          },
-          {
-            "year": 2022,
-            "value": 935.895
-          },
-          {
-            "year": 2023,
-            "value": 993.911
-          },
-          {
-            "year": 2024,
-            "value": 1043.16
-          },
-          {
-            "year": 2025,
-            "value": 1116.47
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 863.872,
-        "latestYear": 2025,
-        "latestValue": 1116.47
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 12.456
-          },
-          {
-            "year": 2016,
-            "value": 14.637
-          },
-          {
-            "year": 2017,
-            "value": 17.2
-          },
-          {
-            "year": 2018,
-            "value": 19.167
-          },
-          {
-            "year": 2019,
-            "value": 21.358
-          },
-          {
-            "year": 2020,
-            "value": 23.8
-          },
-          {
-            "year": 2021,
-            "value": 24.442
-          },
-          {
-            "year": 2022,
-            "value": 28.017
-          },
-          {
-            "year": 2023,
-            "value": 28.806
-          },
-          {
-            "year": 2024,
-            "value": 31.703
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 21.358,
-        "latestYear": 2024,
-        "latestValue": 31.703
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 3.515
-          },
-          {
-            "year": 2016,
-            "value": 3.471
-          },
-          {
-            "year": 2017,
-            "value": 3.408
-          },
-          {
-            "year": 2018,
-            "value": 3.334
-          },
-          {
-            "year": 2019,
-            "value": 3.312
-          },
-          {
-            "year": 2020,
-            "value": 3.415
-          },
-          {
-            "year": 2021,
-            "value": 3.268
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 3.351,
-        "baselineYears": [
-          2017,
-          2018,
-          2019
-        ],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
       }
     },
     {
@@ -27034,144 +27086,6 @@
       }
     },
     {
-      "iso3": "SSD",
-      "country": "South Sudan",
-      "region": "Sub-Saharan Africa",
-      "incomeGroup": "Low income",
-      "population": 12188788,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 39.757
-          },
-          {
-            "year": 2016,
-            "value": 36.72
-          },
-          {
-            "year": 2017,
-            "value": 35.351
-          },
-          {
-            "year": 2018,
-            "value": 51.905
-          },
-          {
-            "year": 2019,
-            "value": 58.129
-          },
-          {
-            "year": 2020,
-            "value": 57.648
-          },
-          {
-            "year": 2021,
-            "value": 57.047
-          },
-          {
-            "year": 2022,
-            "value": 57.203
-          },
-          {
-            "year": 2023,
-            "value": 57.617
-          },
-          {
-            "year": 2024,
-            "value": 57.738
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 58.129,
-        "latestYear": 2024,
-        "latestValue": 57.738
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 1080.147
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "latestYear": 2015,
-        "latestValue": 1080.147
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 3
-          },
-          {
-            "year": 2016,
-            "value": 3.5
-          },
-          {
-            "year": 2017,
-            "value": 4.1
-          },
-          {
-            "year": 2018,
-            "value": 4.8
-          },
-          {
-            "year": 2019,
-            "value": 6.671
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 6.671,
-        "latestYear": 2019,
-        "latestValue": 6.671
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 3.832
-          },
-          {
-            "year": 2016,
-            "value": 3.591
-          },
-          {
-            "year": 2017,
-            "value": 3.254
-          },
-          {
-            "year": 2018,
-            "value": 2.853
-          },
-          {
-            "year": 2019,
-            "value": 2.817
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 2.975,
-        "baselineYears": [
-          2017,
-          2018,
-          2019
-        ],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
-      }
-    },
-    {
       "iso3": "ESP",
       "country": "Spain",
       "region": "Europe & Central Asia",
@@ -27623,166 +27537,6 @@
           2024,
           2025
         ]
-      }
-    },
-    {
-      "iso3": "SDN",
-      "country": "Sudan",
-      "region": "Sub-Saharan Africa",
-      "incomeGroup": "Low income",
-      "population": 51662147,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 64.375
-          },
-          {
-            "year": 2016,
-            "value": 64.677
-          },
-          {
-            "year": 2017,
-            "value": 65.146
-          },
-          {
-            "year": 2018,
-            "value": 65.501
-          },
-          {
-            "year": 2019,
-            "value": 65.803
-          },
-          {
-            "year": 2020,
-            "value": 65.124
-          },
-          {
-            "year": 2021,
-            "value": 64.46
-          },
-          {
-            "year": 2022,
-            "value": 65.695
-          },
-          {
-            "year": 2023,
-            "value": 66.331
-          },
-          {
-            "year": 2024,
-            "value": 66.521
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 65.803,
-        "latestYear": 2024,
-        "latestValue": 66.521
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 1292.38
-          },
-          {
-            "year": 2016,
-            "value": 1297.155
-          },
-          {
-            "year": 2017,
-            "value": 1261.874
-          },
-          {
-            "year": 2018,
-            "value": 1185.944
-          },
-          {
-            "year": 2019,
-            "value": 1126.553
-          },
-          {
-            "year": 2020,
-            "value": 1056.865
-          },
-          {
-            "year": 2021,
-            "value": 1009.549
-          },
-          {
-            "year": 2022,
-            "value": 973.225
-          },
-          {
-            "year": 2023,
-            "value": 677.723
-          },
-          {
-            "year": 2024,
-            "value": 578.389
-          },
-          {
-            "year": 2025,
-            "value": 582.114
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 1126.553,
-        "latestYear": 2025,
-        "latestValue": 582.114
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 12
-          },
-          {
-            "year": 2016,
-            "value": 14.1
-          },
-          {
-            "year": 2017,
-            "value": 18.6
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "latestYear": 2017,
-        "latestValue": 18.6
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 4.139
-          },
-          {
-            "year": 2016,
-            "value": 4.139
-          },
-          {
-            "year": 2017,
-            "value": 4.139
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 4.139,
-        "baselineYears": [
-          2017
-        ],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
       }
     },
     {
@@ -28245,163 +27999,6 @@
           2024,
           2025
         ]
-      }
-    },
-    {
-      "iso3": "SYR",
-      "country": "Syrian Arab Republic",
-      "region": "Middle East, North Africa, Afghanistan & Pakistan",
-      "incomeGroup": "Low income",
-      "population": 25620427,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 63.265
-          },
-          {
-            "year": 2016,
-            "value": 65.19
-          },
-          {
-            "year": 2017,
-            "value": 65.651
-          },
-          {
-            "year": 2018,
-            "value": 67.371
-          },
-          {
-            "year": 2019,
-            "value": 70.97
-          },
-          {
-            "year": 2020,
-            "value": 71.944
-          },
-          {
-            "year": 2021,
-            "value": 72.418
-          },
-          {
-            "year": 2022,
-            "value": 72.79
-          },
-          {
-            "year": 2023,
-            "value": 72.12
-          },
-          {
-            "year": 2024,
-            "value": 72.56
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 70.97,
-        "latestYear": 2024,
-        "latestValue": 72.56
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 847.732
-          },
-          {
-            "year": 2016,
-            "value": 802.969
-          },
-          {
-            "year": 2017,
-            "value": 795.882
-          },
-          {
-            "year": 2018,
-            "value": 792.413
-          },
-          {
-            "year": 2019,
-            "value": 771.518
-          },
-          {
-            "year": 2020,
-            "value": 753.135
-          },
-          {
-            "year": 2021,
-            "value": 746.077
-          },
-          {
-            "year": 2022,
-            "value": 716.944
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 771.518,
-        "latestYear": 2022,
-        "latestValue": 716.944
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 29.98
-          },
-          {
-            "year": 2016,
-            "value": 31.87
-          },
-          {
-            "year": 2017,
-            "value": 32.7
-          },
-          {
-            "year": 2018,
-            "value": 33.77
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "latestYear": 2018,
-        "latestValue": 33.77
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 3.069
-          },
-          {
-            "year": 2016,
-            "value": 3.462
-          },
-          {
-            "year": 2017,
-            "value": 3.462
-          },
-          {
-            "year": 2018,
-            "value": 3.462
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 3.462,
-        "baselineYears": [
-          2017,
-          2018
-        ],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
       }
     },
     {
@@ -29313,6 +28910,215 @@
       }
     },
     {
+      "iso3": "TTO",
+      "country": "Trinidad and Tobago",
+      "region": "Latin America & Caribbean",
+      "incomeGroup": "High income",
+      "population": 1367764,
+      "populationYear": 2025,
+      "live": {
+        "unit": "years",
+        "sourceId": "world-bank-life",
+        "values": [
+          {
+            "year": 2015,
+            "value": 72.882
+          },
+          {
+            "year": 2016,
+            "value": 72.935
+          },
+          {
+            "year": 2017,
+            "value": 72.984
+          },
+          {
+            "year": 2018,
+            "value": 72.658
+          },
+          {
+            "year": 2019,
+            "value": 72.836
+          },
+          {
+            "year": 2020,
+            "value": 72.645
+          },
+          {
+            "year": 2021,
+            "value": 71.111
+          },
+          {
+            "year": 2022,
+            "value": 73.331
+          },
+          {
+            "year": 2023,
+            "value": 73.49
+          },
+          {
+            "year": 2024,
+            "value": 73.617
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 72.836,
+        "latestYear": 2024,
+        "latestValue": 73.617
+      },
+      "thrive": {
+        "unit": "constant 2015 US$ per person",
+        "sourceId": "world-bank-gdp",
+        "values": [
+          {
+            "year": 2015,
+            "value": 19887.233
+          },
+          {
+            "year": 2016,
+            "value": 18331.034
+          },
+          {
+            "year": 2017,
+            "value": 17402.616
+          },
+          {
+            "year": 2018,
+            "value": 17205.615
+          },
+          {
+            "year": 2019,
+            "value": 17225.362
+          },
+          {
+            "year": 2020,
+            "value": 15679.961
+          },
+          {
+            "year": 2021,
+            "value": 15558.094
+          },
+          {
+            "year": 2022,
+            "value": 15712.23
+          },
+          {
+            "year": 2023,
+            "value": 15922.767
+          },
+          {
+            "year": 2024,
+            "value": 16312.485
+          },
+          {
+            "year": 2025,
+            "value": 16190.713
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 17225.362,
+        "latestYear": 2025,
+        "latestValue": 16190.713
+      },
+      "connect": {
+        "unit": "% of population",
+        "sourceId": "world-bank-internet",
+        "values": [
+          {
+            "year": 2015,
+            "value": 65.1
+          },
+          {
+            "year": 2016,
+            "value": 67.8
+          },
+          {
+            "year": 2017,
+            "value": 70.6
+          },
+          {
+            "year": 2018,
+            "value": 72.76
+          },
+          {
+            "year": 2019,
+            "value": 74.987
+          },
+          {
+            "year": 2020,
+            "value": 77.281
+          },
+          {
+            "year": 2021,
+            "value": 84.366
+          },
+          {
+            "year": 2022,
+            "value": 81.698
+          },
+          {
+            "year": 2023,
+            "value": 81.968
+          },
+          {
+            "year": 2024,
+            "value": 82.16
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 74.987,
+        "latestYear": 2024,
+        "latestValue": 82.16
+      },
+      "feel": {
+        "unit": "Cantril ladder points (0–10)",
+        "sourceId": "world-happiness",
+        "values": [
+          {
+            "year": 2015,
+            "value": 6.168
+          },
+          {
+            "year": 2016,
+            "value": 6.168
+          },
+          {
+            "year": 2017,
+            "value": 6.192
+          },
+          {
+            "year": 2018,
+            "value": 6.192
+          },
+          {
+            "year": 2019,
+            "value": 6.192
+          },
+          {
+            "year": 2024,
+            "value": 5.905
+          },
+          {
+            "year": 2025,
+            "value": 5.905
+          }
+        ],
+        "baselineYear": 2019,
+        "baselineValue": 6.192,
+        "baselineYears": [
+          2017,
+          2018,
+          2019
+        ],
+        "latestYear": 2025,
+        "latestValue": 5.905,
+        "latestYears": [
+          2024,
+          2025
+        ]
+      }
+    },
+    {
       "iso3": "TUN",
       "country": "Tunisia",
       "region": "Middle East, North Africa, Afghanistan & Pakistan",
@@ -29760,180 +29566,6 @@
           2024,
           2025
         ]
-      }
-    },
-    {
-      "iso3": "TKM",
-      "country": "Turkmenistan",
-      "region": "Europe & Central Asia",
-      "incomeGroup": "Upper middle income",
-      "population": 7618847,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 69.061
-          },
-          {
-            "year": 2016,
-            "value": 69.142
-          },
-          {
-            "year": 2017,
-            "value": 69.19
-          },
-          {
-            "year": 2018,
-            "value": 69.272
-          },
-          {
-            "year": 2019,
-            "value": 69.405
-          },
-          {
-            "year": 2020,
-            "value": 68.846
-          },
-          {
-            "year": 2021,
-            "value": 69.353
-          },
-          {
-            "year": 2022,
-            "value": 69.913
-          },
-          {
-            "year": 2023,
-            "value": 70.073
-          },
-          {
-            "year": 2024,
-            "value": 70.201
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 69.405,
-        "latestYear": 2024,
-        "latestValue": 70.201
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 5759.498
-          },
-          {
-            "year": 2016,
-            "value": 5979.476
-          },
-          {
-            "year": 2017,
-            "value": 6221.42
-          },
-          {
-            "year": 2018,
-            "value": 6460.13
-          },
-          {
-            "year": 2019,
-            "value": 6719.323
-          },
-          {
-            "year": 2020,
-            "value": 6964.382
-          },
-          {
-            "year": 2021,
-            "value": 7244.614
-          },
-          {
-            "year": 2022,
-            "value": 7549.253
-          },
-          {
-            "year": 2023,
-            "value": 7879.966
-          },
-          {
-            "year": 2024,
-            "value": 8229.673
-          },
-          {
-            "year": 2025,
-            "value": 8605.361
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 6719.323,
-        "latestYear": 2025,
-        "latestValue": 8605.361
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 14.997
-          },
-          {
-            "year": 2016,
-            "value": 17.99
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "latestYear": 2016,
-        "latestValue": 17.99
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 5.658
-          },
-          {
-            "year": 2016,
-            "value": 5.822
-          },
-          {
-            "year": 2017,
-            "value": 5.636
-          },
-          {
-            "year": 2018,
-            "value": 5.247
-          },
-          {
-            "year": 2019,
-            "value": 5.119
-          },
-          {
-            "year": 2020,
-            "value": 5.066
-          },
-          {
-            "year": 2021,
-            "value": 5.474
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 5.334,
-        "baselineYears": [
-          2017,
-          2018,
-          2019
-        ],
-        "latestYear": null,
-        "latestValue": null,
-        "latestYears": []
       }
     },
     {
@@ -32180,172 +31812,6 @@
         "latestValue": 4.815,
         "latestYears": [
           2022,
-          2023,
-          2024,
-          2025
-        ]
-      }
-    },
-    {
-      "iso3": "YEM",
-      "country": "Yemen, Rep.",
-      "region": "Middle East, North Africa, Afghanistan & Pakistan",
-      "incomeGroup": "Low income",
-      "population": 41773878,
-      "populationYear": 2025,
-      "live": {
-        "unit": "years",
-        "sourceId": "world-bank-life",
-        "values": [
-          {
-            "year": 2015,
-            "value": 66.761
-          },
-          {
-            "year": 2016,
-            "value": 67.105
-          },
-          {
-            "year": 2017,
-            "value": 67.12
-          },
-          {
-            "year": 2018,
-            "value": 65.915
-          },
-          {
-            "year": 2019,
-            "value": 66.567
-          },
-          {
-            "year": 2020,
-            "value": 66.435
-          },
-          {
-            "year": 2021,
-            "value": 66.019
-          },
-          {
-            "year": 2022,
-            "value": 67.952
-          },
-          {
-            "year": 2023,
-            "value": 69.295
-          },
-          {
-            "year": 2024,
-            "value": 69.439
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 66.567,
-        "latestYear": 2024,
-        "latestValue": 69.439
-      },
-      "thrive": {
-        "unit": "constant 2015 US$ per person",
-        "sourceId": "world-bank-gdp",
-        "values": [
-          {
-            "year": 2015,
-            "value": 1362.174
-          },
-          {
-            "year": 2016,
-            "value": 1197.959
-          },
-          {
-            "year": 2017,
-            "value": 1103.456
-          },
-          {
-            "year": 2018,
-            "value": 1079.329
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": null,
-        "latestYear": 2018,
-        "latestValue": 1079.329
-      },
-      "connect": {
-        "unit": "% of population",
-        "sourceId": "world-bank-internet",
-        "values": [
-          {
-            "year": 2015,
-            "value": 24.085
-          },
-          {
-            "year": 2016,
-            "value": 24.579
-          },
-          {
-            "year": 2019,
-            "value": 17.491
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 17.491,
-        "latestYear": 2019,
-        "latestValue": 17.491
-      },
-      "feel": {
-        "unit": "Cantril ladder points (0–10)",
-        "sourceId": "world-happiness",
-        "values": [
-          {
-            "year": 2015,
-            "value": 3.724
-          },
-          {
-            "year": 2016,
-            "value": 3.593
-          },
-          {
-            "year": 2017,
-            "value": 3.355
-          },
-          {
-            "year": 2018,
-            "value": 3.38
-          },
-          {
-            "year": 2019,
-            "value": 3.527
-          },
-          {
-            "year": 2020,
-            "value": 3.658
-          },
-          {
-            "year": 2021,
-            "value": 4.197
-          },
-          {
-            "year": 2023,
-            "value": 3.561
-          },
-          {
-            "year": 2024,
-            "value": 3.561
-          },
-          {
-            "year": 2025,
-            "value": 3.532
-          }
-        ],
-        "baselineYear": 2019,
-        "baselineValue": 3.421,
-        "baselineYears": [
-          2017,
-          2018,
-          2019
-        ],
-        "latestYear": 2025,
-        "latestValue": 3.551,
-        "latestYears": [
           2023,
           2024,
           2025

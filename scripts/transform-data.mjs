@@ -145,6 +145,12 @@ function hasAnyValue(series) {
   return series.values.length > 0;
 }
 
+// A series can't produce a baseline→latest change without both endpoints —
+// that's what drives the "Insufficient data" recovery-path badge in the UI.
+function hasComputableChange(series) {
+  return series.baselineValue !== null && series.latestValue !== null;
+}
+
 async function main() {
   await mkdir(PROCESSED_DIR, { recursive: true });
   await mkdir(METADATA_DIR, { recursive: true });
@@ -190,6 +196,13 @@ async function main() {
     const feel = feelIndicatorSeries(happinessMap.get(iso3), "world-happiness", SOURCES["world-happiness"].unit);
 
     if (![live, thrive, connect, feel].some(hasAnyValue)) continue;
+
+    // Countries missing THRIVE, CONNECT or FEEL can never clear the
+    // "Insufficient data" recovery-path badge, so they're dropped here
+    // (before the population cut) rather than shown half-blank — the
+    // population cut below then backfills with the next fully-covered
+    // country so the atlas still lands on TOP_N_COUNTRIES.
+    if (![thrive, connect, feel].every(hasComputableChange)) continue;
 
     const populationSeries = seriesFromMap(populationMap.get(iso3));
     const latestPopulation = populationSeries.length ? populationSeries[populationSeries.length - 1] : null;

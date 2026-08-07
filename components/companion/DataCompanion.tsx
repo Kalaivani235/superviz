@@ -373,12 +373,6 @@ export default function DataCompanion({ context, recoveries, yearRange, onComman
           }
           return;
 
-        case "dismiss":
-          dismissedRef.current = true;
-          writeSession(COMPANION_SESSION_KEYS.dismissed, "true");
-          trackCompanionEvent({ event: "companion_dismissed", metadata: {} });
-          setMode("hidden");
-          return;
         case "minimize":
           setMode("minimized");
           return;
@@ -422,7 +416,6 @@ export default function DataCompanion({ context, recoveries, yearRange, onComman
           prompt={prompt}
           onAction={handleAction}
           onMinimize={() => handleAction("minimize")}
-          onDismiss={() => handleAction("dismiss")}
         />
       )}
       {mode === "story" && storyScenes.length > 0 && (

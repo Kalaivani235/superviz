@@ -202,7 +202,7 @@ export default function AtlasApp() {
         />
 
         {selectedRecovery && (
-          <CountryPanel recovery={selectedRecovery} allRecoveries={recoveries} year={effectiveYear} sources={metadata.sources} />
+          <CountryPanel recovery={selectedRecovery} allRecoveries={recoveries} yearRange={yearRange} sources={metadata.sources} />
         )}
       </section>
 

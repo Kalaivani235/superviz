@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { generateNarrative } from "@/lib/narrative";
 import { METRIC_FULL_LABELS, METRIC_LABELS } from "@/lib/constants";
@@ -10,7 +11,7 @@ import RecoveryProfile from "./RecoveryProfile";
 type Props = {
   recovery: CountryRecovery;
   allRecoveries: CountryRecovery[];
-  year: number;
+  yearRange: [number, number];
   sources: SourceDefinition[];
 };
 
@@ -22,7 +23,29 @@ const CHANGE_KEY: Record<MetricKey, "thrivePctChange" | "liveAbsoluteChange" | "
   feel: "feelAbsoluteChange",
 };
 
-export default function CountryPanel({ recovery, allRecoveries, year, sources }: Props) {
+export default function CountryPanel({ recovery, allRecoveries, yearRange, sources }: Props) {
+  const [minYear, maxYear] = yearRange;
+  // Scoped to this panel alone — scrubbing the recovery profile never
+  // touches the Recovery Orbit's own year. Resets to minYear whenever a
+  // different country is selected because the panel remounts (keyed by
+  // iso3 below).
+  const [year, setYear] = useState(minYear);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    if (!isPlaying) {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      return;
+    }
+    intervalRef.current = setInterval(() => {
+      setYear((current) => (current >= maxYear ? minYear : current + 1));
+    }, 1100);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [isPlaying, minYear, maxYear]);
+
   const narrative = generateNarrative(recovery);
 
   const regionPeers = allRecoveries.filter(
@@ -63,7 +86,37 @@ export default function CountryPanel({ recovery, allRecoveries, year, sources }:
         </div>
       </div>
 
-      <RecoveryProfile country={recovery} year={year} />
+      <div className="recovery-profile-chart-row">
+        <RecoveryProfile country={recovery} year={year} />
+        <div className="profile-year-rail" role="group" aria-label={`Year for ${recovery.country}'s recovery profile`}>
+          <span className="profile-year-bound" aria-hidden="true">{maxYear}</span>
+          <input
+            id={`profile-year-slider-${recovery.iso3}`}
+            type="range"
+            className="profile-year-slider"
+            min={minYear}
+            max={maxYear}
+            step={1}
+            value={year}
+            onChange={(event) => setYear(Number(event.target.value))}
+            aria-label="Recovery profile year"
+            aria-valuetext={`${year}`}
+          />
+          <span className="profile-year-bound" aria-hidden="true">{minYear}</span>
+          <button
+            type="button"
+            className="profile-year-play"
+            onClick={() => setIsPlaying((playing) => !playing)}
+            aria-pressed={isPlaying}
+            aria-label={isPlaying ? "Pause recovery profile playback" : "Play recovery profile through the years"}
+          >
+            {isPlaying ? <span aria-hidden="true">❚❚</span> : <span aria-hidden="true">▶</span>}
+          </button>
+          <output htmlFor={`profile-year-slider-${recovery.iso3}`} className="profile-year-value">
+            {year}
+          </output>
+        </div>
+      </div>
 
       <dl className="country-panel-facts">
         <div>

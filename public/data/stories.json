@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-06T11:56:59.073Z",
+  "generatedAt": "2026-08-07T10:59:04.785Z",
   "stories": [
     {
       "id": "prosperity-without-wellbeing",
       "headline": "Prosperity recovered faster than wellbeing",
-      "insight": "4 of 130 countries with complete data grew real GDP per person while reported life satisfaction fell below its 2019 level. Tajikistan grew +38.7% in real GDP per person while life satisfaction moved -0.06 points.",
+      "insight": "4 of 143 countries with complete data grew real GDP per person while reported life satisfaction fell below its 2019 level. Tajikistan grew +38.7% in real GDP per person while life satisfaction moved -0.06 points.",
       "countries": [
         "TJK",
         "IRL",
@@ -46,12 +46,12 @@
     {
       "id": "resilient-health",
       "headline": "Health outcomes held steady despite economic pressure",
-      "insight": "4 countries recorded real GDP per person below its 2019 level while life expectancy still rose or held flat. Sudan's real GDP per person is -48.3% against 2019, yet life expectancy moved +0.7 years.",
+      "insight": "4 countries recorded real GDP per person below its 2019 level while life expectancy still rose or held flat. Afghanistan's real GDP per person is -32.9% against 2019, yet life expectancy moved +3.3 years.",
       "countries": [
-        "SDN",
         "AFG",
-        "GNQ",
-        "MMR"
+        "MMR",
+        "IRQ",
+        "COG"
       ],
       "years": [
         2019,
@@ -62,12 +62,12 @@
         "live"
       ],
       "lens": "live-thrive",
-      "highlightIso3": "SDN"
+      "highlightIso3": "AFG"
     },
     {
       "id": "broad-recovery",
       "headline": "A small group of countries recovered on all four signals",
-      "insight": "Only 6 of 150 countries with any data show non-negative movement in LIVE, THRIVE, CONNECT and FEEL simultaneously — broad recovery was the exception, not the rule. India leads the group.",
+      "insight": "Only 6 of 143 countries with any data show non-negative movement in LIVE, THRIVE, CONNECT and FEEL simultaneously — broad recovery was the exception, not the rule. India leads the group.",
       "countries": [
         "IND",
         "CHN",
@@ -92,9 +92,9 @@
     {
       "id": "uneven-region",
       "headline": "Middle East & North Africa shows the widest recovery spread of any region",
-      "insight": "Within Middle East & North Africa, real GDP per person ranges from -33.1% at Lebanon to +14.9% at Egypt, Arab Rep. against the same 2019 baseline — one region, very different recoveries.",
+      "insight": "Within Middle East & North Africa, real GDP per person ranges from -33.1% at Lebanon to +19.2% at Malta against the same 2019 baseline — one region, very different recoveries.",
       "countries": [
-        "EGY",
+        "MLT",
         "LBN"
       ],
       "years": [
@@ -105,7 +105,7 @@
         "thrive"
       ],
       "lens": "thrive-feel",
-      "highlightIso3": "EGY",
+      "highlightIso3": "MLT",
       "region": "Middle East, North Africa, Afghanistan & Pakistan"
     }
   ]
