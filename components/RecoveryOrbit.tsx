@@ -171,7 +171,7 @@ export default function RecoveryOrbit({
         ],
         iso3: p.country.iso3,
         lineStyle: {
-          color: REGION_COLORS[p.country.region] ?? "#aab6c5",
+          color: REGION_COLORS[p.country.region] ?? "#6f6a5c",
           opacity: isDimmed(p.country.iso3) ? 0.06 : isEmphasized(p.country.iso3) ? 0.75 : 0.22,
           width: isEmphasized(p.country.iso3) ? 2.4 : 1.2,
           curveness: 0.08,
@@ -183,7 +183,7 @@ export default function RecoveryOrbit({
       iso3: p.country.iso3,
       itemStyle: {
         color: "transparent",
-        borderColor: REGION_COLORS[p.country.region] ?? "#aab6c5",
+        borderColor: REGION_COLORS[p.country.region] ?? "#6f6a5c",
         borderWidth: 1.2,
         opacity: isDimmed(p.country.iso3) ? 0.08 : 0.45,
       },
@@ -199,7 +199,7 @@ export default function RecoveryOrbit({
       const isRevealed = revealSet.has(p.country.iso3);
       const isPrimary = isSelected || isCompare;
       const showLabel = isPrimary || isHovered || isHighlighted || isRevealed;
-      const revealColor = isRevealed ? (revealHighlight?.correct ? "#63d8e5" : "#ff8f7f") : null;
+      const revealColor = isRevealed ? (revealHighlight?.correct ? "#0b6d7d" : "#b53c28") : null;
       const isPulsingThis = pulsing && isRevealed;
       return {
         value: [p.x, p.y, p.country.population ?? 0],
@@ -207,8 +207,8 @@ export default function RecoveryOrbit({
         country: p.country,
         symbolSize: bubbleSize(p.country.population) * (isPulsingThis ? 1.25 : 1),
         itemStyle: {
-          color: REGION_COLORS[p.country.region] ?? "#aab6c5",
-          borderColor: revealColor ?? (isPrimary ? "#ffffff" : isHighlighted ? "rgba(255,255,255,.65)" : "#1b212b"),
+          color: REGION_COLORS[p.country.region] ?? "#6f6a5c",
+          borderColor: revealColor ?? (isPrimary ? "#201d1a" : isHighlighted ? "rgba(32,29,26,.55)" : "#f4f1ea"),
           borderWidth: isPrimary ? 3.5 : isHighlighted || isRevealed ? 2.6 : 1.5,
           opacity: isDimmed(p.country.iso3) ? 0.18 : 0.9,
           shadowBlur: isPrimary || isHovered || isHighlighted || isRevealed ? (isPulsingThis ? 26 : 18) : 0,
@@ -220,7 +220,7 @@ export default function RecoveryOrbit({
               formatter: p.country.country,
               position: "top" as const,
               distance: 10,
-              color: "#f5f0e8",
+              color: "#201d1a",
               fontWeight: isPrimary ? 700 : 600,
               fontSize: isPrimary ? 12 : 11,
             }
@@ -238,15 +238,15 @@ export default function RecoveryOrbit({
       grid: { left: 64, right: 34, top: 54, bottom: 62, containLabel: false },
       tooltip: {
         trigger: "item",
-        backgroundColor: "#242c39",
-        borderColor: "#3d4757",
-        textStyle: { color: "#f5f0e8", fontFamily: "sans-serif" },
+        backgroundColor: "#fbfaf6",
+        borderColor: "#ddd6c6",
+        textStyle: { color: "#201d1a", fontFamily: "sans-serif" },
         extraCssText: "border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.35);padding:14px 16px;max-width:300px",
         formatter: (params: unknown) => {
           const datum = (params as { data?: { country?: CountryDataset; value: number[] } }).data;
           if (!datum?.country) return "";
           const c = datum.country;
-          return `<strong style="font-size:15px">${c.country}</strong><br/><span style="color:#aab6c5">${shortRegionLabel(c.region)}</span><br/><br/>${lens.xLabel.split(" ·")[0]}&nbsp; ${formatSigned(datum.value[0], 1, lens.xMetric === "thrive" ? "%" : "")}<br/>${lens.yLabel.split(" ·")[0]}&nbsp; ${formatSigned(datum.value[1], 1, "")}<br/>Population&nbsp; ${formatPopulation(c.population ?? 0)}`;
+          return `<strong style="font-size:15px">${c.country}</strong><br/><span style="color:#6f6a5c">${shortRegionLabel(c.region)}</span><br/><br/>${lens.xLabel.split(" ·")[0]}&nbsp; ${formatSigned(datum.value[0], 1, lens.xMetric === "thrive" ? "%" : "")}<br/>${lens.yLabel.split(" ·")[0]}&nbsp; ${formatSigned(datum.value[1], 1, "")}<br/>Population&nbsp; ${formatPopulation(c.population ?? 0)}`;
         },
       },
       xAxis: {
@@ -254,10 +254,10 @@ export default function RecoveryOrbit({
         name: lens.xLabel,
         nameLocation: "middle",
         nameGap: 39,
-        nameTextStyle: { color: "#aab6c5", fontSize: 11, fontWeight: 700, letterSpacing: 1.4 },
-        axisLine: { lineStyle: { color: "#667487" } },
-        axisLabel: { color: "#aab6c5" },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,.07)" } },
+        nameTextStyle: { color: "#6f6a5c", fontSize: 11, fontWeight: 700, letterSpacing: 1.4 },
+        axisLine: { lineStyle: { color: "#8b8574" } },
+        axisLabel: { color: "#6f6a5c" },
+        splitLine: { lineStyle: { color: "rgba(32,29,26,.08)" } },
         min: xBounds?.[0],
         max: xBounds?.[1],
       },
@@ -266,18 +266,18 @@ export default function RecoveryOrbit({
         name: lens.yLabel,
         nameLocation: "middle",
         nameGap: 48,
-        nameTextStyle: { color: "#aab6c5", fontSize: 11, fontWeight: 700, letterSpacing: 1.2 },
-        axisLine: { lineStyle: { color: "#667487" } },
-        axisLabel: { color: "#aab6c5" },
-        splitLine: { lineStyle: { color: "rgba(255,255,255,.07)" } },
+        nameTextStyle: { color: "#6f6a5c", fontSize: 11, fontWeight: 700, letterSpacing: 1.2 },
+        axisLine: { lineStyle: { color: "#8b8574" } },
+        axisLabel: { color: "#6f6a5c" },
+        splitLine: { lineStyle: { color: "rgba(32,29,26,.08)" } },
         min: yBounds?.[0],
         max: yBounds?.[1],
       },
       graphic: [
-        { type: "text", right: "7%", top: 18, silent: true, style: { text: quadrant.both, fill: "rgba(245,240,232,.58)", font: "700 10px sans-serif" } },
-        { type: "text", left: 72, top: 18, silent: true, style: { text: quadrant.yOnly, fill: "rgba(245,240,232,.58)", font: "700 10px sans-serif" } },
-        { type: "text", right: "7%", bottom: 18, silent: true, style: { text: quadrant.xOnly, fill: "rgba(245,240,232,.58)", font: "700 10px sans-serif" } },
-        { type: "text", left: 72, bottom: 18, silent: true, style: { text: quadrant.neither, fill: "rgba(245,240,232,.58)", font: "700 10px sans-serif" } },
+        { type: "text", right: "7%", top: 18, silent: true, style: { text: quadrant.both, fill: "rgba(32,29,26,.5)", font: "700 10px sans-serif" } },
+        { type: "text", left: 72, top: 18, silent: true, style: { text: quadrant.yOnly, fill: "rgba(32,29,26,.5)", font: "700 10px sans-serif" } },
+        { type: "text", right: "7%", bottom: 18, silent: true, style: { text: quadrant.xOnly, fill: "rgba(32,29,26,.5)", font: "700 10px sans-serif" } },
+        { type: "text", left: 72, bottom: 18, silent: true, style: { text: quadrant.neither, fill: "rgba(32,29,26,.5)", font: "700 10px sans-serif" } },
       ],
       series: [
         {
@@ -297,7 +297,7 @@ export default function RecoveryOrbit({
             silent: true,
             symbol: "none",
             label: { show: false },
-            lineStyle: { color: "rgba(245,240,232,.35)", width: 1.3 },
+            lineStyle: { color: "rgba(32,29,26,.3)", width: 1.3 },
             data: [{ xAxis: 0 }, { yAxis: 0 }],
           },
         },

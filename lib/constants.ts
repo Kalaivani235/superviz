@@ -1,13 +1,13 @@
 import type { LensDefinition, LensKey, MetricKey } from "./types";
 
 export const REGION_COLORS: Record<string, string> = {
-  "East Asia & Pacific": "#5fd3e0",
-  "Europe & Central Asia": "#9c8cff",
-  "Latin America & Caribbean": "#ffc85c",
-  "Middle East, North Africa, Afghanistan & Pakistan": "#ff8b7a",
-  "North America": "#6fb4ff",
-  "South Asia": "#7be39a",
-  "Sub-Saharan Africa": "#ff8fc4",
+  "East Asia & Pacific": "#1f9aab",
+  "Europe & Central Asia": "#7457e0",
+  "Latin America & Caribbean": "#c78a1f",
+  "Middle East, North Africa, Afghanistan & Pakistan": "#d95d47",
+  "North America": "#2d6fc4",
+  "South Asia": "#2f9a5c",
+  "Sub-Saharan Africa": "#c94f8e",
 };
 
 export const REGION_ORDER = Object.keys(REGION_COLORS);

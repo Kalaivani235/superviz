@@ -57,14 +57,11 @@ export default function Hero({ countryCount, regionCount, yearRange, baselineYea
       </div>
       <div className="hero-grid" aria-hidden="true" />
       <motion.div
-        className="hero-content section-shell"
+        className="hero-content hero-content--centered section-shell"
         initial={{ opacity: 0, y: 28 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
       >
-        <p className="status-pill">
-          <span /> {countryCount} COUNTRIES · {regionCount} REGIONS · {yearRange[0]}–{yearRange[1]}
-        </p>
         <h1 id="hero-title">
           <span>RECOVERY</span>
           <em>ATLAS</em>
@@ -76,6 +73,9 @@ export default function Hero({ countryCount, regionCount, yearRange, baselineYea
         <p className="hero-context">
           Using {baselineYear} as the pre-pandemic baseline, compare {countryCount} economies then and now across
           four independent signals: LIVE, THRIVE, CONNECT and FEEL.
+        </p>
+        <p className="status-pill">
+          <span /> {countryCount} COUNTRIES · {regionCount} REGIONS · {yearRange[0]}–{yearRange[1]}
         </p>
         <div className="hero-preview" role="group" aria-label={`Global averages since ${baselineYear}`}>
           {previewCards.map((card) => (
