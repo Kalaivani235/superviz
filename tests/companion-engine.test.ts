@@ -108,7 +108,6 @@ describe("getContextualPrompt", () => {
     region: "All regions",
     year: 2024,
     selectedIso3: null,
-    isPlaying: false,
     storySpotlight: null,
   };
 

@@ -17,7 +17,6 @@ import RecoveryOrbit from "./RecoveryOrbit";
 import SectionHeading from "./SectionHeading";
 import StatusScreen from "./StatusScreen";
 import StoriesSection from "./StoriesSection";
-import TimelineControl from "./TimelineControl";
 
 export default function AtlasApp() {
   const state = useAtlasData();
@@ -30,7 +29,6 @@ export default function AtlasApp() {
   const [year, setYear] = useState<number | null>(null);
   const [lens, setLens] = useState<LensKey>("thrive-feel");
   const [region, setRegion] = useState("All regions");
-  const [isPlaying, setIsPlaying] = useState(false);
   const [activeSection, setActiveSection] = useState("overview");
   const [storySpotlight, setStorySpotlight] = useState<string[] | null>(null);
   const [predictionReveal, setPredictionReveal] = useState<{ iso3s: string[]; correct: boolean } | null>(null);
@@ -75,13 +73,6 @@ export default function AtlasApp() {
           if (command.selectedIso3) setSelectedIso3(command.selectedIso3);
           if (command.spotlightIso3s) setStorySpotlight(command.spotlightIso3s);
           if (command.section) scrollToSection(command.section);
-          break;
-        case "START_TIMELINE":
-          setYear(command.fromYear);
-          setIsPlaying(true);
-          break;
-        case "STOP_TIMELINE":
-          setIsPlaying(false);
           break;
         case "CLEAR_SPOTLIGHT":
           setStorySpotlight(null);
@@ -137,7 +128,6 @@ export default function AtlasApp() {
     year: effectiveYear,
     selectedIso3: effectiveSelectedIso3,
     selectedCountryName: selectedRecovery?.country,
-    isPlaying,
     storySpotlight,
   };
 
@@ -189,7 +179,6 @@ export default function AtlasApp() {
               setLens("thrive-feel");
               setYear(yearRange[1]);
               setHoveredIso3(null);
-              setIsPlaying(false);
               setStorySpotlight(null);
               setPredictionReveal(null);
             }}
@@ -211,17 +200,6 @@ export default function AtlasApp() {
           onSelect={selectCountry}
           onHover={setHoveredIso3}
         />
-
-        <div id="timeline" className="timeline-anchor">
-          <TimelineControl
-            year={effectiveYear}
-            yearRange={yearRange}
-            baselineYear={dataset.baselineYear}
-            isPlaying={isPlaying}
-            onChangeYear={setYear}
-            onTogglePlay={() => setIsPlaying((playing) => !playing)}
-          />
-        </div>
 
         {selectedRecovery && (
           <CountryPanel recovery={selectedRecovery} allRecoveries={recoveries} year={effectiveYear} sources={metadata.sources} />

@@ -108,7 +108,6 @@ export const LENS_QUADRANTS: Record<LensKey, { both: string; xOnly: string; yOnl
 export const NAV_SECTIONS = [
   { id: "overview", label: "Overview" },
   { id: "explore", label: "Explore" },
-  { id: "timeline", label: "Timeline" },
   { id: "compare", label: "Compare" },
   { id: "stories", label: "Stories" },
   { id: "methodology", label: "Methodology" },

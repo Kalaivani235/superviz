@@ -17,14 +17,6 @@ export type CompanionCommand =
       section?: string;
     }
   | {
-      type: "START_TIMELINE";
-      fromYear: number;
-      toYear: number;
-    }
-  | {
-      type: "STOP_TIMELINE";
-    }
-  | {
       type: "CLEAR_SPOTLIGHT";
     }
   | {
@@ -44,7 +36,6 @@ export interface CompanionContext {
   year: number;
   selectedIso3: string | null;
   selectedCountryName?: string;
-  isPlaying: boolean;
   storySpotlight: string[] | null;
 }
 
