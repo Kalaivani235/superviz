@@ -1,7 +1,6 @@
-import { METRIC_LABELS } from "@/lib/constants";
 import type { CountryRecovery, Story } from "@/lib/types";
 import SectionHeading from "./SectionHeading";
-import StoryChart from "./StoryChart";
+import StoryFlipCard from "./StoryFlipCard";
 
 type Props = {
   stories: Story[];
@@ -16,21 +15,12 @@ export default function StoriesSection({ stories, recoveries }: Props) {
       <SectionHeading
         eyebrow="Stories"
         title="What the data reveals"
-        description="Every story below is generated from the final dataset — not written first and matched to numbers afterward."
+        description="Every story below is generated from the final dataset — not written first and matched to numbers afterward. Click a card to flip it and see the chart behind it."
       />
       {stories.length ? (
         <div className="stories-grid">
           {stories.map((story) => (
-            <article className="story-card" key={story.id}>
-              <p className="eyebrow">{story.metrics.map((m) => METRIC_LABELS[m]).join(" · ")}</p>
-              <h3>{story.headline}</h3>
-              <p>{story.insight}</p>
-              <div className="story-meta">
-                <span>{story.countries.slice(0, 4).map(countryName).join(", ")}{story.countries.length > 4 ? "…" : ""}</span>
-                <span>{story.years.join("–")}</span>
-              </div>
-              <StoryChart story={story} recoveries={recoveries} />
-            </article>
+            <StoryFlipCard key={story.id} story={story} recoveries={recoveries} countryName={countryName} />
           ))}
         </div>
       ) : (
