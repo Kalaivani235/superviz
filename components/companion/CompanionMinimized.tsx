@@ -1,3 +1,5 @@
+import AtlasAvatar from "./AtlasAvatar";
+
 type Props = {
   onExpand: () => void;
   hasNewPrompt: boolean;
@@ -6,7 +8,7 @@ type Props = {
 export default function CompanionMinimized({ onExpand, hasNewPrompt }: Props) {
   return (
     <button type="button" className={`companion-minimized${hasNewPrompt ? " has-pulse" : ""}`} onClick={onExpand}>
-      <span className="companion-minimized-dot" aria-hidden="true" />
+      <AtlasAvatar state={hasNewPrompt ? "noticed" : "idle"} size={28} />
       Atlas Guide
     </button>
   );

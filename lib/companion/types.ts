@@ -80,6 +80,7 @@ export type CompanionActionId =
   | "prediction-show-another"
   | "prediction-explore-country"
   | "prediction-continue-story"
+  | "atlas-show-me"
   | "minimize";
 
 export interface CompanionAction {

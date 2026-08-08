@@ -1,5 +1,6 @@
 import { METRIC_CHANGE_KEY, METRIC_FULL_LABELS, METRIC_MAGNITUDE } from "@/lib/constants";
 import { formatSigned, shortRegionLabel } from "@/lib/formatting";
+import { findEconomicWellbeingGap } from "./discovery-engine";
 import type { CompanionContext, CompanionPrompt, PredictionAnswerResult } from "./types";
 import type { CountryRecovery, MetricKey } from "@/lib/types";
 
@@ -151,15 +152,28 @@ export function getContextualPrompt(
       };
     }
 
-    case "inactivity":
+    case "inactivity": {
+      const discovery = findEconomicWellbeingGap(recoveries);
+      if (!discovery) {
+        return {
+          id: "inactivity",
+          message: "Still there? Try comparing how digital access and wellbeing moved together — or didn't.",
+          actions: [
+            { id: "show-contrast", label: "Show the pattern" },
+            { id: "hide-guide", label: "Hide guide" },
+          ],
+        };
+      }
       return {
-        id: "inactivity",
-        message: "Still there? Try comparing how digital access and wellbeing moved together — or didn't.",
+        id: `atlas-discovery-${discovery.id}`,
+        message: `Wait — I found something unusual. ${discovery.setup} ${discovery.surprise}`,
         actions: [
-          { id: "show-contrast", label: "Show the pattern" },
-          { id: "hide-guide", label: "Hide guide" },
+          { id: "atlas-show-me", label: "Show me" },
+          { id: "give-challenge", label: "Let me guess" },
+          { id: "hide-guide", label: "Not now" },
         ],
       };
+    }
 
     default:
       return null;

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { getContextualPrompt, getPredictionExplanation, getRegionalInsight, getSelectedCountryInsight } from "@/lib/companion/companion-engine";
+import { findEconomicWellbeingGap, getDiscoveryExplanation } from "@/lib/companion/discovery-engine";
 import { pickNextQuestion, validateAnswer } from "@/lib/companion/prediction-engine";
 import { resolveStory } from "@/lib/companion/scene-runner";
 import { trackCompanionEvent } from "@/lib/companion/analytics";
@@ -87,6 +88,11 @@ export default function DataCompanion({ context, recoveries, yearRange, onComman
   const previousCountryRef = useRef(context.selectedIso3);
   const inactivityTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const heroTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // True for the span between clicking "Show me" and its own reveal prompt
+  // appearing — selecting the country as part of that sequence would
+  // otherwise also arm the generic "country-selected" trigger below, which
+  // briefly flashes its own message before the reveal overwrites it.
+  const atlasSequenceRef = useRef(false);
 
   // ---- lazy-load the prediction question pool ------------------------
   useEffect(() => {
@@ -148,7 +154,7 @@ export default function DataCompanion({ context, recoveries, yearRange, onComman
     const changed = previousCountryRef.current !== context.selectedIso3;
     previousCountryRef.current = context.selectedIso3;
     if (!changed || !context.selectedIso3) return;
-    if (dismissedRef.current || mode === "story" || mode === "prediction") return;
+    if (dismissedRef.current || mode === "story" || mode === "prediction" || atlasSequenceRef.current) return;
     const timer = setTimeout(() => {
       const next = getContextualPrompt("country-selected", context, recoveries);
       if (next) showPrompt(next);
@@ -325,6 +331,28 @@ export default function DataCompanion({ context, recoveries, yearRange, onComman
         case "continue-exploring":
           setMode("minimized");
           return;
+
+        case "atlas-show-me": {
+          const discovery = findEconomicWellbeingGap(recoveries);
+          if (!discovery) return;
+          atlasSequenceRef.current = true;
+          setMode("minimized");
+          window.setTimeout(() => {
+            onCommand(discovery.command);
+            window.setTimeout(() => {
+              atlasSequenceRef.current = false;
+              showPrompt({
+                id: `atlas-reveal-${discovery.iso3}`,
+                message: getDiscoveryExplanation(discovery),
+                actions: [
+                  { id: "continue-exploring", label: "Explore this country" },
+                  { id: "see-another-contrast", label: "See another pattern" },
+                ],
+              });
+            }, 900);
+          }, 300);
+          return;
+        }
 
         case "story-next":
           if (storyIndex >= storyScenes.length - 1) {

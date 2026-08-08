@@ -1,4 +1,5 @@
 import type { CompanionActionId, PredictionAnswerResult, PredictionQuestion } from "@/lib/companion/types";
+import AtlasAvatar from "./AtlasAvatar";
 import CompanionActions from "./CompanionActions";
 
 type Props = {
@@ -13,11 +14,15 @@ type Props = {
 
 export default function PredictionCard({ question, selectedOptionId, revealed, result, onSelectOption, onAction, onExit }: Props) {
   const locked = selectedOptionId !== null;
+  const avatarState = revealed ? (result?.correct ? "celebrate" : "reveal") : "thinking";
 
   return (
     <div className="companion-card prediction-card" role="status" aria-live="polite">
       <div className="companion-card-head">
-        <span className="companion-label">Atlas Guide · Predict</span>
+        <span className="companion-label">
+          <AtlasAvatar state={avatarState} size={26} />
+          Atlas Guide · Predict
+        </span>
         <div className="companion-card-controls">
           <button type="button" onClick={onExit} aria-label="Exit prediction">
             ×
