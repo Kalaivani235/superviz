@@ -188,6 +188,10 @@ async function main() {
     happinessMap.get(code).set(numericYear, numericValue);
   }
 
+  const totalEconomies = countryMeta.size;
+  let noUsableDataCount = 0;
+  let insufficientSignalCount = 0;
+
   const countries = [];
   for (const [iso3, meta] of countryMeta) {
     const live = directIndicatorSeries(lifeMap.get(iso3), "world-bank-life", SOURCES["world-bank-life"].unit);
@@ -195,14 +199,20 @@ async function main() {
     const connect = directIndicatorSeries(internetMap.get(iso3), "world-bank-internet", SOURCES["world-bank-internet"].unit);
     const feel = feelIndicatorSeries(happinessMap.get(iso3), "world-happiness", SOURCES["world-happiness"].unit);
 
-    if (![live, thrive, connect, feel].some(hasAnyValue)) continue;
+    if (![live, thrive, connect, feel].some(hasAnyValue)) {
+      noUsableDataCount += 1;
+      continue;
+    }
 
     // Countries missing THRIVE, CONNECT or FEEL can never clear the
     // "Insufficient data" recovery-path badge, so they're dropped here
     // (before the population cut) rather than shown half-blank — the
     // population cut below then backfills with the next fully-covered
     // country so the atlas still lands on TOP_N_COUNTRIES.
-    if (![thrive, connect, feel].every(hasComputableChange)) continue;
+    if (![thrive, connect, feel].every(hasComputableChange)) {
+      insufficientSignalCount += 1;
+      continue;
+    }
 
     const populationSeries = seriesFromMap(populationMap.get(iso3));
     const latestPopulation = populationSeries.length ? populationSeries[populationSeries.length - 1] : null;
@@ -251,7 +261,18 @@ async function main() {
     baselineNote: "LIVE, THRIVE and CONNECT use the calendar year 2019 as the pre-pandemic baseline. FEEL uses a 2017–2019 survey average because life-satisfaction sampling is sparser and noisier year to year.",
     latestNote: "LIVE, THRIVE and CONNECT use each country's most recent available observation, which differs by indicator and by country. FEEL uses the average of all available survey years from 2022 onward.",
     missingDataNote: "A null value means the source has no observation for that country/year/indicator. Missing values are never estimated, interpolated or replaced — they are shown as unavailable and excluded from averages and comparisons that require them.",
-    coverageScopeNote: `This atlas covers the ${TOP_N_COUNTRIES} most populous economies with usable data, so the experience stays focused on widely-recognized countries rather than every micro-territory a source tracks. Ranking is by total population (most recent available), the only objective proxy for global prominence present in the source data. ${excludedByPopulationCap} smaller economies were excluded on this basis.`,
+    coverageScopeNote: [
+      `World Bank tracks ${totalEconomies} economies.`,
+      noUsableDataCount > 0
+        ? `${noUsableDataCount} have no usable observation in any of LIVE, THRIVE, CONNECT or FEEL and are excluded outright.`
+        : null,
+      `${insufficientSignalCount} more are missing THRIVE, CONNECT or FEEL entirely — which would leave them permanently stuck on "Insufficient data" — so they're excluded too.`,
+      excludedByPopulationCap > 0
+        ? `That leaves ${rankedByPopulation.length} economies with all four dimensions computable, ranked by total population (most recent available, the only objective proxy for global prominence in the source data) and capped to the ${TOP_N_COUNTRIES} most populous — ${excludedByPopulationCap} smaller economies were excluded on that basis.`
+        : `That leaves ${topCountries.length} economies with all four dimensions computable — fewer than the ${TOP_N_COUNTRIES}-country target, so every one of them is included and no population-based cut was needed.`,
+    ]
+      .filter(Boolean)
+      .join(" "),
     sources: Object.values(SOURCES),
   };
   await writeFile(path.join(PUBLIC_DATA_DIR, "metadata.json"), JSON.stringify(metadata, null, 2));
