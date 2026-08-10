@@ -8,6 +8,7 @@ import type { CompanionCommand, CompanionContext } from "@/lib/companion/types";
 import type { LensKey } from "@/lib/types";
 import { useAtlasData } from "@/lib/useAtlasData";
 import DataCompanion from "./companion/DataCompanion";
+import Colophon from "./Colophon";
 import ComparePanel from "./ComparePanel";
 import CountryPanel from "./CountryPanel";
 import Header from "./Header";
@@ -250,6 +251,8 @@ export default function AtlasApp() {
           <i /> <span>FEEL</span>
         </div>
       </section>
+
+      <Colophon />
 
       <footer className="site-footer section-shell">
         <div>

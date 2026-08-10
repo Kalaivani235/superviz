@@ -308,6 +308,19 @@ button { cursor: pointer; }
 .closing > p:not(.eyebrow) { position: relative; margin: 38px 0 0; color: var(--text-muted); font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.6rem); line-height: 1.25; letter-spacing: -.03em; }
 .signal-line { position: relative; display: flex; align-items: center; gap: 13px; margin-top: 64px; color: var(--text-primary); font-size: .67rem; font-weight: 800; letter-spacing: .16em; }
 .signal-line i { width: 4px; height: 4px; border-radius: 50%; background: var(--recovery-cyan); }
+
+.colophon { padding: 34px; margin-top: 60px; border: 1px solid var(--border); border-radius: 20px; background: var(--bg-secondary); }
+.colophon-title { margin: 0 0 26px; font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; }
+.colophon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px 28px; margin-bottom: 30px; }
+.colophon-label { margin: 0 0 8px; color: var(--text-muted); font-size: .66rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.colophon-items { margin: 0; color: var(--text-primary); font-size: .82rem; line-height: 1.7; }
+.colophon-author { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 22px; border-top: 1px solid var(--border); }
+.colophon-author-name { margin: 0; color: var(--text-primary); font-size: .88rem; font-weight: 700; }
+.colophon-author-name span { margin-left: 6px; color: var(--text-muted); font-weight: 500; }
+.colophon-author-role { margin: 2px 0 0; color: var(--text-muted); font-size: .78rem; }
+.colophon-link { min-height: 36px; display: inline-flex; align-items: center; padding: 6px 16px; border: 1px solid var(--recovery-cyan); border-radius: 999px; background: rgba(11,109,125,.08); color: var(--recovery-cyan); font-size: .76rem; font-weight: 700; text-decoration: none; }
+.colophon-link:hover { background: rgba(11,109,125,.14); }
+
 .site-footer { display: flex; justify-content: space-between; gap: 30px; padding-block: 28px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: .74rem; }
 .site-footer > div { display: flex; gap: 14px 24px; flex-wrap: wrap; }
 .site-footer strong { color: var(--text-primary); }
@@ -397,6 +410,7 @@ button { cursor: pointer; }
   .stories-grid { grid-template-columns: 1fr 1fr; }
   .method-grid { grid-template-columns: 1fr; gap: 36px; }
   .coverage-grid { grid-template-columns: 1fr; }
+  .colophon-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 680px) {
@@ -433,6 +447,9 @@ button { cursor: pointer; }
   .closing { min-height: 60vh; padding-block: 80px; }
   .closing h2 { font-size: clamp(3.4rem, 17vw, 5rem); }
   .signal-line { flex-wrap: wrap; }
+  .colophon { padding: 22px; }
+  .colophon-grid { grid-template-columns: 1fr; gap: 18px; }
+  .colophon-author { align-items: flex-start; }
   .site-footer { flex-direction: column; }
   .footer-links { justify-content: flex-start; }
 
