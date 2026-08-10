@@ -30,7 +30,7 @@ export default function Methodology({ metadata, coverage }: Props) {
           <details>
             <summary>How are GenAI tools used here?</summary>
             <p>
-              This site was built with substantial help from Claude, Anthropic's AI coding assistant — drafting and
+              This site was built with substantial help from Claude, Anthropic&apos;s AI coding assistant — drafting and
               refactoring the Next.js/React/TypeScript codebase, the World Bank and World Happiness Report data
               pipeline, the CSS design system, the Recovery Orbit visualization, and the Atlas Guide companion. Every
               change was reviewed, tested, and directed by a human before it shipped.

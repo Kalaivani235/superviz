@@ -236,6 +236,7 @@ button { cursor: pointer; }
   overflow-y: auto;
   border: none;
   border-top: 2px solid var(--recovery-cyan);
+  background: var(--bg-secondary);
   text-align: left;
   font: inherit;
   color: inherit;
