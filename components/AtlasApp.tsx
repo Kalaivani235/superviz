@@ -8,6 +8,7 @@ import type { CompanionCommand, CompanionContext } from "@/lib/companion/types";
 import type { LensKey } from "@/lib/types";
 import { useAtlasData } from "@/lib/useAtlasData";
 import DataCompanion from "./companion/DataCompanion";
+import BackToTop from "./BackToTop";
 import Colophon from "./Colophon";
 import ComparePanel from "./ComparePanel";
 import CountryPanel from "./CountryPanel";
@@ -280,6 +281,8 @@ export default function AtlasApp() {
         onCommand={handleCompanionCommand}
         onReveal={setPredictionReveal}
       />
+
+      <BackToTop />
     </main>
   );
 }

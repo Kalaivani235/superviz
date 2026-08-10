@@ -337,6 +337,29 @@ button { cursor: pointer; }
   .mobile-nav button.is-active { background: rgba(11,109,125,.12); color: var(--recovery-cyan); }
 }
 
+.back-to-top {
+  position: fixed;
+  z-index: 500;
+  left: 22px;
+  bottom: 22px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  box-shadow: 0 14px 34px rgba(32,29,26,.14);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease, border-color .2s ease, color .2s ease;
+}
+.back-to-top.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover, .back-to-top:focus-visible { border-color: var(--recovery-cyan); color: var(--recovery-cyan); }
+
 /* Atlas Guide companion */
 .companion-root { position: fixed; z-index: 500; right: 22px; bottom: 22px; width: min(380px, calc(100vw - 32px)); }
 .companion-card { padding: 22px; border: 1px solid var(--border); border-radius: 18px; background: var(--bg-secondary); box-shadow: 0 24px 60px rgba(32,29,26,.14); }
