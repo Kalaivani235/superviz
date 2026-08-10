@@ -28,20 +28,22 @@ export default function Methodology({ metadata, coverage }: Props) {
             <p>{metadata.coverageScopeNote}</p>
           </details>
           <details>
-            <summary>How are years aligned across indicators?</summary>
-            <p>{metadata.latestNote}</p>
+            <summary>How are GenAI tools used here?</summary>
+            <p>
+              This site was built with substantial help from Claude, Anthropic's AI coding assistant — drafting and
+              refactoring the Next.js/React/TypeScript codebase, the World Bank and World Happiness Report data
+              pipeline, the CSS design system, the Recovery Orbit visualization, and the Atlas Guide companion. Every
+              change was reviewed, tested, and directed by a human before it shipped.
+            </p>
+            <p>
+              That is separate from what happens when you use the site. No runtime AI call ever generates or alters a
+              number, a narrative sentence, or an Atlas discovery — every value on screen is computed by deterministic
+              rules evaluated against the published data, so the same inputs always produce the same output.
+            </p>
           </details>
           <details>
             <summary>How is missing data handled?</summary>
             <p>{metadata.missingDataNote}</p>
-          </details>
-          <details>
-            <summary>What does GenAI contribute?</summary>
-            <p>
-              GenAI was used to support code generation, data-pipeline logic, interface development, and narrative
-              template design. All narrative text is produced by deterministic rules evaluated against the values
-              shown — no runtime model call generates or alters any figure or sentence a user sees.
-            </p>
           </details>
         </div>
         <aside className="formula-panel" aria-label="Calculation formulas">
